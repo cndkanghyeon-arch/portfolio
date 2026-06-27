@@ -91,25 +91,25 @@ fadeEls.forEach(el => fadeObserver.observe(el));
 /* ============================================================
    RAINBOW FLASH ON CAREER SCROLL
    ============================================================ */
-const rainbowObserver = new IntersectionObserver((entries) => {
+const timelineObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const strongs = entry.target.querySelectorAll('strong');
+      const strongs = entry.target.querySelectorAll('.highlight-list strong');
       strongs.forEach((el, i) => {
         setTimeout(() => {
           el.classList.add('rainbow-flash');
           el.addEventListener('animationend', () => {
             el.classList.remove('rainbow-flash');
           }, { once: true });
-        }, i * 100);
+        }, i * 150);
       });
-      rainbowObserver.unobserve(entry.target);
+      timelineObserver.unobserve(entry.target);
     }
   });
-}, { threshold: 0.2 });
+}, { threshold: 0.25 });
 
 document.querySelectorAll('.timeline-item').forEach(item => {
-  rainbowObserver.observe(item);
+  timelineObserver.observe(item);
 });
 
 /* ============================================================
