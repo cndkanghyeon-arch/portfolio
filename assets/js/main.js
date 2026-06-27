@@ -89,6 +89,30 @@ const fadeObserver = new IntersectionObserver((entries) => {
 fadeEls.forEach(el => fadeObserver.observe(el));
 
 /* ============================================================
+   RAINBOW FLASH ON CAREER SCROLL
+   ============================================================ */
+const rainbowObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const strongs = entry.target.querySelectorAll('.highlight-list strong');
+      strongs.forEach((el, i) => {
+        setTimeout(() => {
+          el.classList.add('rainbow-flash');
+          el.addEventListener('animationend', () => {
+            el.classList.remove('rainbow-flash');
+          }, { once: true });
+        }, i * 50);
+      });
+      rainbowObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+
+document.querySelectorAll('.timeline-item').forEach(item => {
+  rainbowObserver.observe(item);
+});
+
+/* ============================================================
    LIGHTBOX
    ============================================================ */
 const overlay = document.createElement('div');

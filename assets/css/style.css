@@ -216,6 +216,9 @@ h1, h2, h3, h4 { line-height: 1.25; letter-spacing: -0.02em; }
   align-items: center; padding: 24px 16px;
   text-align: center;
 }
+.stat-num-wrap {
+  display: flex; align-items: baseline; gap: 2px;
+}
 .stat-num {
   font-size: 2.2rem; font-weight: 800;
   color: #fff; font-family: 'Inter', sans-serif;
@@ -232,8 +235,9 @@ h1, h2, h3, h4 { line-height: 1.25; letter-spacing: -0.02em; }
    ============================================================ */
 .about-grid {
   display: grid; grid-template-columns: 1fr 1fr;
-  gap: 60px; align-items: start;
+  gap: 60px; align-items: stretch;
 }
+.about-highlights { height: 100%; }
 .about-text p {
   color: var(--text-dark-muted); margin-bottom: 16px; font-size: 1.02rem;
 }
@@ -245,7 +249,7 @@ h1, h2, h3, h4 { line-height: 1.25; letter-spacing: -0.02em; }
   font-size: 0.82rem; font-weight: 500;
 }
 
-.about-highlights { display: flex; flex-direction: column; gap: 14px; }
+.about-highlights { display: flex; flex-direction: column; gap: 14px; height: 100%; }
 .highlight-card {
   display: flex; align-items: center; gap: 16px;
   background: var(--bg-light-card);
@@ -532,6 +536,20 @@ footer p { font-size: 0.8rem; color: var(--text-muted); }
 }
 .fade-in.visible { opacity: 1; transform: none; }
 
+@keyframes rainbow-flash {
+  0%   { color: hsl(0,   100%, 70%); }
+  15%  { color: hsl(54,  100%, 65%); }
+  30%  { color: hsl(120, 100%, 55%); }
+  45%  { color: hsl(180, 100%, 55%); }
+  60%  { color: hsl(220, 100%, 70%); }
+  75%  { color: hsl(280, 100%, 70%); }
+  90%  { color: hsl(330, 100%, 70%); }
+  100% { color: #fff; }
+}
+.rainbow-flash {
+  animation: rainbow-flash 1.5s ease forwards;
+}
+
 /* ============================================================
    RESPONSIVE
    ============================================================ */
@@ -588,9 +606,10 @@ footer p { font-size: 0.8rem; color: var(--text-muted); }
   text-transform: uppercase;
   margin-bottom: 14px;
 }
+.project-arch { width: 100%; }
 .arch-svg {
   width: 100%;
-  max-width: 780px;
+  max-width: 100%;
   height: auto;
   background: rgba(10,12,20,0.6);
   border: 1px solid var(--border);
