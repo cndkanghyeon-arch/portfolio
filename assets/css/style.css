@@ -185,7 +185,7 @@ h1, h2, h3, h4 { line-height: 1.25; letter-spacing: -0.02em; }
   position: relative;
 }
 .hero-photo {
-  width: 220px; height: 280px;
+  width: 160px; height: 200px;
   border-radius: 20px;
   overflow: hidden;
   border: 2px solid var(--border);
