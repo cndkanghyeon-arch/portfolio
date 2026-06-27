@@ -87,3 +87,25 @@ const fadeObserver = new IntersectionObserver((entries) => {
 }, { threshold: 0.08 });
 
 fadeEls.forEach(el => fadeObserver.observe(el));
+
+/* ============================================================
+   LIGHTBOX
+   ============================================================ */
+const overlay = document.createElement('div');
+overlay.className = 'lightbox-overlay';
+const lbImg = document.createElement('img');
+overlay.appendChild(lbImg);
+document.body.appendChild(overlay);
+
+document.querySelectorAll('.gallery-item img').forEach(img => {
+  img.addEventListener('click', () => {
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    overlay.classList.add('active');
+  });
+});
+
+overlay.addEventListener('click', () => overlay.classList.remove('active'));
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') overlay.classList.remove('active');
+});
