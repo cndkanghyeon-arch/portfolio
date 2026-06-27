@@ -268,3 +268,21 @@ document.addEventListener('keydown', e => {
 
   apply('bhc');
 })();
+
+/* ============================================================
+   PRINT / PDF — reveal all content before printing
+   ============================================================ */
+function preparePrint() {
+  // Reveal scroll-animated elements
+  document.querySelectorAll('.fade-in').forEach(el => el.classList.add('visible'));
+  // Set counters to their final value
+  document.querySelectorAll('.stat-num[data-target]').forEach(el => {
+    el.textContent = el.dataset.target;
+  });
+  // Force lazy images to load
+  document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+    img.loading = 'eager';
+    if (img.dataset.src) img.src = img.dataset.src;
+  });
+}
+window.addEventListener('beforeprint', preparePrint);

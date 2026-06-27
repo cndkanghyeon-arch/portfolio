@@ -981,6 +981,9 @@ footer p { font-size: 0.8rem; color: var(--text-muted); }
   html { scroll-behavior: auto; }
   body { background: #0d0f14 !important; }
 
+  /* Force scroll-reveal elements to be visible in print/PDF */
+  .fade-in { opacity: 1 !important; transform: none !important; transition: none !important; }
+
   /* Hide interactive chrome */
   #navbar, .nav-hamburger, #scroll-progress, .hero-actions,
   .lightbox-overlay { display: none !important; }
