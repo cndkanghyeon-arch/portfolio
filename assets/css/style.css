@@ -969,3 +969,45 @@ footer p { font-size: 0.8rem; color: var(--text-muted); }
   .dash-kpis { grid-template-columns: repeat(2, 1fr); }
   .dash-row { grid-template-columns: 1fr; }
 }
+
+/* ============================================================
+   PRINT / PDF
+   ============================================================ */
+@media print {
+  *, *::before, *::after {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  html { scroll-behavior: auto; }
+  body { background: #0d0f14 !important; }
+
+  /* Hide interactive chrome */
+  #navbar, .nav-hamburger, #scroll-progress, .hero-actions,
+  .lightbox-overlay { display: none !important; }
+
+  /* Tighten spacing for paper */
+  .section { padding: 28px 0 !important; }
+  #hero { min-height: auto !important; padding-top: 0 !important; }
+  .hero-inner { padding: 24px !important; gap: 28px !important; }
+  .hero-stats { padding: 16px 24px !important; }
+  .section-header { margin-bottom: 24px !important; }
+
+  /* Avoid awkward page breaks */
+  .project-block, .timeline-item, .comp-card,
+  .edu-card, .award-item, .highlight-card,
+  .gallery-item, .project-arch { break-inside: avoid; page-break-inside: avoid; }
+  section { break-inside: avoid-page; }
+  h1, h2, h3, h4 { break-after: avoid; }
+
+  /* Show both dashboard tabs content statically isn't trivial; keep active tab */
+  .dash-tabs { display: none !important; }
+
+  /* Keep links readable */
+  a { color: inherit !important; text-decoration: none !important; }
+
+  /* Slightly smaller media to fit page width */
+  .arch-svg { padding: 8px !important; }
+  .gallery-item img { height: 150px !important; }
+
+  @page { margin: 12mm; size: A4; }
+}
