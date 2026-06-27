@@ -5,9 +5,16 @@ const navbar = document.getElementById('navbar');
 const hamburger = document.querySelector('.nav-hamburger');
 const navLinks = document.querySelector('.nav-links');
 
+const scrollProgress = document.getElementById('scroll-progress');
+
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 30);
-});
+  if (scrollProgress) {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0;
+    scrollProgress.style.width = pct + '%';
+  }
+}, { passive: true });
 
 hamburger?.addEventListener('click', () => {
   navLinks.classList.toggle('open');
