@@ -94,14 +94,14 @@ fadeEls.forEach(el => fadeObserver.observe(el));
 const rainbowObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const strongs = entry.target.querySelectorAll('.highlight-list strong');
+      const strongs = entry.target.querySelectorAll('strong');
       strongs.forEach((el, i) => {
         setTimeout(() => {
           el.classList.add('rainbow-flash');
           el.addEventListener('animationend', () => {
             el.classList.remove('rainbow-flash');
           }, { once: true });
-        }, i * 50);
+        }, i * 100);
       });
       rainbowObserver.unobserve(entry.target);
     }
