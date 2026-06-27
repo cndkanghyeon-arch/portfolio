@@ -978,8 +978,8 @@ footer p { font-size: 0.8rem; color: var(--text-muted); }
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
   }
-  html { scroll-behavior: auto; }
-  body { background: #0d0f14 !important; }
+  html { scroll-behavior: auto; font-size: 11px; }
+  body { background: #0d0f14 !important; line-height: 1.55 !important; }
 
   /* Force scroll-reveal elements to be visible in print/PDF */
   .fade-in { opacity: 1 !important; transform: none !important; transition: none !important; }
@@ -988,29 +988,72 @@ footer p { font-size: 0.8rem; color: var(--text-muted); }
   #navbar, .nav-hamburger, #scroll-progress, .hero-actions,
   .lightbox-overlay { display: none !important; }
 
-  /* Tighten spacing for paper */
-  .section { padding: 28px 0 !important; }
-  #hero { min-height: auto !important; padding-top: 0 !important; }
-  .hero-inner { padding: 24px !important; gap: 28px !important; }
-  .hero-stats { padding: 16px 24px !important; }
-  .section-header { margin-bottom: 24px !important; }
+  /* ---- Element sizing: shrink screen sizes for A4 ---- */
+  .container, .nav-inner, .hero-inner, .hero-stats { max-width: 100% !important; }
 
-  /* Avoid awkward page breaks */
+  .section { padding: 18px 0 !important; }
+  .section-header { margin-bottom: 16px !important; }
+  .section-header h2 { font-size: 1.5rem !important; }
+  .section-desc { font-size: 0.9rem !important; }
+
+  /* Hero: keep compact, do not let it eat a full page */
+  #hero { min-height: auto !important; padding-top: 0 !important; }
+  .hero-inner { padding: 16px 24px 8px !important; gap: 28px !important; }
+  .hero-title { font-size: 1.9rem !important; margin-bottom: 12px !important; }
+  .hero-sub { font-size: 0.85rem !important; margin-bottom: 0 !important; line-height: 1.5 !important; }
+  .hero-eyebrow { margin-bottom: 10px !important; }
+  .hero-photo { width: 120px !important; height: 150px !important; }
+  .hero-stats { padding: 12px 24px 8px !important; gap: 0 !important; }
+  .stat-item { padding: 10px 12px !important; }
+  .stat-num { font-size: 1.5rem !important; }
+  .stat-label { font-size: 0.7rem !important; }
+
+  /* Headings */
+  h3 { font-size: 1.1rem !important; }
+  h4 { font-size: 0.82rem !important; }
+
+  /* Cards / paddings */
+  .timeline-card { padding: 16px !important; }
+  .timeline-item { margin-bottom: 22px !important; }
+  .comp-card, .edu-card { padding: 16px !important; }
+  .project-block { margin-bottom: 28px !important; padding-bottom: 24px !important; }
+  .project-number { font-size: 2rem !important; }
+  .project-content h3 { font-size: 1.25rem !important; }
+  .project-overview, .project-req { font-size: 0.82rem !important; line-height: 1.55 !important; }
+  .result-num { font-size: 1.2rem !important; }
+  .contact-card { padding: 18px 28px !important; }
+
+  /* ---- Grid compaction ---- */
+  .about-grid { gap: 24px !important; }
+  .comp-grid { gap: 12px !important; }
+  .hero-stats { grid-template-columns: repeat(4, 1fr) !important; }
+  .project-results { grid-template-columns: repeat(4, 1fr) !important; gap: 8px !important; }
+  .project-gallery { grid-template-columns: repeat(2, 1fr) !important; gap: 8px !important; }
+  .gallery-item--wide { grid-column: 1 / -1 !important; }
+
+  /* ---- Page-break control ---- */
+  #about { break-before: auto; }
+  #career, #competencies, #projects, #education, #contact {
+    break-before: page; page-break-before: always;
+  }
   .project-block, .timeline-item, .comp-card,
   .edu-card, .award-item, .highlight-card,
-  .gallery-item, .project-arch { break-inside: avoid; page-break-inside: avoid; }
-  section { break-inside: avoid-page; }
-  h1, h2, h3, h4 { break-after: avoid; }
+  .gallery-item, .project-arch, .highlight-card {
+    break-inside: avoid; page-break-inside: avoid;
+  }
+  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
 
-  /* Show both dashboard tabs content statically isn't trivial; keep active tab */
+  /* Keep active dashboard tab only */
   .dash-tabs { display: none !important; }
 
   /* Keep links readable */
   a { color: inherit !important; text-decoration: none !important; }
 
-  /* Slightly smaller media to fit page width */
-  .arch-svg { padding: 8px !important; }
-  .gallery-item img { height: 150px !important; }
+  /* ---- Media size limits ---- */
+  .arch-svg { padding: 8px !important; max-height: 320px !important; }
+  .gallery-item img { height: 130px !important; max-height: 130px !important; }
+  .gallery-item--dashboard, .dash { max-height: 460px !important; overflow: hidden !important; }
+  .dash { padding: 12px !important; font-size: 11px !important; }
 
   @page { margin: 12mm; size: A4; }
 }
