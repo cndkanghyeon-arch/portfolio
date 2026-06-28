@@ -445,7 +445,8 @@ document.addEventListener('keydown', e => {
   }
 
   function renderInsights(c, items) {
-    c.innerHTML = items.map(t =>
+    // 대표 인사이트 1개만 표시 (과다 노출 방지)
+    c.innerHTML = items.slice(0, 1).map(t =>
       '<div class="dash-insight"><div class="dash-insight-icon">C</div><div>' +
       '<p class="dash-insight-head">Claude AI 인사이트</p>' +
       '<p class="dash-insight-body">' + t + '</p></div></div>'
