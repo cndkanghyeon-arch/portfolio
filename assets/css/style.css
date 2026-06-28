@@ -490,6 +490,25 @@ h1, h2, h3, h4 { line-height: 1.25; letter-spacing: -0.02em; }
 }
 .flow-step p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
 .flow-step p strong { color: var(--text); }
+.flow-sublist { margin: 6px 0 0; padding-left: 4px; }
+.flow-sublist li {
+  font-size: 0.84rem; color: var(--text-muted); line-height: 1.6;
+  padding-left: 16px; position: relative;
+}
+.flow-sublist li::before {
+  content: '–'; position: absolute; left: 2px; color: var(--accent);
+}
+.project-team {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 4px; font-size: 0.82rem; color: var(--text-muted);
+}
+.project-team strong { color: var(--accent-light); font-weight: 600; }
+.gallery-label {
+  font-size: 0.8rem; color: var(--text-muted); font-weight: 600;
+  margin: 8px 0 8px; letter-spacing: 0.02em;
+}
+.project-gallery--old { opacity: 0.78; }
+.project-gallery--old .gallery-item img { filter: grayscale(0.35) brightness(0.85); }
 .flow-step--problem    { border-left-color: #ff6b6b; }
 .flow-step--problem    .flow-tag { color: #ff6b6b; }
 .flow-step--hypothesis { border-left-color: #ffb454; }
@@ -1224,6 +1243,11 @@ footer p { font-size: 0.8rem; color: var(--text-muted); }
   #career, #competencies, #projects, #education, #contact {
     break-before: page; page-break-before: always;
   }
+  /* Remove trailing space so the forced page-break before #education
+     doesn't spill into an extra blank page */
+  #projects { padding-bottom: 0 !important; }
+  .project-block:last-child { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+  .project-block:last-child .project-badge { margin-bottom: 0 !important; }
   /* Avoid splitting small blocks only — NOT .project-block (taller than a page,
      which would force it to a fresh page and leave the previous page near-blank) */
   .timeline-item, .comp-card, .edu-card, .award-item, .highlight-card,
