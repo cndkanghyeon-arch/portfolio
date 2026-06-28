@@ -26,6 +26,25 @@
 
 html { scroll-behavior: smooth; }
 
+/* Offset anchor scroll so section titles aren't hidden under the fixed navbar */
+section[id] { scroll-margin-top: 80px; }
+
+/* Keyboard focus styles — visible only for keyboard users, not mouse clicks */
+:focus-visible {
+  outline: 2px solid var(--accent-light);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+a:focus-visible, .btn:focus-visible, .nav-cta:focus-visible,
+.dash-tab:focus-visible, .nav-hamburger:focus-visible {
+  outline: 2px solid var(--accent-light);
+  outline-offset: 3px;
+}
+.contact-card:focus-visible, .gallery-item img:focus-visible {
+  outline: 2px solid var(--accent-light);
+  outline-offset: 4px;
+}
+
 /* Scroll progress bar */
 #scroll-progress {
   position: fixed;

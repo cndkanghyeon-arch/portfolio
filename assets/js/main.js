@@ -17,11 +17,17 @@ window.addEventListener('scroll', () => {
 }, { passive: true });
 
 hamburger?.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
+  const isOpen = navLinks.classList.toggle('open');
+  hamburger.setAttribute('aria-expanded', String(isOpen));
+  hamburger.setAttribute('aria-label', isOpen ? '메뉴 닫기' : '메뉴 열기');
 });
 
 navLinks?.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => navLinks.classList.remove('open'));
+  a.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger?.setAttribute('aria-expanded', 'false');
+    hamburger?.setAttribute('aria-label', '메뉴 열기');
+  });
 });
 
 /* ============================================================
@@ -128,11 +134,22 @@ const lbImg = document.createElement('img');
 overlay.appendChild(lbImg);
 document.body.appendChild(overlay);
 
+function openLightbox(img) {
+  lbImg.src = img.src;
+  lbImg.alt = img.alt;
+  overlay.classList.add('active');
+}
+
 document.querySelectorAll('.gallery-item img').forEach(img => {
-  img.addEventListener('click', () => {
-    lbImg.src = img.src;
-    lbImg.alt = img.alt;
-    overlay.classList.add('active');
+  img.tabIndex = 0;
+  img.setAttribute('role', 'button');
+  img.setAttribute('aria-label', (img.alt || '이미지') + ' 확대 보기');
+  img.addEventListener('click', () => openLightbox(img));
+  img.addEventListener('keydown', e => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      openLightbox(img);
+    }
   });
 });
 
@@ -260,8 +277,12 @@ document.addEventListener('keydown', e => {
 
   dash.querySelectorAll('.dash-tab').forEach(btn => {
     btn.addEventListener('click', () => {
-      dash.querySelectorAll('.dash-tab').forEach(b => b.classList.remove('active'));
+      dash.querySelectorAll('.dash-tab').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
       btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
       apply(btn.dataset.dashTab);
     });
   });

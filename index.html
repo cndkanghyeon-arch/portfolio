@@ -37,7 +37,7 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a class="nav-logo" href="#hero">김강현</a>
-      <ul class="nav-links">
+      <ul class="nav-links" id="primary-nav">
         <li><a href="#about">소개</a></li>
         <li><a href="#career">이력</a></li>
         <li><a href="#competencies">역량</a></li>
@@ -45,7 +45,7 @@
         <li><a href="#education">학력</a></li>
         <li><a href="#contact" class="nav-cta">연락하기</a></li>
       </ul>
-      <button class="nav-hamburger" aria-label="메뉴">
+      <button class="nav-hamburger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="primary-nav">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -737,9 +737,9 @@
                   <span class="dash-badge">🤖 Claude AI</span>
                 </div>
 
-                <div class="dash-tabs" role="tablist">
-                  <button class="dash-tab active" data-dash-tab="bhc" type="button">BHC</button>
-                  <button class="dash-tab" data-dash-tab="outback" type="button">OUTBACK</button>
+                <div class="dash-tabs" role="tablist" aria-label="브랜드 선택">
+                  <button class="dash-tab active" data-dash-tab="bhc" type="button" role="tab" aria-selected="true">BHC</button>
+                  <button class="dash-tab" data-dash-tab="outback" type="button" role="tab" aria-selected="false">OUTBACK</button>
                 </div>
 
                 <!-- KPI cards -->
