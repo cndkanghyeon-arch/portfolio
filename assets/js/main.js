@@ -563,3 +563,21 @@ function preparePrint() {
   });
 }
 window.addEventListener('beforeprint', preparePrint);
+
+/* ============================================================
+   BACK TO TOP
+   ============================================================ */
+(function () {
+  var btn = document.getElementById('back-to-top');
+  if (!btn) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function toggle() {
+    if (window.scrollY > 400) btn.classList.add('visible');
+    else btn.classList.remove('visible');
+  }
+  window.addEventListener('scroll', toggle, { passive: true });
+  toggle();
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+  });
+})();
