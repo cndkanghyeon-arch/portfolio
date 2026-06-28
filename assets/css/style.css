@@ -389,9 +389,26 @@ h1, h2, h3, h4 { line-height: 1.25; letter-spacing: -0.02em; }
   border: 1px solid var(--border-light);
   border-radius: var(--radius); padding: 28px;
   transition: var(--transition);
+  position: relative;
+  overflow: hidden;
 }
-.comp-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-light); }
-.comp-icon { font-size: 2rem; margin-bottom: 14px; }
+.comp-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-light));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform var(--transition);
+}
+.comp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-light);
+  border-color: rgba(91,127,255,0.35);
+}
+.comp-card:hover::before { transform: scaleX(1); }
+.comp-card:hover .comp-icon { transform: scale(1.08); }
+.comp-icon { font-size: 2rem; margin-bottom: 14px; transition: transform var(--transition); }
 .comp-card h3 { font-size: 1.05rem; color: var(--text-dark); margin-bottom: 14px; }
 .comp-card ul { display: flex; flex-direction: column; gap: 8px; }
 .comp-card li {
