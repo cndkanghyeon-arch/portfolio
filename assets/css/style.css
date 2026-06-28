@@ -461,12 +461,25 @@ h1, h2, h3, h4 { line-height: 1.25; letter-spacing: -0.02em; }
 .project-block:last-child { border-bottom: none; margin-bottom: 0; }
 
 .project-number {
+  position: relative;
   font-family: 'Inter', sans-serif;
   font-size: 3rem; font-weight: 900;
-  color: rgba(91,127,255,0.2);
+  color: rgba(91,127,255,0.22);
   line-height: 1; padding-top: 4px;
   user-select: none;
+  -webkit-text-stroke: 1px rgba(91,127,255,0.28);
 }
+/* Vertical accent connector under each number — gives the project list a numbered-station rhythm */
+.project-number::after {
+  content: "";
+  position: absolute;
+  left: 50%; top: 64px; bottom: -56px;
+  width: 2px;
+  transform: translateX(-50%);
+  background: linear-gradient(180deg, rgba(91,127,255,0.45), rgba(91,127,255,0));
+  pointer-events: none;
+}
+.project-block:last-child .project-number::after { display: none; }
 
 .project-meta {
   display: flex; align-items: center; gap: 14px;
@@ -758,7 +771,14 @@ footer p { font-size: 0.8rem; color: var(--text-muted); }
   .tc-grid { grid-template-columns: 1fr; }
   .comp-grid { grid-template-columns: 1fr; }
   .project-block { grid-template-columns: 1fr; gap: 12px; }
-  .project-number { font-size: 1.5rem; }
+  .project-number {
+    font-size: 1.4rem; padding-top: 0;
+    color: var(--accent); -webkit-text-stroke: 0;
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 44px; height: 44px; border-radius: 12px;
+    background: rgba(91,127,255,0.12);
+  }
+  .project-number::after { display: none; }
   .project-results { grid-template-columns: repeat(2, 1fr); }
   .nav-links { display: none; }
   .nav-hamburger { display: flex; }
