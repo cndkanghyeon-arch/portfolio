@@ -1088,12 +1088,17 @@ footer p { font-size: 0.8rem; color: var(--text-muted); }
   #career, #competencies, #projects, #education, #contact {
     break-before: page; page-break-before: always;
   }
-  .project-block, .timeline-item, .comp-card,
-  .edu-card, .award-item, .highlight-card,
-  .gallery-item, .project-arch, .highlight-card {
+  /* Avoid splitting small blocks only — NOT .project-block (taller than a page,
+     which would force it to a fresh page and leave the previous page near-blank) */
+  .timeline-item, .comp-card, .edu-card, .award-item, .highlight-card,
+  .gallery-item, .project-arch, .project-flow, .flow-step, .project-results {
     break-inside: avoid; page-break-inside: avoid;
   }
-  h1, h2, h3, h4 { break-after: avoid; page-break-after: avoid; }
+  /* Keep each project's heading with the first content lines */
+  .project-content h3 { break-after: avoid; page-break-after: avoid; }
+  h1, h2, h4 { break-after: avoid; page-break-after: avoid; }
+  /* Don't isolate the projects section header on its own page */
+  #projects .section-header { break-after: avoid; page-break-after: avoid; margin-bottom: 10px !important; }
 
   /* Keep active dashboard tab only */
   .dash-tabs { display: none !important; }
