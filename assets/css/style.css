@@ -461,6 +461,39 @@ h1, h2, h3, h4 { line-height: 1.25; letter-spacing: -0.02em; }
 }
 .project-issue p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.75; }
 
+/* Problem-solving flow (4 steps) */
+.project-flow { margin-bottom: 24px; }
+.project-flow > h4 {
+  font-size: 0.85rem; font-weight: 600; color: var(--text);
+  margin-bottom: 14px; letter-spacing: 0.02em;
+}
+.flow-step {
+  position: relative;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 12px 16px;
+  margin-bottom: 8px;
+}
+.flow-step:last-child { margin-bottom: 0; }
+.flow-tag {
+  display: inline-block;
+  font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 5px;
+}
+.flow-step p { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
+.flow-step p strong { color: var(--text); }
+.flow-step--problem    { border-left-color: #ff6b6b; }
+.flow-step--problem    .flow-tag { color: #ff6b6b; }
+.flow-step--hypothesis { border-left-color: #ffb454; }
+.flow-step--hypothesis .flow-tag { color: #ffb454; }
+.flow-step--execution  { border-left-color: #5b7fff; }
+.flow-step--execution  .flow-tag { color: #7b9aff; }
+.flow-step--result     { border-left-color: #3fb950; }
+.flow-step--result     .flow-tag { color: #3fb950; }
+
 .project-results {
   display: grid; grid-template-columns: repeat(4, 1fr);
   gap: 14px; margin-bottom: 16px;
