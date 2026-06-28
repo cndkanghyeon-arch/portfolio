@@ -764,109 +764,160 @@
               <div class="dash" id="mktDash">
                 <div class="dash-header">
                   <div>
-                    <h4>BHC · OUTBACK 통합 마케팅 대시보드</h4>
-                    <p class="dash-sub">2026년 5월 월간 리포트 · 자동 생성</p>
+                    <h4>광동상회 통합 대시보드 <span class="dash-live">LIVE DATA</span></h4>
+                    <p class="dash-sub">기준일 2026-05-31 · 자사몰 운영 실데이터 기반</p>
                   </div>
                   <span class="dash-badge">🤖 Claude AI</span>
                 </div>
 
-                <div class="dash-tabs" role="tablist" aria-label="브랜드 선택">
-                  <button class="dash-tab active" data-dash-tab="bhc" type="button" role="tab" aria-selected="true">BHC</button>
-                  <button class="dash-tab" data-dash-tab="outback" type="button" role="tab" aria-selected="false">OUTBACK</button>
+                <div class="dash-tabs" role="tablist" aria-label="대시보드 보기 선택">
+                  <button class="dash-tab active" data-dash-tab="all" type="button" role="tab" aria-selected="true">통합</button>
+                  <button class="dash-tab" data-dash-tab="brand" type="button" role="tab" aria-selected="false">브랜드별</button>
                 </div>
 
-                <!-- KPI cards -->
-                <div class="dash-kpis">
-                  <div class="dash-kpi" style="--kpi-accent:#3b82f6">
-                    <div class="dash-kpi-label" data-k="k1l">월 총 주문</div>
-                    <div class="dash-kpi-value" data-k="k1v">48,291건</div>
-                    <span class="dash-kpi-delta" data-k="k1d">▲ 9.3% vs 4월</span>
-                  </div>
-                  <div class="dash-kpi" style="--kpi-accent:#f97316">
-                    <div class="dash-kpi-label">이벤트 전환율</div>
-                    <div class="dash-kpi-value" data-k="k2v">11.4%</div>
-                    <span class="dash-kpi-delta" data-k="k2d">▲ 32.7%</span>
-                  </div>
-                  <div class="dash-kpi" style="--kpi-accent:#8b5cf6">
-                    <div class="dash-kpi-label">신규 앱 설치</div>
-                    <div class="dash-kpi-value" data-k="k3v">3,847건</div>
-                    <span class="dash-kpi-delta" data-k="k3d">▲ 15.2% vs 4월</span>
-                  </div>
-                  <div class="dash-kpi" style="--kpi-accent:#ec4899">
-                    <div class="dash-kpi-label">쿠폰 소진율</div>
-                    <div class="dash-kpi-value" data-k="k4v">87.3%</div>
-                    <span class="dash-kpi-delta" data-k="k4d">▲ 22.1%p</span>
-                  </div>
-                  <div class="dash-kpi" style="--kpi-accent:#10b981">
-                    <div class="dash-kpi-label" data-k="k5l">재구매율</div>
-                    <div class="dash-kpi-value" data-k="k5v">34.2%</div>
-                    <span class="dash-kpi-delta" data-k="k5d">▲ 4.1%p</span>
-                  </div>
-                  <div class="dash-kpi" style="--kpi-accent:#0ea5e9">
-                    <div class="dash-kpi-label">평균 객단가</div>
-                    <div class="dash-kpi-value" data-k="k6v">₩23,400</div>
-                    <span class="dash-kpi-delta" data-k="k6d">▲ 6.2%</span>
-                  </div>
-                </div>
+                <!-- ===== 통합 뷰 ===== -->
+                <div class="dash-view" data-view="all">
 
-                <!-- Chart row 1 -->
-                <div class="dash-row">
-                  <div class="dash-card">
-                    <h5 class="dash-card-title">주간 주문 추이 (5주)</h5>
-                    <div class="dash-bars" data-k="weeks">
-                      <div class="dash-bar-col"><div class="dash-bar-pair"><div class="dash-bar" style="height:45%"></div><div class="dash-bar dash-bar--b" style="height:34%"></div></div><span class="dash-bar-x">1주</span></div>
-                      <div class="dash-bar-col"><div class="dash-bar-pair"><div class="dash-bar" style="height:63%"></div><div class="dash-bar dash-bar--b" style="height:54%"></div></div><span class="dash-bar-x">2주</span></div>
-                      <div class="dash-bar-col"><div class="dash-bar-pair"><div class="dash-bar" style="height:77%"></div><div class="dash-bar dash-bar--b" style="height:70%"></div></div><span class="dash-bar-x">3주</span></div>
-                      <div class="dash-bar-col"><div class="dash-bar-pair"><div class="dash-bar" style="height:86%"></div><div class="dash-bar dash-bar--b" style="height:72%"></div></div><span class="dash-bar-x">4주</span></div>
-                      <div class="dash-bar-col"><div class="dash-bar-pair"><div class="dash-bar" style="height:100%"></div><div class="dash-bar dash-bar--b" style="height:88%"></div></div><span class="dash-bar-x">5주</span></div>
+                  <!-- ① 상단 KPI 5 -->
+                  <div class="dash-kpis dash-kpis--5" data-k="kpis"></div>
+
+                  <!-- ② 메인 분석 위젯 -->
+                  <div class="dash-row">
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">고객 구매 패턴</h5>
+                      <div class="dash-stat-grid" data-k="pattern"></div>
+                    </div>
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">성별 매출 비중</h5>
+                      <div class="dash-donut-wrap" data-k="gender"></div>
                     </div>
                   </div>
-                  <div class="dash-card">
-                    <h5 class="dash-card-title">채널별 유입</h5>
-                    <div class="dash-hbars" data-k="channels"></div>
-                  </div>
-                </div>
 
-                <!-- Chart row 2 -->
-                <div class="dash-row">
-                  <div class="dash-card">
-                    <h5 class="dash-card-title">연령/성별 분포</h5>
-                    <div class="dash-hbars" data-k="age"></div>
-                  </div>
-                  <div class="dash-card">
-                    <h5 class="dash-card-title">시간대별 주문</h5>
-                    <div class="dash-bars" data-k="hours">
-                      <div class="dash-bar-col"><div class="dash-bar-pair"><div class="dash-bar" style="height:28%"></div></div><span class="dash-bar-x">11시</span></div>
-                      <div class="dash-bar-col"><div class="dash-bar-pair"><div class="dash-bar" style="height:62%"></div></div><span class="dash-bar-x">13시</span></div>
-                      <div class="dash-bar-col"><div class="dash-bar-pair"><div class="dash-bar" style="height:40%"></div></div><span class="dash-bar-x">15시</span></div>
-                      <div class="dash-bar-col"><div class="dash-bar-pair"><div class="dash-bar" style="height:55%"></div></div><span class="dash-bar-x">18시</span></div>
-                      <div class="dash-bar-col"><div class="dash-bar-pair"><div class="dash-bar" style="height:90%"></div></div><span class="dash-bar-x">20시</span></div>
-                      <div class="dash-bar-col"><div class="dash-bar-pair"><div class="dash-bar" style="height:100%"></div></div><span class="dash-bar-x">21시</span></div>
+                  <div class="dash-row">
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">연령대별 매출 분포</h5>
+                      <div class="dash-hbars" data-k="ageDist"></div>
+                    </div>
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">일 매출 그래프 (5월 1~31일)</h5>
+                      <div class="dash-bars dash-bars--daily" data-k="daily"></div>
                     </div>
                   </div>
+
+                  <div class="dash-row">
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">연도별 월 매출 추이</h5>
+                      <div class="dash-line" data-k="yearTrend"></div>
+                    </div>
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">월 검색어 순위 Top 10</h5>
+                      <ol class="dash-rank" data-k="keywords"></ol>
+                    </div>
+                  </div>
+
+                  <div class="dash-row">
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">CRM 발송 실적 및 ROAS</h5>
+                      <div class="dash-stat-grid dash-stat-grid--2" data-k="crm"></div>
+                      <div class="dash-hbars" data-k="crmBars"></div>
+                    </div>
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">브랜드별 매출 현황</h5>
+                      <div class="dash-hbars" data-k="brandSales"></div>
+                    </div>
+                  </div>
+
+                  <div class="dash-card dash-card--full">
+                    <h5 class="dash-card-title">재구매 코호트 분석 (최근 6개월)</h5>
+                    <div class="dash-cohort" data-k="cohort"></div>
+                  </div>
+
+                  <div class="dash-row">
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">쿠폰 사용 실적 분석</h5>
+                      <div class="dash-stat-grid dash-stat-grid--2" data-k="coupon"></div>
+                      <div class="dash-hbars" data-k="couponBars"></div>
+                    </div>
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">이벤트 진행 실적</h5>
+                      <ul class="dash-events" data-k="events"></ul>
+                    </div>
+                  </div>
+
+                  <div class="dash-row">
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">요일/시간대별 방문 수</h5>
+                      <div class="dash-heat" data-k="visitHeat"></div>
+                    </div>
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">요일/시간대별 구매 수</h5>
+                      <div class="dash-heat" data-k="buyHeat"></div>
+                    </div>
+                  </div>
+
+                  <div class="dash-insights" data-k="insights"></div>
                 </div>
 
-                <!-- Region table -->
-                <div class="dash-card" style="margin-bottom:16px;">
-                  <h5 class="dash-card-title" data-k="tableTitle">지역별 성과</h5>
-                  <table class="dash-table">
-                    <thead>
-                      <tr><th>지역</th><th>주문수</th><th>전환율</th><th>전월비</th></tr>
-                    </thead>
-                    <tbody data-k="regions"></tbody>
-                  </table>
-                </div>
+                <!-- ===== 브랜드별 뷰 ===== -->
+                <div class="dash-view" data-view="brand" hidden>
+                  <div class="dash-chips" data-k="brandChips" role="tablist" aria-label="브랜드 선택"></div>
 
-                <!-- AI insight -->
-                <div class="dash-insight">
-                  <div class="dash-insight-icon">C</div>
-                  <div>
-                    <p class="dash-insight-head">Claude AI 인사이트</p>
-                    <p class="dash-insight-body" data-k="insight">강남·홍대 지점의 주말 저녁 20-22시 주문이 평일 대비 44% 높습니다. 해당 시간대 푸시 알림 이벤트 실행 시 전환율 12~18%p 추가 개선 예상.</p>
+                  <div class="dash-kpis dash-kpis--4" data-k="bKpis"></div>
+
+                  <div class="dash-row">
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">고객 구매 패턴</h5>
+                      <div class="dash-stat-grid" data-k="bPattern"></div>
+                    </div>
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">성별 결제 비중</h5>
+                      <div class="dash-donut-wrap" data-k="bGender"></div>
+                    </div>
+                  </div>
+
+                  <div class="dash-row">
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">멤버십 등급별 결제액</h5>
+                      <div class="dash-hbars" data-k="bGrade"></div>
+                    </div>
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">연령대별 결제액 분포</h5>
+                      <div class="dash-hbars" data-k="bAge"></div>
+                    </div>
+                  </div>
+
+                  <div class="dash-row">
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">일 매출 그래프 (5월)</h5>
+                      <div class="dash-bars dash-bars--daily" data-k="bDaily"></div>
+                    </div>
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">연도별 월 매출 추이</h5>
+                      <div class="dash-line" data-k="bTrend"></div>
+                    </div>
+                  </div>
+
+                  <div class="dash-row">
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">상품별 매출 현황</h5>
+                      <table class="dash-table">
+                        <thead><tr><th>상품</th><th>매출</th><th>비중</th></tr></thead>
+                        <tbody data-k="bProducts"></tbody>
+                      </table>
+                    </div>
+                    <div class="dash-card">
+                      <h5 class="dash-card-title">재구매 코호트 분석</h5>
+                      <div class="dash-cohort" data-k="bCohort"></div>
+                    </div>
+                  </div>
+
+                  <div class="dash-card dash-card--full">
+                    <h5 class="dash-card-title">고객 리뷰 키워드 분류</h5>
+                    <div class="dash-tags" data-k="bReview"></div>
                   </div>
                 </div>
               </div>
-              <span class="gallery-caption">BHC·OUTBACK 통합 마케팅 대시보드 (AI 자동 생성)</span>
+              <span class="gallery-caption">광동상회 통합 대시보드 (실제 운영 화면 기반 재구성)</span>
             </div>
             <div class="gallery-item">
               <img src="assets/images/dashboard/kanban.png" alt="칸반 대시보드" loading="lazy" />
