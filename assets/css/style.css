@@ -448,6 +448,21 @@ h1, h2, h3, h4 { line-height: 1.25; letter-spacing: -0.02em; }
   content: '›'; position: absolute; left: 0;
   color: var(--accent); font-weight: 700;
 }
+.comp-stack {
+  display: flex; flex-wrap: wrap; gap: 6px;
+  margin-top: 16px; padding-top: 14px;
+  border-top: 1px dashed var(--border-light);
+}
+.comp-tag {
+  background: #eef1ff; color: var(--accent);
+  padding: 4px 10px; border-radius: 6px;
+  font-size: 0.74rem; font-weight: 600;
+  letter-spacing: -0.01em;
+  transition: var(--transition);
+}
+.comp-card:hover .comp-tag {
+  background: var(--accent); color: #fff;
+}
 
 /* ============================================================
    PROJECTS
