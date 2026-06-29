@@ -130,14 +130,45 @@ document.querySelectorAll('.timeline-item').forEach(item => {
    ============================================================ */
 const overlay = document.createElement('div');
 overlay.className = 'lightbox-overlay';
+overlay.setAttribute('role', 'dialog');
+overlay.setAttribute('aria-modal', 'true');
+overlay.setAttribute('aria-label', '확대 이미지 보기');
+
+const lbClose = document.createElement('button');
+lbClose.type = 'button';
+lbClose.className = 'lightbox-close';
+lbClose.setAttribute('aria-label', '닫기');
+lbClose.innerHTML = '&times;';
+
+const lbFigure = document.createElement('figure');
+lbFigure.className = 'lightbox-figure';
 const lbImg = document.createElement('img');
-overlay.appendChild(lbImg);
+const lbCaption = document.createElement('figcaption');
+lbCaption.className = 'lightbox-caption';
+lbFigure.appendChild(lbImg);
+lbFigure.appendChild(lbCaption);
+
+overlay.appendChild(lbClose);
+overlay.appendChild(lbFigure);
 document.body.appendChild(overlay);
 
+let lbLastFocus = null;
+
 function openLightbox(img) {
+  lbLastFocus = img;
   lbImg.src = img.src;
   lbImg.alt = img.alt;
+  const cap = img.closest('.gallery-item')?.querySelector('.gallery-caption');
+  const text = cap ? cap.textContent.trim() : (img.alt || '');
+  lbCaption.textContent = text;
+  lbCaption.style.display = text ? '' : 'none';
   overlay.classList.add('active');
+  lbClose.focus();
+}
+
+function closeLightbox() {
+  overlay.classList.remove('active');
+  if (lbLastFocus && typeof lbLastFocus.focus === 'function') lbLastFocus.focus();
 }
 
 document.querySelectorAll('.gallery-item img').forEach(img => {
@@ -153,9 +184,10 @@ document.querySelectorAll('.gallery-item img').forEach(img => {
   });
 });
 
-overlay.addEventListener('click', () => overlay.classList.remove('active'));
+lbClose.addEventListener('click', e => { e.stopPropagation(); closeLightbox(); });
+overlay.addEventListener('click', e => { if (e.target === overlay) closeLightbox(); });
 document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') overlay.classList.remove('active');
+  if (e.key === 'Escape' && overlay.classList.contains('active')) closeLightbox();
 });
 
 /* ============================================================
