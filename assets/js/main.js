@@ -581,3 +581,47 @@ window.addEventListener('beforeprint', preparePrint);
     window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
   });
 })();
+
+/* ============================================================
+   CONTACT — COPY TO CLIPBOARD
+   ============================================================ */
+(function () {
+  var btns = document.querySelectorAll('.cc-copy');
+  if (!btns.length) return;
+  function copy(text, cb) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(cb, function () { fallback(text, cb); });
+    } else {
+      fallback(text, cb);
+    }
+  }
+  function fallback(text, cb) {
+    try {
+      var ta = document.createElement('textarea');
+      ta.value = text;
+      ta.style.position = 'fixed';
+      ta.style.opacity = '0';
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      cb();
+    } catch (e) { /* no-op */ }
+  }
+  btns.forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var text = btn.getAttribute('data-copy') || '';
+      copy(text, function () {
+        var prev = btn.textContent;
+        btn.textContent = '복사됨 ✓';
+        btn.classList.add('copied');
+        setTimeout(function () {
+          btn.textContent = prev;
+          btn.classList.remove('copied');
+        }, 1600);
+      });
+    });
+  });
+})();
