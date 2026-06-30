@@ -407,321 +407,6 @@
         <div class="project-number">01</div>
         <div class="project-content">
           <div class="project-meta">
-            <span class="project-period">2023.09 ~ 2024.06 (10개월)</span>
-            <div class="project-roles">
-              <span class="role-tag">화면 설계</span>
-              <span class="role-tag">정책 설계</span>
-              <span class="role-tag">프로토콜 설계</span>
-              <span class="role-tag">ERD 설계</span>
-              <span class="role-tag">PM</span>
-              <span class="role-tag">QA</span>
-            </div>
-            <span class="project-team">👥 <strong>총 5인</strong> · 개발 3(FE 2·BE 1) · 기획 1(본인) · 디자이너 1</span>
-          </div>
-          <h3>2024 파리 올림픽 태권도 운영 서비스<br /><span>& KPNP 대회 운영 구독 서비스</span></h3>
-          <p class="project-req"><strong>요구사항</strong> 대회 운영 사업에 대한 분석 후, 솔루션이 필요합니다.</p>
-          <p class="project-overview">
-            전세계 태권도 대회를 반자동으로 운영할 수 있도록 하는 온라인 구독 서비스.
-            대회 개최, 참가자 모집/결제, 스케줄 생성, 대진 생성, 실시간 경기 순서 조작,
-            경기 결과 통합 문서화, 참가자 경기 정보 안내 등의 기능을 갖춤.
-          </p>
-          <!-- Architecture SVG -->
-          <div class="project-arch">
-            <h4>⚙️ 시스템 구성도</h4>
-            <svg class="arch-svg" viewBox="0 0 780 280" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <marker id="arrow1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-                  <path d="M0,0 L0,6 L8,3 z" fill="#5b7fff"/>
-                </marker>
-              </defs>
-              <!-- External Programs -->
-              <rect x="20" y="30" width="120" height="44" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="80" y="44" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="12" font-weight="600">세계태권도연맹</text>
-              <text x="80" y="61" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">규정 DB</text>
-
-              <rect x="20" y="94" width="120" height="44" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="80" y="108" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="12" font-weight="600">외부 연동 SW</text>
-              <text x="80" y="125" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">4개 프로그램</text>
-
-              <rect x="20" y="158" width="120" height="44" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="80" y="172" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="12" font-weight="600">PG / 결제</text>
-              <text x="80" y="189" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">참가비 처리</text>
-
-              <line x1="140" y1="52" x2="210" y2="100" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow1)"/>
-              <line x1="140" y1="116" x2="210" y2="116" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow1)"/>
-              <line x1="140" y1="180" x2="210" y2="132" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow1)"/>
-
-              <!-- OVR Core -->
-              <rect x="210" y="70" width="160" height="100" rx="12" fill="#0f1628" stroke="#7c5fff" stroke-width="2"/>
-              <text x="290" y="95" text-anchor="middle" dominant-baseline="middle" fill="#c0aaff" font-size="14" font-weight="700">OVR 플랫폼</text>
-              <text x="290" y="112" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">대회 개최 · 참가자 모집</text>
-              <text x="290" y="129" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">스케줄 · 대진 자동 생성</text>
-              <text x="290" y="146" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">실시간 경기 결과 통합</text>
-
-              <line x1="370" y1="100" x2="440" y2="75" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow1)"/>
-              <line x1="370" y1="120" x2="440" y2="150" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow1)"/>
-
-              <!-- Admin -->
-              <rect x="440" y="44" width="140" height="60" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="510" y="57" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="13" font-weight="600">대회 운영자</text>
-              <text x="510" y="74" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">어드민 대시보드</text>
-              <text x="510" y="91" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">스케줄 조작 · 결과 입력</text>
-
-              <!-- Participant -->
-              <rect x="440" y="124" width="140" height="60" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="510" y="137" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="13" font-weight="600">참가자</text>
-              <text x="510" y="154" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">모바일 / 웹 앱</text>
-              <text x="510" y="171" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">경기 정보 · 결과 확인</text>
-
-              <!-- Results -->
-              <line x1="580" y1="74" x2="650" y2="80" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow1)"/>
-              <rect x="650" y="54" width="120" height="76" rx="8" fill="#0f1628" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="710" y="67" text-anchor="middle" dominant-baseline="middle" fill="#5b7fff" font-size="12" font-weight="600">성과</text>
-              <text x="710" y="84" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">운영 시간 40% 단축</text>
-              <text x="710" y="101" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">수작업 80% 자동화</text>
-              <text x="710" y="118" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">연 100만 이용자</text>
-
-              <!-- Labels -->
-              <text x="80" y="235" text-anchor="middle" fill="#556688" font-size="12">외부 연동</text>
-              <text x="290" y="200" text-anchor="middle" fill="#556688" font-size="12">핵심 플랫폼</text>
-              <text x="510" y="210" text-anchor="middle" fill="#556688" font-size="12">사용자</text>
-            </svg>
-          </div>
-
-          <!-- Screenshot Gallery -->
-          <div class="project-gallery">
-            <div class="gallery-item">
-              <img src="assets/images/ovr/main.png" alt="OVR 메인화면" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">대회 메인 화면</span>
-            </div>
-            <div class="gallery-item">
-              <img src="assets/images/ovr/participants.png" alt="OVR 참가자 목록" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">참가자 목록 관리</span>
-            </div>
-            <div class="gallery-item">
-              <img src="assets/images/ovr/schedule.png" alt="OVR 경기 스케줄" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">경기 스케줄 조정</span>
-            </div>
-          </div>
-
-          <p class="gallery-label">개선 전 — 구버전 (수기 운영)</p>
-          <div class="project-gallery project-gallery--old">
-            <div class="gallery-item">
-              <img src="assets/images/ovr_old/old-main.png" alt="구버전 OVR 메인" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">구버전 메인 화면</span>
-            </div>
-            <div class="gallery-item">
-              <img src="assets/images/ovr_old/old-schedule.png" alt="구버전 스케줄 관리" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">구버전 스케줄 (수기)</span>
-            </div>
-            <div class="gallery-item">
-              <img src="assets/images/ovr_old/old-weighin.png" alt="구버전 계체 관리" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">구버전 계체 관리</span>
-            </div>
-          </div>
-
-          <div class="project-flow">
-            <h4>🧭 문제 해결 과정</h4>
-            <div class="flow-step flow-step--problem">
-              <span class="flow-tag">① 문제 인식·정의</span>
-              <p>170개국마다 태권도 대회 규정이 제각각이고 4개 외부 프로그램과 연동돼야 했습니다. 무엇보다 대회는 정해진 날짜에 반드시 열려야 해, 일정 지연이 곧 사업 실패로 직결되는 구조였습니다.</p>
-            </div>
-            <div class="flow-step flow-step--hypothesis">
-              <span class="flow-tag">② 가설·접근 (선택 근거)</span>
-              <p>매 대회를 커스텀 개발하면 170개국 확장이 불가능하다고 판단했습니다. 나라·종목마다 다른 대회 규정에도 호환되도록, <strong>확장성과 호환성을 우선해 데이터 분류 체계와 처리 흐름을 재구축</strong>하고 실시간성은 SSE 기반 연동 아키텍처로 해결하는 방향을 택했습니다.</p>
-            </div>
-            <div class="flow-step flow-step--execution">
-              <span class="flow-tag">③ 실행·검증</span>
-              <p>개발팀장이 두 차례 공백이 된 위기에 ERD·API·통신 프로토콜을 직접 재설계·점검해 무결성을 확보했습니다. 대진·결제(PayPal)·결과 통합 수작업 80%를 자동화로 치환하고, Figma·Notion 멀티트랙으로 기획–개발–QA 사이클을 6개월 1회전으로 압축해 검증했습니다.</p>
-            </div>
-            <div class="flow-step flow-step--result">
-              <span class="flow-tag">④ 데이터 기반 결과</span>
-              <p>운영 시간 40%↓·수작업 80% 자동화·운영비 70%↓·연 100만 명 이용, 일정 지연 0으로 런칭해 2024 파리올림픽 공식 운영 서비스로 채택됐습니다.</p>
-            </div>
-          </div>
-          <div class="project-results">
-            <div class="result-item">
-              <span class="result-num">40%</span>
-              <span class="result-label">운영 시간 단축</span>
-            </div>
-            <div class="result-item">
-              <span class="result-num">80%</span>
-              <span class="result-label">수작업 자동화</span>
-            </div>
-            <div class="result-item">
-              <span class="result-num">70%</span>
-              <span class="result-label">비용 절감</span>
-            </div>
-            <div class="result-item">
-              <span class="result-num">100만</span>
-              <span class="result-label">연 이용자 수</span>
-            </div>
-          </div>
-          <div class="project-ax">
-            <span class="ax-chip">AX 관점</span>
-            <p>대회마다 사람이 반복하던 대진·정산·문서화를, <strong>여러 규정 차이에도 호환되도록 확장성·호환성을 고려해 데이터 분류와 처리 흐름을 재구축</strong>한 자동화 구조로 전환했습니다.</p>
-          </div>
-          <div class="project-badge">
-            🏅 2024년 파리 올림픽 태권도 공식 운영 서비스 채택
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-block">
-        <div class="project-number">02</div>
-        <div class="project-content">
-          <div class="project-meta">
-            <span class="project-period">2025.08 ~ 2026.03 (8개월)</span>
-            <div class="project-roles">
-              <span class="role-tag">화면 설계</span>
-              <span class="role-tag">정책 설계</span>
-              <span class="role-tag">ERD·API 명세</span>
-              <span class="role-tag">정산 자동화</span>
-              <span class="role-tag">QA</span>
-              <span class="role-tag">운영</span>
-              <span class="role-tag">PM</span>
-            </div>
-            <span class="project-team">👥 <strong>총 5인</strong> · 개발 4 · 기획/설계·자동화 구현 1(본인 전담)</span>
-          </div>
-          <h3>BMW SCP, OAS, WPP<br /><span>시스템 고도화</span></h3>
-          <p class="project-req"><strong>요구사항</strong> BMW Korea 3종 D2C 서비스의 운영 고도화 및 정산 무결성 확보가 필요합니다.</p>
-          <p class="project-overview">
-            BMW Korea가 고객과 직접 계약하는 D2C 서비스 3종(SCP 차량 구독 · OAS 정비 예약 · WPP 차량 보험)의
-            통합 기획·운영·고도화. 월 거래액 약 20억 원, 월 15만 건 처리, 연 250억 규모의 플랫폼.
-            정산 로직 불일치·중복 결제 문제를 개선하여 정산 무결성 확보 및 오류율 50% 감소, 매출 40% 상승을 달성.
-          </p>
-
-          <!-- Architecture SVG -->
-          <div class="project-arch">
-            <h4>⚙️ 시스템 구성도</h4>
-            <svg class="arch-svg" viewBox="0 0 780 260" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-                  <path d="M0,0 L0,6 L8,3 z" fill="#5b7fff"/>
-                </marker>
-              </defs>
-              <!-- BMW Services -->
-              <rect x="20" y="40" width="140" height="48" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="90" y="55" text-anchor="middle" dominant-baseline="middle" fill="#5b7fff" font-size="13" font-weight="600">SCP</text>
-              <text x="90" y="72" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">차량 구독</text>
-
-              <rect x="20" y="108" width="140" height="48" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="90" y="123" text-anchor="middle" dominant-baseline="middle" fill="#5b7fff" font-size="13" font-weight="600">OAS</text>
-              <text x="90" y="140" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">정비 예약</text>
-
-              <rect x="20" y="176" width="140" height="48" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="90" y="191" text-anchor="middle" dominant-baseline="middle" fill="#5b7fff" font-size="13" font-weight="600">WPP</text>
-              <text x="90" y="208" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">차량 보험</text>
-
-              <!-- Arrows to Engine -->
-              <line x1="160" y1="64" x2="230" y2="110" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow2)"/>
-              <line x1="160" y1="132" x2="230" y2="132" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow2)"/>
-              <line x1="160" y1="200" x2="230" y2="155" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow2)"/>
-
-              <!-- Engine -->
-              <rect x="230" y="90" width="160" height="80" rx="10" fill="#0f1628" stroke="#7c5fff" stroke-width="2"/>
-              <text x="310" y="113" text-anchor="middle" dominant-baseline="middle" fill="#c0aaff" font-size="13" font-weight="700">정산 자동화 엔진</text>
-              <text x="310" y="130" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">VBA · Python</text>
-              <text x="310" y="147" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">정산 로직 재설계</text>
-
-              <!-- Arrow to Dashboard -->
-              <line x1="390" y1="130" x2="460" y2="130" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow2)"/>
-
-              <!-- BMW Admin -->
-              <rect x="460" y="90" width="160" height="80" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="540" y="113" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="13" font-weight="600">BMW 어드민</text>
-              <text x="540" y="130" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">운영·정산 대시보드</text>
-              <text x="540" y="147" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">실시간 이력 연동</text>
-
-              <!-- Arrow to KPIs -->
-              <line x1="620" y1="130" x2="660" y2="130" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow2)"/>
-
-              <!-- KPI Box -->
-              <rect x="660" y="80" width="110" height="88" rx="8" fill="#0f1628" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="715" y="98" text-anchor="middle" dominant-baseline="middle" fill="#5b7fff" font-size="12" font-weight="600">성과</text>
-              <text x="715" y="115" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">오류율 50% 감소</text>
-              <text x="715" y="132" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">매출 40% 상승</text>
-              <text x="715" y="149" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">정산 무결성 확보</text>
-
-              <!-- Labels -->
-              <text x="90" y="240" text-anchor="middle" fill="#556688" font-size="12">D2C 서비스</text>
-              <text x="310" y="200" text-anchor="middle" fill="#556688" font-size="12">처리 엔진</text>
-              <text x="540" y="200" text-anchor="middle" fill="#556688" font-size="12">대시보드</text>
-              <text x="715" y="190" text-anchor="middle" fill="#556688" font-size="12">성과</text>
-            </svg>
-          </div>
-
-          <!-- Screenshot Gallery -->
-          <div class="project-gallery">
-            <div class="gallery-item">
-              <img src="assets/images/bmw/scp.png" alt="SCP 어드민 화면" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">SCP 가입 관리</span>
-            </div>
-            <div class="gallery-item">
-              <img src="assets/images/bmw/oas.png" alt="OAS 어드민 화면" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">OAS 예약 현황</span>
-            </div>
-            <div class="gallery-item">
-              <img src="assets/images/bmw/wpp.png" alt="WPP 어드민 화면" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">WPP 운영 관리</span>
-            </div>
-          </div>
-
-          <div class="project-flow">
-            <h4>🧭 문제 해결 과정</h4>
-            <div class="flow-step flow-step--problem">
-              <span class="flow-tag">① 문제 인식·정의</span>
-              <p>SCP·OAS·WPP 3종이 서로 다른 시기에 구축돼 정산 로직 불일치·중복 결제·노쇼·수기 분석이 누적돼 있었습니다. 연 250억·월 15만 건 규모라 작은 오류 하나도 큰 손실과 CS(월 100여 건)로 이어졌습니다. 정산 에러를 전수 분석해 상위 3개 유형을 특정했습니다:</p>
-              <ul class="flow-sublist">
-                <li>구독 신청일에 차량이 입고된 케이스 (정책상 신청일 +1일부터 사용 가능)</li>
-                <li>사용한 패키지 상품과 일치하지 않는 할인율이 입력된 케이스</li>
-                <li>상품 적용이 불가능한 정비 항목에 상품이 적용된 케이스</li>
-              </ul>
-            </div>
-            <div class="flow-step flow-step--hypothesis">
-              <span class="flow-tag">② 가설·접근 (선택 근거)</span>
-              <p>모든 에러를 동시에 잡기보다 "빈도×영향도로 우선순위화하면 적은 수정으로 최대 효과를 낸다"고 가정해 위 상위 3개 로직부터 재설계했습니다. 중복 결제는 정상 흐름에선 2회 결제가 불가능한데, <strong>결제 완료 안내 페이지 로딩 중 뒤로가기 → 결제 버튼을 반복하면 중복 결제가 발생</strong>함을 재현으로 확인했습니다. 원인을 PG 콜백 중복으로 특정하고 멱등성 확보를 핵심 가설로 삼았습니다.</p>
-            </div>
-            <div class="flow-step flow-step--execution">
-              <span class="flow-tag">③ 실행·검증</span>
-              <p>상위 3개 정산 로직을 재설계하고, PG 중복 콜백 경로에 멱등키를 도입했습니다. 온라인 체크인·온라인 보험 가입 채널을 신규 기획하고 ISMS-P 보안 조치를 이행했습니다. 효과는 <strong>2달치 처리 건 약 30만 건(월 15만 × 2)을 표본으로 Before/After 비교</strong>해 검증했습니다.</p>
-            </div>
-            <div class="flow-step flow-step--result">
-              <span class="flow-tag">④ 데이터 기반 결과</span>
-              <p>정산 처리 시간 <strong>3시간 → 0시간</strong>·정산 에러 50%↓·CS <strong>월 100여 건 → 절반</strong>·중복 결제 100% 제거·노쇼 <strong>40% → 20%</strong>·신규 가입 40%↑·매출 40%↑을 달성했습니다.</p>
-            </div>
-          </div>
-          <div class="project-results">
-            <div class="result-item">
-              <span class="result-num">50%</span>
-              <span class="result-label">오류율 감소</span>
-            </div>
-            <div class="result-item">
-              <span class="result-num">40%</span>
-              <span class="result-label">매출 상승</span>
-            </div>
-            <div class="result-item">
-              <span class="result-num">250억</span>
-              <span class="result-label">연 거래 규모</span>
-            </div>
-            <div class="result-item">
-              <span class="result-num">15만</span>
-              <span class="result-label">월 처리 건수</span>
-            </div>
-          </div>
-          <div class="project-ax">
-            <span class="ax-chip">AX 관점</span>
-            <p>사람이 눈으로 맞추던 정산 검증을 <strong>멱등키 기반 자동 대조 로직</strong>으로 대체해, 연 250억 규모에서 중복 결제를 원천 차단하고 정산 무결성을 시스템이 보장하도록 만들었습니다.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="project-block">
-        <div class="project-number">03</div>
-        <div class="project-content">
-          <div class="project-meta">
             <span class="project-period">2025.07 ~ 현재</span>
             <div class="project-roles">
               <span class="role-tag">자동화 기획</span>
@@ -1032,9 +717,159 @@
         </div>
       </div>
 
-      <!-- Project 4 -->
+      <!-- Project 2 -->
       <div class="project-block">
-        <div class="project-number">04</div>
+        <div class="project-number">02</div>
+        <div class="project-content">
+          <div class="project-meta">
+            <span class="project-period">2025.08 ~ 2026.03 (8개월)</span>
+            <div class="project-roles">
+              <span class="role-tag">화면 설계</span>
+              <span class="role-tag">정책 설계</span>
+              <span class="role-tag">ERD·API 명세</span>
+              <span class="role-tag">정산 자동화</span>
+              <span class="role-tag">QA</span>
+              <span class="role-tag">운영</span>
+              <span class="role-tag">PM</span>
+            </div>
+            <span class="project-team">👥 <strong>총 5인</strong> · 개발 4 · 기획/설계·자동화 구현 1(본인 전담)</span>
+          </div>
+          <h3>BMW SCP, OAS, WPP<br /><span>시스템 고도화</span></h3>
+          <p class="project-req"><strong>요구사항</strong> BMW Korea 3종 D2C 서비스의 운영 고도화 및 정산 무결성 확보가 필요합니다.</p>
+          <p class="project-overview">
+            BMW Korea가 고객과 직접 계약하는 D2C 서비스 3종(SCP 차량 구독 · OAS 정비 예약 · WPP 차량 보험)의
+            통합 기획·운영·고도화. 월 거래액 약 20억 원, 월 15만 건 처리, 연 250억 규모의 플랫폼.
+            정산 로직 불일치·중복 결제 문제를 개선하여 정산 무결성 확보 및 오류율 50% 감소, 매출 40% 상승을 달성.
+          </p>
+
+          <!-- Architecture SVG -->
+          <div class="project-arch">
+            <h4>⚙️ 시스템 구성도</h4>
+            <svg class="arch-svg" viewBox="0 0 780 260" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                  <path d="M0,0 L0,6 L8,3 z" fill="#5b7fff"/>
+                </marker>
+              </defs>
+              <!-- BMW Services -->
+              <rect x="20" y="40" width="140" height="48" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
+              <text x="90" y="55" text-anchor="middle" dominant-baseline="middle" fill="#5b7fff" font-size="13" font-weight="600">SCP</text>
+              <text x="90" y="72" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">차량 구독</text>
+
+              <rect x="20" y="108" width="140" height="48" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
+              <text x="90" y="123" text-anchor="middle" dominant-baseline="middle" fill="#5b7fff" font-size="13" font-weight="600">OAS</text>
+              <text x="90" y="140" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">정비 예약</text>
+
+              <rect x="20" y="176" width="140" height="48" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
+              <text x="90" y="191" text-anchor="middle" dominant-baseline="middle" fill="#5b7fff" font-size="13" font-weight="600">WPP</text>
+              <text x="90" y="208" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">차량 보험</text>
+
+              <!-- Arrows to Engine -->
+              <line x1="160" y1="64" x2="230" y2="110" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow2)"/>
+              <line x1="160" y1="132" x2="230" y2="132" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow2)"/>
+              <line x1="160" y1="200" x2="230" y2="155" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow2)"/>
+
+              <!-- Engine -->
+              <rect x="230" y="90" width="160" height="80" rx="10" fill="#0f1628" stroke="#7c5fff" stroke-width="2"/>
+              <text x="310" y="113" text-anchor="middle" dominant-baseline="middle" fill="#c0aaff" font-size="13" font-weight="700">정산 자동화 엔진</text>
+              <text x="310" y="130" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">VBA · Python</text>
+              <text x="310" y="147" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">정산 로직 재설계</text>
+
+              <!-- Arrow to Dashboard -->
+              <line x1="390" y1="130" x2="460" y2="130" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow2)"/>
+
+              <!-- BMW Admin -->
+              <rect x="460" y="90" width="160" height="80" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
+              <text x="540" y="113" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="13" font-weight="600">BMW 어드민</text>
+              <text x="540" y="130" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">운영·정산 대시보드</text>
+              <text x="540" y="147" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">실시간 이력 연동</text>
+
+              <!-- Arrow to KPIs -->
+              <line x1="620" y1="130" x2="660" y2="130" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow2)"/>
+
+              <!-- KPI Box -->
+              <rect x="660" y="80" width="110" height="88" rx="8" fill="#0f1628" stroke="#5b7fff" stroke-width="1.5"/>
+              <text x="715" y="98" text-anchor="middle" dominant-baseline="middle" fill="#5b7fff" font-size="12" font-weight="600">성과</text>
+              <text x="715" y="115" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">오류율 50% 감소</text>
+              <text x="715" y="132" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">매출 40% 상승</text>
+              <text x="715" y="149" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">정산 무결성 확보</text>
+
+              <!-- Labels -->
+              <text x="90" y="240" text-anchor="middle" fill="#556688" font-size="12">D2C 서비스</text>
+              <text x="310" y="200" text-anchor="middle" fill="#556688" font-size="12">처리 엔진</text>
+              <text x="540" y="200" text-anchor="middle" fill="#556688" font-size="12">대시보드</text>
+              <text x="715" y="190" text-anchor="middle" fill="#556688" font-size="12">성과</text>
+            </svg>
+          </div>
+
+          <!-- Screenshot Gallery -->
+          <div class="project-gallery">
+            <div class="gallery-item">
+              <img src="assets/images/bmw/scp.png" alt="SCP 어드민 화면" width="400" height="180" loading="lazy" />
+              <span class="gallery-caption">SCP 가입 관리</span>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/images/bmw/oas.png" alt="OAS 어드민 화면" width="400" height="180" loading="lazy" />
+              <span class="gallery-caption">OAS 예약 현황</span>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/images/bmw/wpp.png" alt="WPP 어드민 화면" width="400" height="180" loading="lazy" />
+              <span class="gallery-caption">WPP 운영 관리</span>
+            </div>
+          </div>
+
+          <div class="project-flow">
+            <h4>🧭 문제 해결 과정</h4>
+            <div class="flow-step flow-step--problem">
+              <span class="flow-tag">① 문제 인식·정의</span>
+              <p>SCP·OAS·WPP 3종이 서로 다른 시기에 구축돼 정산 로직 불일치·중복 결제·노쇼·수기 분석이 누적돼 있었습니다. 연 250억·월 15만 건 규모라 작은 오류 하나도 큰 손실과 CS(월 100여 건)로 이어졌습니다. 정산 에러를 전수 분석해 상위 3개 유형을 특정했습니다:</p>
+              <ul class="flow-sublist">
+                <li>구독 신청일에 차량이 입고된 케이스 (정책상 신청일 +1일부터 사용 가능)</li>
+                <li>사용한 패키지 상품과 일치하지 않는 할인율이 입력된 케이스</li>
+                <li>상품 적용이 불가능한 정비 항목에 상품이 적용된 케이스</li>
+              </ul>
+            </div>
+            <div class="flow-step flow-step--hypothesis">
+              <span class="flow-tag">② 가설·접근 (선택 근거)</span>
+              <p>모든 에러를 동시에 잡기보다 "빈도×영향도로 우선순위화하면 적은 수정으로 최대 효과를 낸다"고 가정해 위 상위 3개 로직부터 재설계했습니다. 중복 결제는 정상 흐름에선 2회 결제가 불가능한데, <strong>결제 완료 안내 페이지 로딩 중 뒤로가기 → 결제 버튼을 반복하면 중복 결제가 발생</strong>함을 재현으로 확인했습니다. 원인을 PG 콜백 중복으로 특정하고 멱등성 확보를 핵심 가설로 삼았습니다.</p>
+            </div>
+            <div class="flow-step flow-step--execution">
+              <span class="flow-tag">③ 실행·검증</span>
+              <p>상위 3개 정산 로직을 재설계하고, PG 중복 콜백 경로에 멱등키를 도입했습니다. 온라인 체크인·온라인 보험 가입 채널을 신규 기획하고 ISMS-P 보안 조치를 이행했습니다. 효과는 <strong>2달치 처리 건 약 30만 건(월 15만 × 2)을 표본으로 Before/After 비교</strong>해 검증했습니다.</p>
+            </div>
+            <div class="flow-step flow-step--result">
+              <span class="flow-tag">④ 데이터 기반 결과</span>
+              <p>정산 처리 시간 <strong>3시간 → 0시간</strong>·정산 에러 50%↓·CS <strong>월 100여 건 → 절반</strong>·중복 결제 100% 제거·노쇼 <strong>40% → 20%</strong>·신규 가입 40%↑·매출 40%↑을 달성했습니다.</p>
+            </div>
+          </div>
+          <div class="project-results">
+            <div class="result-item">
+              <span class="result-num">50%</span>
+              <span class="result-label">오류율 감소</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">40%</span>
+              <span class="result-label">매출 상승</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">250억</span>
+              <span class="result-label">연 거래 규모</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">15만</span>
+              <span class="result-label">월 처리 건수</span>
+            </div>
+          </div>
+          <div class="project-ax">
+            <span class="ax-chip">AX 관점</span>
+            <p>사람이 눈으로 맞추던 정산 검증을 <strong>멱등키 기반 자동 대조 로직</strong>으로 대체해, 연 250억 규모에서 중복 결제를 원천 차단하고 정산 무결성을 시스템이 보장하도록 만들었습니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-block">
+        <div class="project-number">03</div>
         <div class="project-content">
           <div class="project-meta">
             <span class="project-period">2024.06 ~ 2024.08 (3개월)</span>
@@ -1161,6 +996,171 @@
           </div>
         </div>
       </div>
+      <!-- Project 4 -->
+      <div class="project-block">
+        <div class="project-number">04</div>
+        <div class="project-content">
+          <div class="project-meta">
+            <span class="project-period">2023.09 ~ 2024.06 (10개월)</span>
+            <div class="project-roles">
+              <span class="role-tag">화면 설계</span>
+              <span class="role-tag">정책 설계</span>
+              <span class="role-tag">프로토콜 설계</span>
+              <span class="role-tag">ERD 설계</span>
+              <span class="role-tag">PM</span>
+              <span class="role-tag">QA</span>
+            </div>
+            <span class="project-team">👥 <strong>총 5인</strong> · 개발 3(FE 2·BE 1) · 기획 1(본인) · 디자이너 1</span>
+          </div>
+          <h3>2024 파리 올림픽 태권도 운영 서비스<br /><span>& KPNP 대회 운영 구독 서비스</span></h3>
+          <p class="project-req"><strong>요구사항</strong> 대회 운영 사업에 대한 분석 후, 솔루션이 필요합니다.</p>
+          <p class="project-overview">
+            전세계 태권도 대회를 반자동으로 운영할 수 있도록 하는 온라인 구독 서비스.
+            대회 개최, 참가자 모집/결제, 스케줄 생성, 대진 생성, 실시간 경기 순서 조작,
+            경기 결과 통합 문서화, 참가자 경기 정보 안내 등의 기능을 갖춤.
+          </p>
+          <!-- Architecture SVG -->
+          <div class="project-arch">
+            <h4>⚙️ 시스템 구성도</h4>
+            <svg class="arch-svg" viewBox="0 0 780 280" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <marker id="arrow1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+                  <path d="M0,0 L0,6 L8,3 z" fill="#5b7fff"/>
+                </marker>
+              </defs>
+              <!-- External Programs -->
+              <rect x="20" y="30" width="120" height="44" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
+              <text x="80" y="44" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="12" font-weight="600">세계태권도연맹</text>
+              <text x="80" y="61" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">규정 DB</text>
+
+              <rect x="20" y="94" width="120" height="44" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
+              <text x="80" y="108" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="12" font-weight="600">외부 연동 SW</text>
+              <text x="80" y="125" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">4개 프로그램</text>
+
+              <rect x="20" y="158" width="120" height="44" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
+              <text x="80" y="172" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="12" font-weight="600">PG / 결제</text>
+              <text x="80" y="189" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">참가비 처리</text>
+
+              <line x1="140" y1="52" x2="210" y2="100" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow1)"/>
+              <line x1="140" y1="116" x2="210" y2="116" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow1)"/>
+              <line x1="140" y1="180" x2="210" y2="132" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow1)"/>
+
+              <!-- OVR Core -->
+              <rect x="210" y="70" width="160" height="100" rx="12" fill="#0f1628" stroke="#7c5fff" stroke-width="2"/>
+              <text x="290" y="95" text-anchor="middle" dominant-baseline="middle" fill="#c0aaff" font-size="14" font-weight="700">OVR 플랫폼</text>
+              <text x="290" y="112" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">대회 개최 · 참가자 모집</text>
+              <text x="290" y="129" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">스케줄 · 대진 자동 생성</text>
+              <text x="290" y="146" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">실시간 경기 결과 통합</text>
+
+              <line x1="370" y1="100" x2="440" y2="75" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow1)"/>
+              <line x1="370" y1="120" x2="440" y2="150" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow1)"/>
+
+              <!-- Admin -->
+              <rect x="440" y="44" width="140" height="60" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
+              <text x="510" y="57" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="13" font-weight="600">대회 운영자</text>
+              <text x="510" y="74" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">어드민 대시보드</text>
+              <text x="510" y="91" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">스케줄 조작 · 결과 입력</text>
+
+              <!-- Participant -->
+              <rect x="440" y="124" width="140" height="60" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
+              <text x="510" y="137" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="13" font-weight="600">참가자</text>
+              <text x="510" y="154" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">모바일 / 웹 앱</text>
+              <text x="510" y="171" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">경기 정보 · 결과 확인</text>
+
+              <!-- Results -->
+              <line x1="580" y1="74" x2="650" y2="80" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow1)"/>
+              <rect x="650" y="54" width="120" height="76" rx="8" fill="#0f1628" stroke="#5b7fff" stroke-width="1.5"/>
+              <text x="710" y="67" text-anchor="middle" dominant-baseline="middle" fill="#5b7fff" font-size="12" font-weight="600">성과</text>
+              <text x="710" y="84" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">운영 시간 40% 단축</text>
+              <text x="710" y="101" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">수작업 80% 자동화</text>
+              <text x="710" y="118" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">연 100만 이용자</text>
+
+              <!-- Labels -->
+              <text x="80" y="235" text-anchor="middle" fill="#556688" font-size="12">외부 연동</text>
+              <text x="290" y="200" text-anchor="middle" fill="#556688" font-size="12">핵심 플랫폼</text>
+              <text x="510" y="210" text-anchor="middle" fill="#556688" font-size="12">사용자</text>
+            </svg>
+          </div>
+
+          <!-- Screenshot Gallery -->
+          <div class="project-gallery">
+            <div class="gallery-item">
+              <img src="assets/images/ovr/main.png" alt="OVR 메인화면" width="400" height="180" loading="lazy" />
+              <span class="gallery-caption">대회 메인 화면</span>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/images/ovr/participants.png" alt="OVR 참가자 목록" width="400" height="180" loading="lazy" />
+              <span class="gallery-caption">참가자 목록 관리</span>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/images/ovr/schedule.png" alt="OVR 경기 스케줄" width="400" height="180" loading="lazy" />
+              <span class="gallery-caption">경기 스케줄 조정</span>
+            </div>
+          </div>
+
+          <p class="gallery-label">개선 전 — 구버전 (수기 운영)</p>
+          <div class="project-gallery project-gallery--old">
+            <div class="gallery-item">
+              <img src="assets/images/ovr_old/old-main.png" alt="구버전 OVR 메인" width="400" height="180" loading="lazy" />
+              <span class="gallery-caption">구버전 메인 화면</span>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/images/ovr_old/old-schedule.png" alt="구버전 스케줄 관리" width="400" height="180" loading="lazy" />
+              <span class="gallery-caption">구버전 스케줄 (수기)</span>
+            </div>
+            <div class="gallery-item">
+              <img src="assets/images/ovr_old/old-weighin.png" alt="구버전 계체 관리" width="400" height="180" loading="lazy" />
+              <span class="gallery-caption">구버전 계체 관리</span>
+            </div>
+          </div>
+
+          <div class="project-flow">
+            <h4>🧭 문제 해결 과정</h4>
+            <div class="flow-step flow-step--problem">
+              <span class="flow-tag">① 문제 인식·정의</span>
+              <p>170개국마다 태권도 대회 규정이 제각각이고 4개 외부 프로그램과 연동돼야 했습니다. 무엇보다 대회는 정해진 날짜에 반드시 열려야 해, 일정 지연이 곧 사업 실패로 직결되는 구조였습니다.</p>
+            </div>
+            <div class="flow-step flow-step--hypothesis">
+              <span class="flow-tag">② 가설·접근 (선택 근거)</span>
+              <p>매 대회를 커스텀 개발하면 170개국 확장이 불가능하다고 판단했습니다. 나라·종목마다 다른 대회 규정에도 호환되도록, <strong>확장성과 호환성을 우선해 데이터 분류 체계와 처리 흐름을 재구축</strong>하고 실시간성은 SSE 기반 연동 아키텍처로 해결하는 방향을 택했습니다.</p>
+            </div>
+            <div class="flow-step flow-step--execution">
+              <span class="flow-tag">③ 실행·검증</span>
+              <p>개발팀장이 두 차례 공백이 된 위기에 ERD·API·통신 프로토콜을 직접 재설계·점검해 무결성을 확보했습니다. 대진·결제(PayPal)·결과 통합 수작업 80%를 자동화로 치환하고, Figma·Notion 멀티트랙으로 기획–개발–QA 사이클을 6개월 1회전으로 압축해 검증했습니다.</p>
+            </div>
+            <div class="flow-step flow-step--result">
+              <span class="flow-tag">④ 데이터 기반 결과</span>
+              <p>운영 시간 40%↓·수작업 80% 자동화·운영비 70%↓·연 100만 명 이용, 일정 지연 0으로 런칭해 2024 파리올림픽 공식 운영 서비스로 채택됐습니다.</p>
+            </div>
+          </div>
+          <div class="project-results">
+            <div class="result-item">
+              <span class="result-num">40%</span>
+              <span class="result-label">운영 시간 단축</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">80%</span>
+              <span class="result-label">수작업 자동화</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">70%</span>
+              <span class="result-label">비용 절감</span>
+            </div>
+            <div class="result-item">
+              <span class="result-num">100만</span>
+              <span class="result-label">연 이용자 수</span>
+            </div>
+          </div>
+          <div class="project-ax">
+            <span class="ax-chip">AX 관점</span>
+            <p>대회마다 사람이 반복하던 대진·정산·문서화를, <strong>여러 규정 차이에도 호환되도록 확장성·호환성을 고려해 데이터 분류와 처리 흐름을 재구축</strong>한 자동화 구조로 전환했습니다.</p>
+          </div>
+          <div class="project-badge">
+            🏅 2024년 파리 올림픽 태권도 공식 운영 서비스 채택
+          </div>
+        </div>
+      </div>
+
 
     </div>
   </section>
@@ -1176,8 +1176,8 @@
         <div class="edu-card">
           <div class="edu-school">한국외국어대학교</div>
           <div class="edu-degree">언어인지과학 / 언론정보학 학사</div>
-          <div class="edu-period">2013.02 – 2026.08</div>
-          <p class="edu-note">졸업 요건을 모두 갖춘 상태에서 정책적 이득(청년 지원, 창업 패키지 등) 유지를 위해 졸업을 유예했으며, 현재는 졸업을 완료했습니다.</p>
+          <div class="edu-period">2013.02 – 2026.02 (졸업)</div>
+          <p class="edu-note">졸업 요건을 모두 갖춘 상태에서 정책적 이득(청년 지원, 창업 패키지 등) 유지를 위해 졸업을 유예했으며, 2026년 2월 졸업했습니다.</p>
         </div>
         <div class="awards-wrap">
           <h3>수상 및 특허</h3>
