@@ -1,0 +1,8 @@
+# Cloudflare Workers 로컬 캐시
+.wrangler/
+
+# humanize-korean 스킬 작업 디렉터리
+_workspace/
+
+# Claude Code 로컬 상태
+.claude/scheduled_tasks.lock

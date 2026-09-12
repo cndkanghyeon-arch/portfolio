@@ -6,6 +6,12 @@
       "runtimeExecutable": "npx",
       "runtimeArgs": ["serve", "-p", "3456", "."],
       "port": 3456
+    },
+    {
+      "name": "client-memo",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["wrangler", "dev", "-c", "../client-memo/wrangler.toml", "--port", "8787", "--ip", "127.0.0.1"],
+      "port": 8787
     }
   ]
 }
