@@ -112,7 +112,7 @@ button { font: inherit; letter-spacing: inherit; }
 .profile dd { color: var(--text); font-weight: 600; }
 .profile dd a:hover { color: var(--red); }
 @media (max-width: 1023px) { .hero-grid { grid-template-columns: 1fr; gap: 40px; } .profile { max-width: 480px; } }
-@media (max-width: 767px) { .hero { padding: 56px 0 56px; } .hero-lead { font-size: 16px; } .btn { height: 48px; padding: 0 22px; font-size: 15px; } }
+@media (max-width: 767px) { .br-pc { display: none; } .hero { padding: 56px 0 56px; } .hero-lead { font-size: 16px; } .btn { height: 48px; padding: 0 22px; font-size: 15px; } }
 
 /* 핵심 수치 */
 .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-bottom: 1px solid var(--line); }
