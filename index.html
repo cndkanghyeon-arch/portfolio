@@ -3,1281 +3,636 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>김강현 포트폴리오 | AX 전문 IT 기획자·PM</title>
-  <meta name="description" content="자동화·AI로 일하는 방식을 바꾸는 AX 전문 IT 기획자·PM 김강현의 포트폴리오입니다." />
+  <title>김강현 | AX 전문 IT 기획자 / PM</title>
+  <meta name="description" content="업무를 측정해 과제를 고르고, 작게 검증한 뒤 직접 개발하고 배포해 확산하는 AX 전문 IT 기획자 김강현의 포트폴리오입니다." />
   <meta name="author" content="김강현" />
-  <meta name="keywords" content="AX, IT 기획자, PM, 서비스 기획, 업무 자동화, AI 도입, Claude API, 데이터 분석, BMW, 파리올림픽, 김강현" />
-  <meta name="theme-color" content="#0d0f14" />
+  <meta name="theme-color" content="#faf8f3" />
   <link rel="canonical" href="https://cndkanghyeon-arch.github.io/portfolio/" />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="김강현 포트폴리오 | AX 전문 IT 기획자·PM" />
-  <meta property="og:description" content="연 250억 거래 규모 BMW KR 서비스부터 연 100만 명이 사용하는 세계 태권도 운영 플랫폼까지, 자동화·AI 도입으로 약 30개 프로젝트에서 AX 혁신을 이끈 7년차 AX 전문 IT 기획자·PM." />
-  <meta property="og:image" content="assets/images/profile.png" />
+  <meta property="og:title" content="김강현 | AX 전문 IT 기획자 / PM" />
+  <meta property="og:description" content="반복 업무 연 3,500시간을 0시간으로 바꾸고, 170개국이 쓰는 파리올림픽 운영 SaaS를 총괄한 AX 전문 IT 기획자의 포트폴리오." />
+  <meta property="og:image" content="https://cndkanghyeon-arch.github.io/portfolio/assets/images/profile.png" />
   <meta property="og:locale" content="ko_KR" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="김강현 포트폴리오 | AX 전문 IT 기획자·PM" />
-  <meta name="twitter:description" content="연 250억 거래 규모 BMW KR 서비스부터 세계 태권도 운영 플랫폼까지, 자동화·AI로 약 30개 프로젝트에서 AX 혁신을 이끈 7년차 AX 전문 IT 기획자·PM." />
-  <meta name="twitter:image" content="assets/images/profile.png" />
-
-  <!-- Favicon (inline SVG) -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d0f14'/%3E%3Ctext x='16' y='22' font-family='Inter,sans-serif' font-size='18' font-weight='800' fill='%235b7fff' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E" />
-
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231b1a17'/%3E%3Ctext x='16' y='22' font-family='serif' font-size='17' font-weight='700' fill='%23e0896a' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/v2/style.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">본문으로 건너뛰기</a>
 
-  <!-- SKIP LINK (a11y) -->
-  <a href="#hero" class="skip-link">본문으로 건너뛰기</a>
-
-  <!-- SCROLL PROGRESS -->
-  <div id="scroll-progress" role="progressbar" aria-label="페이지 스크롤 진행률" aria-hidden="true"></div>
-
-  <!-- NAV -->
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a class="nav-logo" href="#hero">김강현</a>
-      <ul class="nav-links" id="primary-nav">
-        <li><a href="#about">소개</a></li>
-        <li><a href="#career">이력</a></li>
-        <li><a href="#competencies">역량</a></li>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">김강현<small>AX 전문 IT 기획자 / PM</small></a>
+      <button class="nav-toggle" type="button" aria-controls="nav-links" aria-expanded="false" aria-label="메뉴 열기">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#method">일하는 방식</a></li>
         <li><a href="#projects">프로젝트</a></li>
-        <li><a href="#education">학력</a></li>
-        <li><a href="#contact" class="nav-cta">연락하기</a></li>
+        <li><a href="#toolkit">AX 툴킷</a></li>
+        <li><a href="#career">경력</a></li>
+        <li><a href="#contact">연락처</a></li>
+        <li><a class="nav-cta" href="포트폴리오_김강현_한장.pdf" download>1장 PDF</a></li>
       </ul>
-      <button class="nav-hamburger" aria-label="메뉴 열기" aria-expanded="false" aria-controls="primary-nav">
-        <span></span><span></span><span></span>
-      </button>
     </div>
-  </nav>
+  </header>
 
-  <!-- HERO -->
-  <section id="hero" tabindex="-1">
-    <div class="hero-bg"></div>
-    <div class="hero-inner">
-      <div class="hero-text">
-        <p class="hero-eyebrow">AX 전문 IT 기획자 / PM · 7년+</p>
-        <h1 class="hero-title">
-          저는 AI로<br />
-          <span class="accent">일하는 방식을 바꾸는</span><br />
-          AX 전문 IT 기획자입니다
-        </h1>
-        <p class="hero-sub">
-          연 250억 거래 BMW 서비스부터 파리올림픽 글로벌 SaaS까지 —<br />
-          자동화·AI 도입으로 약 30개 프로젝트에서 AX 혁신을 이끌며
-          연 3,000시간 절약·업무 처리량 150%↑를 달성했습니다.
-        </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">프로젝트 보기</a>
-          <a href="#contact" class="btn btn-ghost">연락하기</a>
-          <a href="포트폴리오_김강현.pdf" class="btn btn-ghost" download>📄 PDF 다운로드</a>
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div>
+            <p class="eyebrow">AX 전문 IT 기획자 / PM, 7년</p>
+            <h1>사람이 반복하던 일을<br /><em>시스템이 하게</em> 만듭니다</h1>
+            <p class="hero-lead">업무를 숫자로 측정해 과제를 고르고, 한 업무에서 먼저 효과를 검증한 뒤 직접 개발하고 배포해 조직 전체로 넓혀 왔습니다. 자동차, 외식, 커머스, IT 유통, 스포츠, 제약 서비스에서 AX를 실행했습니다.</p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#projects">프로젝트 보기</a>
+              <a class="btn btn-ghost" href="포트폴리오_김강현_한장.pdf" download>1장 PDF 받기</a>
+            </div>
+          </div>
+          <aside class="hero-card" aria-label="프로필 요약">
+            <img src="assets/v2/img/profile.webp" alt="김강현 프로필 사진" width="72" height="88" />
+            <div class="name">김강현</div>
+            <div class="role">AX 전문 IT 기획자 / PM</div>
+            <dl>
+              <div><dt>Email</dt><dd><a href="mailto:saian64@naver.com">saian64@naver.com</a></dd></div>
+              <div><dt>Phone</dt><dd><a href="tel:010-9954-8720">010-9954-8720</a></dd></div>
+            </dl>
+          </aside>
         </div>
       </div>
-      <div class="hero-photo-wrap">
-        <div class="hero-photo">
-          <img src="assets/images/profile.png" alt="김강현 프로필 사진" />
+    </section>
+
+    <!-- METRICS -->
+    <section class="wrap" aria-label="핵심 성과">
+      <div class="metrics">
+        <div class="metric">
+          <div class="metric-num">3,500h<span> → 0</span></div>
+          <div class="metric-label">반복 업무 제거</div>
+          <div class="metric-src">씨앤디팩토리 운영 자동화 연간 합산, 자동화 이후 관련 CS 1년간 0건</div>
+        </div>
+        <div class="metric">
+          <div class="metric-num">0<span>건</span></div>
+          <div class="metric-label">보안 취약점</div>
+          <div class="metric-src">BMW ISMS 심사, 모의해킹, VM0 Pentest 종결 / SPC ISMS 인증 획득</div>
+        </div>
+        <div class="metric">
+          <div class="metric-num">170<span>개국</span></div>
+          <div class="metric-label">글로벌 SaaS 총괄</div>
+          <div class="metric-src">2024 파리올림픽 태권도 공식 운영 서비스 채택, 연 100만 명 사용</div>
+        </div>
+        <div class="metric">
+          <div class="metric-num">80<span>%</span></div>
+          <div class="metric-label">개발 지연과 누락 감소</div>
+          <div class="metric-src">개발 현황 대시보드 전사 도입, Task 처리량 150% 증가</div>
         </div>
       </div>
-    </div>
-    <div class="hero-stats">
-      <div class="stat-item">
-        <div class="stat-num-wrap">
-          <span class="stat-num" data-target="30">0</span><span class="stat-unit">+</span>
-        </div>
-        <span class="stat-label">완수 프로젝트</span>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num-wrap">
-          <span class="stat-num" data-target="7">0</span><span class="stat-unit">년+</span>
-        </div>
-        <span class="stat-label">기획 경력</span>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num-wrap">
-          <span class="stat-num" data-target="100">0</span><span class="stat-unit">만+</span>
-        </div>
-        <span class="stat-label">연 서비스 이용자</span>
-      </div>
-      <div class="stat-item">
-        <div class="stat-num-wrap">
-          <span class="stat-num" data-target="700">0</span><span class="stat-unit">억</span>
-        </div>
-        <span class="stat-label">운영 거래 규모</span>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">About</span>
-        <h2>AI로 일하는 방식을 바꾸는 <br /><span class="accent">AX 전문 IT 기획자</span></h2>
-      </div>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>
-            저는 반복 업무를 <strong>자동화·AI로 전환(AX)</strong>해 조직이 일하는 방식 자체를
-            바꾸는 IT 기획자/PM입니다. Python·VBA·Selenium 자동화 파이프라인부터 Claude API 기반
-            분석 대시보드, AI 영상 관제·판독까지 — 거의 모든 프로젝트에서 AX 혁신을 직접 설계하고 구현했습니다.
-          </p>
-          <p>
-            기획·설계·개발·QA·운영까지 <strong>End-to-End</strong>로 직접 손을 대기에,
-            AI를 "도입"에 그치지 않고 실제 업무에 녹여 성과 수치로 증명합니다. 개발 팀장 공백,
-            글로벌 규정 충돌, 시스템 결함 등 위기 상황에서도 끝까지 해결해 프로젝트를 완수해왔습니다.
-          </p>
-          <div class="about-tags">
-            <span class="tag tag--ax">AX 전략</span>
-            <span class="tag tag--ax">업무 자동화</span>
-            <span class="tag tag--ax">Claude API</span>
-            <span class="tag tag--ax">AI 영상 분석</span>
-            <span class="tag">서비스 기획 / PM</span>
-            <span class="tag">VBA · Python</span>
-            <span class="tag">ERD 설계</span>
-            <span class="tag">데이터 분석</span>
-            <span class="tag">Figma · Jira</span>
+    <!-- METHOD -->
+    <section class="section" id="method">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">How I work</div>
+          <div>
+            <h2>AX는 작은 업무 하나를 측정하는 데서 시작합니다</h2>
+            <p>한 번에 모든 업무를 바꾸면 효과를 증명하기도, 문제가 생겼을 때 원인을 찾기도 어렵습니다. 그래서 네 단계를 지킵니다.</p>
           </div>
         </div>
-        <div class="about-highlights">
-          <div class="highlight-card">
-            <div class="hc-icon">🏆</div>
-            <div class="hc-text">
-              <strong>2024 파리 올림픽</strong>
-              <span>태권도 공식 운영 서비스 채택</span>
-            </div>
-          </div>
-          <div class="highlight-card">
-            <div class="hc-icon">⚡</div>
-            <div class="hc-text">
-              <strong>연 3,000시간</strong>
-              <span>업무 자동화로 절약</span>
-            </div>
-          </div>
-          <div class="highlight-card">
-            <div class="hc-icon">📈</div>
-            <div class="hc-text">
-              <strong>매출 40% 상승</strong>
-              <span>BMW 서비스 고도화 결과</span>
-            </div>
-          </div>
-          <div class="highlight-card">
-            <div class="hc-icon">🌏</div>
-            <div class="hc-text">
-              <strong>글로벌 서비스</strong>
-              <span>세계 태권도연맹 · 대한유도회 공식 채택</span>
-            </div>
-          </div>
+        <div class="method">
+          <article class="method-step">
+            <div class="no">01</div>
+            <h3>측정</h3>
+            <p>업무별 소요 시간을 재고, 빈도와 영향도로 첫 과제를 고릅니다.</p>
+            <div class="ex">BMW 가입 승인 하루 200건, 매일 2시간 / 정비 증적 에러 대응 주 4시간</div>
+          </article>
+          <article class="method-step">
+            <div class="no">02</div>
+            <h3>작게 검증</h3>
+            <p>한 업무만 먼저 자동화해 효과가 숫자로 확인되는지 봅니다.</p>
+            <div class="ex">가입 승인을 Python, Selenium으로 100% 자동 처리해 하루 2시간이 0이 되는 것을 확인</div>
+          </article>
+          <article class="method-step">
+            <div class="no">03</div>
+            <h3>확산</h3>
+            <p>검증한 방식을 다른 업무와 브랜드로 넓히고, 반대 의견은 기준을 공개해 합의로 바꿉니다.</p>
+            <div class="ex">정산 검증과 리포트 자동화로 넓혀 BHC, 아웃백, 제주삼다수까지 적용</div>
+          </article>
+          <article class="method-step">
+            <div class="no">04</div>
+            <h3>운영과 보안</h3>
+            <p>만든 도구를 직접 배포하고 운영하며, 보안 심사까지 함께 책임집니다.</p>
+            <div class="ex">Firebase, Cloudflare 직접 배포 / IT팀, 정보보안팀과 보안 코드 리뷰</div>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- CAREER -->
-  <section id="career" class="section section-dark">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Career</span>
-        <h2>경력 <span class="accent">요약</span></h2>
-        <p class="section-desc">7년 이상의 서비스·사업 기획 경험</p>
-      </div>
-      <div class="timeline">
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2025.07 – 현재</div>
-          <div class="timeline-card">
-            <div class="tc-header">
-              <span class="tc-company">㈜ CNDF</span>
-              <span class="tc-role">전략기획/운영팀 대리</span>
-            </div>
-            <div class="tc-grid">
-              <div>
-                <h4>주요 업무</h4>
-                <ul>
-                  <li>VBA, Python을 통한 업무 자동화</li>
-                  <li>BMW SCP, WPP 서비스 정책 기획</li>
-                  <li>고객 요구 분석을 통한 신규 서비스 기획 (화면/IA 기획, 정책 설계, ERD 설계)</li>
-                  <li>BMW KR / 광동상회·삼다수 서비스 운영 및 개선 총괄</li>
-                  <li>Jira, Flow 기반 프로젝트 관리 체계 구축 및 운영</li>
-                </ul>
-              </div>
-              <div>
-                <h4>주요 성과</h4>
-                <ul class="highlight-list">
-                  <li>BMW KR · BHC · OUTBACK 운영 관리 업무 <strong>80% 자동화</strong> → 연 3,000시간 이상 단축</li>
-                  <li>OAS 정비 정산 내역 처리 로직 개선 → <strong>오류율 50% 감소</strong></li>
-                  <li>BMW Vantage 앱 내 정비 이력 실시간 연동 서비스 구현</li>
-                  <li>개발자 모니터링 대시보드 및 AI KPI 평가 시스템 직접 개발 → <strong>생산성 150% 증가</strong></li>
-                </ul>
-              </div>
-            </div>
+    <!-- PROJECTS -->
+    <section class="section section--surface" id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">Projects</div>
+          <div>
+            <h2>문제, 해결, 성과로 정리한 AX 프로젝트</h2>
+            <p>모든 수치는 실제 운영 결과입니다. 프로젝트마다 무엇이 문제였고 무엇을 바꿨는지 함께 적었습니다.</p>
           </div>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2023.02 – 2024.12</div>
-          <div class="timeline-card">
-            <div class="tc-header">
-              <span class="tc-company">㈜ 오앤</span>
-              <span class="tc-role">전략기획팀 과장</span>
-            </div>
-            <div class="tc-grid">
-              <div>
-                <h4>주요 업무</h4>
-                <ul>
-                  <li>신규 사업 발굴 및 고객 요구 분석</li>
-                  <li>영상 분석 IA 자사 서비스를 활용한 신규 서비스 기획</li>
-                  <li>프로젝트 리딩 및 고객사 커뮤니케이션</li>
-                  <li>Notion 기반 프로젝트 관리 체계 구축 및 운영</li>
-                </ul>
-              </div>
-              <div>
-                <h4>주요 성과</h4>
-                <ul class="highlight-list">
-                  <li><strong>2024 파리 올림픽</strong> 태권도 운영사 선정</li>
-                  <li>세계태권도 연맹 공식 대회 운영 서비스 선정</li>
-                  <li>영상 판독 서비스 — 세계태권도연맹/대한유도회 공식 채택</li>
-                  <li>몽골 정부 국민 체력 검정 시스템 개발사 선정 및 도입 완료</li>
-                  <li><strong>20여 건</strong>의 프로젝트 수행 완료</li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div class="filters" role="group" aria-label="프로젝트 분류">
+          <button class="filter" type="button" data-filter="all" aria-pressed="true">전체</button>
+          <button class="filter" type="button" data-filter="auto" aria-pressed="false">업무 자동화</button>
+          <button class="filter" type="button" data-filter="ai" aria-pressed="false">AI 도구 도입</button>
+          <button class="filter" type="button" data-filter="sec" aria-pressed="false">보안과 운영</button>
+          <button class="filter" type="button" data-filter="build" aria-pressed="false">0 to 1 구축</button>
         </div>
 
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2021.09 – 2023.03</div>
-          <div class="timeline-card">
-            <div class="tc-header">
-              <span class="tc-company">플러스이노베이션</span>
-              <span class="tc-role">대표</span>
-            </div>
-            <div class="tc-grid">
-              <div>
-                <h4>주요 업무</h4>
-                <ul>
-                  <li>제품 기획, 서비스 기획, 정부 지원사업 기획서 작성 및 수행</li>
-                  <li>시장 조사 및 경쟁사 분석, 사업 전략 구상</li>
-                  <li>마케팅/이벤트 기획 및 실행</li>
-                </ul>
-              </div>
-              <div>
-                <h4>주요 성과</h4>
-                <ul class="highlight-list">
-                  <li>공간 공유 서비스로 1년차 <strong>연 매출 3억</strong> 달성</li>
-                  <li>무드등 제품 3,000개 양산 및 <strong>와디즈 클라우드 펀딩 성공</strong></li>
-                  <li>21년 예비창업패키지 등 <strong>13개의 지원 사업 우수 완료</strong></li>
-                </ul>
-              </div>
-            </div>
+        <!-- P01 -->
+        <article class="project" data-cat="auto">
+          <div class="project-top">
+            <span class="project-no">01 / 업무 자동화</span>
+            <span class="project-meta">(주)씨앤디팩토리 / 2025.07~현재 / 기획, 개발, 배포</span>
           </div>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-dot"></div>
-          <div class="timeline-date">2019.06 – 2023.03</div>
-          <div class="timeline-card">
-            <div class="tc-header">
-              <span class="tc-company">와이엔케이</span>
-              <span class="tc-role">대표</span>
-            </div>
-            <div class="tc-grid">
-              <div>
-                <h4>주요 업무</h4>
-                <ul>
-                  <li>신규 사업 발굴 및 사업 기획</li>
-                  <li>정부 지원사업 기획서 작성 및 수행</li>
-                  <li>시장 조사, 경쟁사 분석, 사업 전략 구상</li>
-                </ul>
-              </div>
-              <div>
-                <h4>주요 성과</h4>
-                <ul class="highlight-list">
-                  <li>'방문' 모바일 앱 플랫폼 iOS, Android 출시</li>
-                  <li>제21회 경제 유니버시아드 IT부문 <strong>산업통상부장관상 대상 수상</strong></li>
-                  <li>기술보증기금 기술평가 B등급 획득</li>
-                  <li><strong>기술특허 등록</strong> (출원번호 : 1020190004096)</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- COMPETENCIES -->
-  <section id="competencies" class="section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Core Competencies</span>
-        <h2>핵심 <span class="accent">역량</span></h2>
-      </div>
-      <div class="comp-grid">
-        <div class="comp-card">
-          <div class="comp-icon">📋</div>
-          <h3>서비스 기획</h3>
-          <ul>
-            <li>스토리보드/IA 등 기획 문서 작성</li>
-            <li>서비스 정책 수립</li>
-            <li>PPT, Figma 등 툴 사용</li>
-            <li>ERD 설계</li>
-            <li>스포츠, 물류, 건설, 커머스, 교육 등 다양한 분야 경험</li>
-          </ul>
-          <div class="comp-stack">
-            <span class="comp-tag">Figma</span>
-            <span class="comp-tag">스토리보드·IA</span>
-            <span class="comp-tag">ERD</span>
-            <span class="comp-tag">정책 설계</span>
-          </div>
-        </div>
-        <div class="comp-card">
-          <div class="comp-icon">📊</div>
-          <h3>서비스 운영 및 데이터 분석</h3>
-          <ul>
-            <li>데이터 툴을 활용한 데이터 분석</li>
-            <li>고객 행동 분석 및 인사이트 도출</li>
-            <li>데이터 기반 서비스 전략 수립</li>
-            <li>Postman, DBeaver 등 툴 활용 서비스 안정화</li>
-          </ul>
-          <div class="comp-stack">
-            <span class="comp-tag">SQL · DBeaver</span>
-            <span class="comp-tag">Postman</span>
-            <span class="comp-tag">데이터 분석</span>
-            <span class="comp-tag">Claude API</span>
-          </div>
-        </div>
-        <div class="comp-card">
-          <div class="comp-icon">⚙️</div>
-          <h3>프로젝트 관리</h3>
-          <ul>
-            <li>팀 내 협업 및 커뮤니케이션</li>
-            <li>고객사 요구사항 분석 및 조율</li>
-            <li>외부 협력 및 각종 계약</li>
-            <li>Jira, Notion 등 툴을 활용한 일정/리소스 관리</li>
-          </ul>
-          <div class="comp-stack">
-            <span class="comp-tag">Jira · Flow</span>
-            <span class="comp-tag">Notion</span>
-            <span class="comp-tag">고객사 조율</span>
-            <span class="comp-tag">계약·협력</span>
-          </div>
-        </div>
-        <div class="comp-card">
-          <div class="comp-icon">🚀</div>
-          <h3>사업 기획/운영</h3>
-          <ul>
-            <li>신규 사업 발굴</li>
-            <li>제품·서비스 기획, 정부 지원사업 기획서 작성</li>
-            <li>시장 조사 및 경쟁사 분석, 사업 전략 구상</li>
-            <li>마케팅/이벤트 기획 및 실행</li>
-            <li>예산 관리 및 성과 분석</li>
-          </ul>
-          <div class="comp-stack">
-            <span class="comp-tag">사업 기획서</span>
-            <span class="comp-tag">시장·경쟁 분석</span>
-            <span class="comp-tag">정부지원사업</span>
-            <span class="comp-tag">성과 분석</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects" class="section section-dark">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Major Projects</span>
-        <h2>주요 <span class="accent">프로젝트</span></h2>
-      </div>
-
-      <!-- Project 1 -->
-      <div class="project-block">
-        <div class="project-number">01</div>
-        <div class="project-content">
-          <div class="project-meta">
-            <span class="project-period">2025.07 ~ 현재</span>
-            <div class="project-roles">
-              <span class="role-tag">자동화 기획</span>
-              <span class="role-tag">VBA · Python</span>
-              <span class="role-tag">대시보드 설계</span>
-              <span class="role-tag">데이터 분석</span>
-              <span class="role-tag">PM</span>
-            </div>
-            <span class="project-team">👥 <strong>1인(본인) 단독</strong> · 기획·설계·자동화 구현 전담 (BHC·OUTBACK·광동상회)</span>
-          </div>
-          <h3>BMW · BHC · OUTBACK · 광동상회<br /><span>운영 자동화 및 마케팅 리포트</span></h3>
-          <p class="project-req"><strong>요구사항</strong> 반복 운영 업무의 자동화 및 BHC·OUTBACK·광동상회 마케팅팀의 데이터 기반 의사결정 지원이 필요합니다.</p>
-          <p class="project-overview">
-            VBA·Python 기반으로 BMW KR, BHC, OUTBACK, 광동상회 4개 브랜드의 반복 운영 업무를 자동화하고
-            종합 대시보드 및 리포트 시스템을 구축. 연 3,000시간 이상의 업무 시간을 절약했습니다.
-          </p>
-          <ul class="auto-list">
-            <li><strong>① SCP 가입 승인 자동화</strong> — Admin·BMW 본사·정책 조건 3개 소스를 자동 크로스체크하여 승인/반려 자동 처리</li>
-            <li><strong>② 정산 오류 자동 분류 &amp; 안내</strong> — 정비 데이터 에러를 원인별 자동 분류, 센터별 수정 가이드 메일 자동 발송 → 정산 불일치 80% 이상 안정화</li>
-            <li><strong>③ 종합 성과 리포트 자동 생성</strong> — SCP·WPP·OAS 성과 + 개발/운영 인력 공수 + 센터·딜러사별 추이를 통합한 주·월간 보고서 자동 생성</li>
-            <li><strong>④ BHC·OUTBACK 마케팅 리포트 자동화</strong> — GA·Matomo·Admin·App Connect·앱스토어 등 다중 소스 병렬 추출 → 주간·월간 마케팅 리포트 자동 생성 → 이벤트 성과 30%+ 향상</li>
-            <li><strong>⑤ 광동상회 AI 분석 통합 대시보드</strong> — 회원 연령/성별·카테고리별·시간/요일별 실시간 통계, 매출 추이·이벤트 ROI·구매율 추이를 Claude API로 실시간 개선점·전략 분석 (아래 실제 화면 참고)</li>
-          </ul>
-
-          <!-- Architecture SVG -->
-          <div class="project-arch">
-            <h4>⚙️ 시스템 구성도</h4>
-            <svg class="arch-svg" viewBox="0 0 780 300" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <marker id="arrow3" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-                  <path d="M0,0 L0,6 L8,3 z" fill="#5b7fff"/>
-                </marker>
-              </defs>
-              <!-- Data Sources (4) -->
-              <rect x="20" y="24" width="130" height="42" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="85" y="38" text-anchor="middle" dominant-baseline="middle" fill="#5b7fff" font-size="13" font-weight="600">BMW KR</text>
-              <text x="85" y="54" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">운영 데이터</text>
-
-              <rect x="20" y="90" width="130" height="42" rx="8" fill="#1a1f2e" stroke="#ff8c42" stroke-width="1.5"/>
-              <text x="85" y="104" text-anchor="middle" dominant-baseline="middle" fill="#ffb47a" font-size="13" font-weight="600">BHC</text>
-              <text x="85" y="120" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">마케팅 데이터</text>
-
-              <rect x="20" y="156" width="130" height="42" rx="8" fill="#1a1f2e" stroke="#ff8c42" stroke-width="1.5"/>
-              <text x="85" y="170" text-anchor="middle" dominant-baseline="middle" fill="#ffb47a" font-size="13" font-weight="600">OUTBACK</text>
-              <text x="85" y="186" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">마케팅 데이터</text>
-
-              <rect x="20" y="222" width="130" height="42" rx="8" fill="#1a1f2e" stroke="#3fb950" stroke-width="1.5"/>
-              <text x="85" y="236" text-anchor="middle" dominant-baseline="middle" fill="#5fd97a" font-size="13" font-weight="600">광동상회</text>
-              <text x="85" y="252" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">커머스 데이터</text>
-
-              <!-- Arrows to Engine -->
-              <line x1="150" y1="45" x2="220" y2="128" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow3)"/>
-              <line x1="150" y1="111" x2="220" y2="140" stroke="#ff8c42" stroke-width="1.2" marker-end="url(#arrow3)"/>
-              <line x1="150" y1="177" x2="220" y2="156" stroke="#ff8c42" stroke-width="1.2" marker-end="url(#arrow3)"/>
-              <line x1="150" y1="243" x2="220" y2="168" stroke="#3fb950" stroke-width="1.2" marker-end="url(#arrow3)"/>
-
-              <!-- Automation Engine -->
-              <rect x="220" y="108" width="160" height="80" rx="10" fill="#0f1628" stroke="#7c5fff" stroke-width="2"/>
-              <text x="300" y="131" text-anchor="middle" dominant-baseline="middle" fill="#c0aaff" font-size="13" font-weight="700">자동화 엔진</text>
-              <text x="300" y="148" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">VBA · Python</text>
-              <text x="300" y="165" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">데이터 수집·가공</text>
-
-              <!-- Arrows to Dashboards -->
-              <line x1="380" y1="132" x2="450" y2="100" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow3)"/>
-              <line x1="380" y1="164" x2="450" y2="210" stroke="#ff8c42" stroke-width="1.2" marker-end="url(#arrow3)"/>
-
-              <!-- BMW Ops Dashboard -->
-              <rect x="450" y="70" width="150" height="60" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="525" y="91" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="13" font-weight="600">BMW 운영 대시보드</text>
-              <text x="525" y="108" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">업무 80% 자동화</text>
-
-              <!-- Marketing/Commerce Dashboard -->
-              <rect x="450" y="180" width="150" height="60" rx="8" fill="#1a1f2e" stroke="#ff8c42" stroke-width="1.5"/>
-              <text x="525" y="201" text-anchor="middle" dominant-baseline="middle" fill="#ffb47a" font-size="13" font-weight="600">마케팅·커머스 대시보드</text>
-              <text x="525" y="218" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">BHC · OUTBACK · 광동상회</text>
-
-              <!-- Arrows to KPIs -->
-              <line x1="600" y1="100" x2="650" y2="120" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow3)"/>
-              <line x1="600" y1="210" x2="650" y2="180" stroke="#ff8c42" stroke-width="1.2" marker-end="url(#arrow3)"/>
-
-              <!-- KPI Box -->
-              <rect x="650" y="95" width="120" height="110" rx="8" fill="#0f1628" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="710" y="116" text-anchor="middle" dominant-baseline="middle" fill="#5b7fff" font-size="12" font-weight="600">성과</text>
-              <text x="710" y="133" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">연 3,000h 절약</text>
-              <text x="710" y="150" text-anchor="middle" dominant-baseline="middle" fill="#ff8c42" font-size="11">이벤트 성과 30%+</text>
-              <text x="710" y="167" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">인사이트 실시간화</text>
-              <text x="710" y="184" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">업무 80% 자동화</text>
-
-              <!-- Labels -->
-              <text x="85" y="284" text-anchor="middle" fill="#556688" font-size="12">데이터 소스</text>
-              <text x="300" y="210" text-anchor="middle" fill="#556688" font-size="12">처리 엔진</text>
-              <text x="525" y="260" text-anchor="middle" fill="#556688" font-size="12">대시보드</text>
-              <text x="710" y="224" text-anchor="middle" fill="#556688" font-size="12">성과</text>
-            </svg>
-          </div>
-
-          <!-- Screenshot Gallery -->
-          <div class="project-gallery">
-            <div class="gallery-item gallery-item--wide">
-              <img src="assets/images/dashboard/kd-real.png" alt="실제 광동상회 운영 대시보드 화면" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">실제 광동상회 운영 대시보드 (LIVE 데이터 화면)</span>
-            </div>
-            <div class="gallery-item gallery-item--wide gallery-item--dashboard">
-              <div class="dash" id="mktDash">
-                <div class="dash-header">
-                  <div>
-                    <h4>광동상회 통합 대시보드 <span class="dash-live">LIVE DATA</span></h4>
-                    <p class="dash-sub">기준일 2026-05-31 · 자사몰 운영 실데이터 기반</p>
-                  </div>
-                  <span class="dash-badge">🤖 Claude AI</span>
-                </div>
-
-                <div class="dash-tabs" role="tablist" aria-label="대시보드 보기 선택">
-                  <button class="dash-tab active" data-dash-tab="all" type="button" role="tab" aria-selected="true">통합</button>
-                  <button class="dash-tab" data-dash-tab="brand" type="button" role="tab" aria-selected="false">브랜드별</button>
-                </div>
-
-                <!-- ===== 통합 뷰 ===== -->
-                <div class="dash-view" data-view="all">
-
-                  <!-- ① 상단 KPI 5 -->
-                  <div class="dash-kpis dash-kpis--5" data-k="kpis"></div>
-
-                  <!-- ② 메인 분석 위젯 -->
-                  <div class="dash-row">
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">고객 구매 패턴</h5>
-                      <div class="dash-stat-grid" data-k="pattern"></div>
-                    </div>
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">성별 매출 비중</h5>
-                      <div class="dash-donut-wrap" data-k="gender"></div>
-                    </div>
-                  </div>
-
-                  <div class="dash-row">
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">연령대별 매출 분포</h5>
-                      <div class="dash-hbars" data-k="ageDist"></div>
-                    </div>
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">일 매출 그래프 (5월 1~31일)</h5>
-                      <div class="dash-bars dash-bars--daily" data-k="daily"></div>
-                    </div>
-                  </div>
-
-                  <div class="dash-row">
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">연도별 월 매출 추이</h5>
-                      <div class="dash-line" data-k="yearTrend"></div>
-                    </div>
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">월 검색어 순위 Top 10</h5>
-                      <ol class="dash-rank" data-k="keywords"></ol>
-                    </div>
-                  </div>
-
-                  <div class="dash-row">
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">CRM 발송 실적 및 ROAS</h5>
-                      <div class="dash-stat-grid dash-stat-grid--2" data-k="crm"></div>
-                      <div class="dash-hbars" data-k="crmBars"></div>
-                    </div>
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">브랜드별 매출 현황</h5>
-                      <div class="dash-hbars" data-k="brandSales"></div>
-                    </div>
-                  </div>
-
-                  <div class="dash-card dash-card--full">
-                    <h5 class="dash-card-title">재구매 코호트 분석 (최근 6개월)</h5>
-                    <div class="dash-cohort" data-k="cohort"></div>
-                  </div>
-
-                  <div class="dash-row">
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">쿠폰 사용 실적 분석</h5>
-                      <div class="dash-stat-grid dash-stat-grid--2" data-k="coupon"></div>
-                      <div class="dash-hbars" data-k="couponBars"></div>
-                    </div>
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">이벤트 진행 실적</h5>
-                      <ul class="dash-events" data-k="events"></ul>
-                    </div>
-                  </div>
-
-                  <div class="dash-row">
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">요일/시간대별 방문 수</h5>
-                      <div class="dash-heat" data-k="visitHeat"></div>
-                    </div>
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">요일/시간대별 구매 수</h5>
-                      <div class="dash-heat" data-k="buyHeat"></div>
-                    </div>
-                  </div>
-
-                  <div class="dash-insights" data-k="insights"></div>
-                </div>
-
-                <!-- ===== 브랜드별 뷰 ===== -->
-                <div class="dash-view" data-view="brand" hidden>
-                  <div class="dash-chips" data-k="brandChips" role="tablist" aria-label="브랜드 선택"></div>
-
-                  <div class="dash-kpis dash-kpis--4" data-k="bKpis"></div>
-
-                  <div class="dash-row">
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">고객 구매 패턴</h5>
-                      <div class="dash-stat-grid" data-k="bPattern"></div>
-                    </div>
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">성별 결제 비중</h5>
-                      <div class="dash-donut-wrap" data-k="bGender"></div>
-                    </div>
-                  </div>
-
-                  <div class="dash-row">
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">멤버십 등급별 결제액</h5>
-                      <div class="dash-hbars" data-k="bGrade"></div>
-                    </div>
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">연령대별 결제액 분포</h5>
-                      <div class="dash-hbars" data-k="bAge"></div>
-                    </div>
-                  </div>
-
-                  <div class="dash-row">
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">일 매출 그래프 (5월)</h5>
-                      <div class="dash-bars dash-bars--daily" data-k="bDaily"></div>
-                    </div>
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">연도별 월 매출 추이</h5>
-                      <div class="dash-line" data-k="bTrend"></div>
-                    </div>
-                  </div>
-
-                  <div class="dash-row">
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">상품별 매출 현황</h5>
-                      <table class="dash-table">
-                        <thead><tr><th>상품</th><th>매출</th><th>비중</th></tr></thead>
-                        <tbody data-k="bProducts"></tbody>
-                      </table>
-                    </div>
-                    <div class="dash-card">
-                      <h5 class="dash-card-title">재구매 코호트 분석</h5>
-                      <div class="dash-cohort" data-k="bCohort"></div>
-                    </div>
-                  </div>
-
-                  <div class="dash-card dash-card--full">
-                    <h5 class="dash-card-title">고객 리뷰 키워드 분류</h5>
-                    <div class="dash-tags" data-k="bReview"></div>
-                  </div>
-                </div>
-              </div>
-              <span class="gallery-caption">광동상회 통합 대시보드 (실제 운영 화면 기반 재구성)</span>
-            </div>
-            <div class="gallery-item">
-              <img src="assets/images/dashboard/kanban.png" alt="칸반 대시보드" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">운영 칸반 보드</span>
-            </div>
-            <div class="gallery-item">
-              <img src="assets/images/dashboard/jira.png" alt="Jira 프로젝트 관리" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">Jira 프로젝트 관리</span>
-            </div>
-          </div>
-
-          <div class="project-flow">
-            <h4>🧭 문제 해결 과정</h4>
-            <div class="flow-step flow-step--problem">
-              <span class="flow-tag">① 문제 인식·정의</span>
-              <p>BMW의 가입 승인·정산 검증이 사람 손에 묶여 있었고, 더해 BHC·OUTBACK·광동상회의 성과 리포트까지 수기에 의존했습니다. 게다가 마케팅 데이터가 GA·Matomo·Admin·앱스토어 등에 흩어져 인사이트 도출이 느렸습니다.</p>
-            </div>
-            <div class="flow-step flow-step--hypothesis">
-              <span class="flow-tag">② 가설·접근 (선택 근거)</span>
-              <p>반복 업무는 '응대'가 아니라 '구조'로 풀어야 한다고 판단했습니다. 인력을 늘리는 대신 파이프라인을 만들면 처리량이 선형이 아닌 비선형으로 늘어난다는 가설 아래, 자동화와 데이터 통합을 동시에 설계했습니다.</p>
-            </div>
-            <div class="flow-step flow-step--execution">
-              <span class="flow-tag">③ 실행·검증</span>
-              <p>Selenium·Python으로 가입 승인을 자동화하고, VBA·Python 리포트 파이프라인과 다중 소스 병렬 추출 마케팅 리포트, Claude API 연동 분석 대시보드를 구축했습니다. 베타 운영과 실사용 피드백으로 효과를 검증했습니다.</p>
-            </div>
-            <div class="flow-step flow-step--result">
-              <span class="flow-tag">④ 데이터 기반 결과</span>
-              <p>연 3,000시간 이상 절약·업무 자동화 80%·이벤트 성과 30% 이상 향상을 4개 브랜드(BMW·BHC·OUTBACK·광동상회)에 적용했습니다.</p>
-            </div>
-          </div>
-          <div class="project-results">
-            <div class="result-item">
-              <span class="result-num">3,000h</span>
-              <span class="result-label">연 업무 시간 절약</span>
-            </div>
-            <div class="result-item">
-              <span class="result-num">80%</span>
-              <span class="result-label">업무 자동화율</span>
-            </div>
-            <div class="result-item">
-              <span class="result-num">30%+</span>
-              <span class="result-label">이벤트 성과 향상</span>
-            </div>
-            <div class="result-item">
-              <span class="result-num">4개사</span>
-              <span class="result-label">적용 브랜드</span>
-            </div>
-          </div>
-          <div class="project-ax">
-            <span class="ax-chip">AX 관점</span>
-            <p>반복 운영을 인력으로 받아내는 대신 <strong>Claude API·자동화 파이프라인</strong>으로 구조화해, 처리량을 비선형으로 키우고 흩어진 데이터를 실시간 의사결정 자산으로 바꿨습니다.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="project-block">
-        <div class="project-number">02</div>
-        <div class="project-content">
-          <div class="project-meta">
-            <span class="project-period">2025.08 ~ 2026.03 (8개월)</span>
-            <div class="project-roles">
-              <span class="role-tag">화면 설계</span>
-              <span class="role-tag">정책 설계</span>
-              <span class="role-tag">ERD·API 명세</span>
-              <span class="role-tag">정산 자동화</span>
-              <span class="role-tag">QA</span>
-              <span class="role-tag">운영</span>
-              <span class="role-tag">PM</span>
-            </div>
-            <span class="project-team">👥 <strong>총 5인</strong> · 개발 4 · 기획/설계·자동화 구현 1(본인 전담)</span>
-          </div>
-          <h3>BMW SCP, OAS, WPP<br /><span>시스템 고도화</span></h3>
-          <p class="project-req"><strong>요구사항</strong> BMW Korea 3종 D2C 서비스의 운영 고도화 및 정산 무결성 확보가 필요합니다.</p>
-          <p class="project-overview">
-            BMW Korea가 고객과 직접 계약하는 D2C 서비스 3종(SCP 차량 구독 · OAS 정비 예약 · WPP 차량 보험)의
-            통합 기획·운영·고도화. 월 거래액 약 20억 원, 월 15만 건 처리, 연 250억 규모의 플랫폼.
-            정산 로직 불일치·중복 결제 문제를 개선하여 정산 무결성 확보 및 오류율 50% 감소, 매출 40% 상승을 달성.
-          </p>
-
-          <!-- Architecture SVG -->
-          <div class="project-arch">
-            <h4>⚙️ 시스템 구성도</h4>
-            <svg class="arch-svg" viewBox="0 0 780 260" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <marker id="arrow2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-                  <path d="M0,0 L0,6 L8,3 z" fill="#5b7fff"/>
-                </marker>
-              </defs>
-              <!-- BMW Services -->
-              <rect x="20" y="40" width="140" height="48" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="90" y="55" text-anchor="middle" dominant-baseline="middle" fill="#5b7fff" font-size="13" font-weight="600">SCP</text>
-              <text x="90" y="72" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">차량 구독</text>
-
-              <rect x="20" y="108" width="140" height="48" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="90" y="123" text-anchor="middle" dominant-baseline="middle" fill="#5b7fff" font-size="13" font-weight="600">OAS</text>
-              <text x="90" y="140" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">정비 예약</text>
-
-              <rect x="20" y="176" width="140" height="48" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="90" y="191" text-anchor="middle" dominant-baseline="middle" fill="#5b7fff" font-size="13" font-weight="600">WPP</text>
-              <text x="90" y="208" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">차량 보험</text>
-
-              <!-- Arrows to Engine -->
-              <line x1="160" y1="64" x2="230" y2="110" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow2)"/>
-              <line x1="160" y1="132" x2="230" y2="132" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow2)"/>
-              <line x1="160" y1="200" x2="230" y2="155" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow2)"/>
-
-              <!-- Engine -->
-              <rect x="230" y="90" width="160" height="80" rx="10" fill="#0f1628" stroke="#7c5fff" stroke-width="2"/>
-              <text x="310" y="113" text-anchor="middle" dominant-baseline="middle" fill="#c0aaff" font-size="13" font-weight="700">정산 자동화 엔진</text>
-              <text x="310" y="130" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">VBA · Python</text>
-              <text x="310" y="147" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">정산 로직 재설계</text>
-
-              <!-- Arrow to Dashboard -->
-              <line x1="390" y1="130" x2="460" y2="130" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow2)"/>
-
-              <!-- BMW Admin -->
-              <rect x="460" y="90" width="160" height="80" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="540" y="113" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="13" font-weight="600">BMW 어드민</text>
-              <text x="540" y="130" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">운영·정산 대시보드</text>
-              <text x="540" y="147" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">실시간 이력 연동</text>
-
-              <!-- Arrow to KPIs -->
-              <line x1="620" y1="130" x2="660" y2="130" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow2)"/>
-
-              <!-- KPI Box -->
-              <rect x="660" y="80" width="110" height="88" rx="8" fill="#0f1628" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="715" y="98" text-anchor="middle" dominant-baseline="middle" fill="#5b7fff" font-size="12" font-weight="600">성과</text>
-              <text x="715" y="115" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">오류율 50% 감소</text>
-              <text x="715" y="132" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">매출 40% 상승</text>
-              <text x="715" y="149" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">정산 무결성 확보</text>
-
-              <!-- Labels -->
-              <text x="90" y="240" text-anchor="middle" fill="#556688" font-size="12">D2C 서비스</text>
-              <text x="310" y="200" text-anchor="middle" fill="#556688" font-size="12">처리 엔진</text>
-              <text x="540" y="200" text-anchor="middle" fill="#556688" font-size="12">대시보드</text>
-              <text x="715" y="190" text-anchor="middle" fill="#556688" font-size="12">성과</text>
-            </svg>
-          </div>
-
-          <!-- Screenshot Gallery -->
-          <div class="project-gallery">
-            <div class="gallery-item">
-              <img src="assets/images/bmw/scp.png" alt="SCP 어드민 화면" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">SCP 가입 관리</span>
-            </div>
-            <div class="gallery-item">
-              <img src="assets/images/bmw/oas.png" alt="OAS 어드민 화면" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">OAS 예약 현황</span>
-            </div>
-            <div class="gallery-item">
-              <img src="assets/images/bmw/wpp.png" alt="WPP 어드민 화면" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">WPP 운영 관리</span>
-            </div>
-          </div>
-
-          <div class="project-flow">
-            <h4>🧭 문제 해결 과정</h4>
-            <div class="flow-step flow-step--problem">
-              <span class="flow-tag">① 문제 인식·정의</span>
-              <p>SCP·OAS·WPP 3종이 서로 다른 시기에 구축돼 정산 로직 불일치·중복 결제·노쇼·수기 분석이 누적돼 있었습니다. 연 250억·월 15만 건 규모라 작은 오류 하나도 큰 손실과 CS(월 100여 건)로 이어졌습니다. 정산 에러를 전수 분석해 상위 3개 유형을 특정했습니다:</p>
-              <ul class="flow-sublist">
-                <li>구독 신청일에 차량이 입고된 케이스 (정책상 신청일 +1일부터 사용 가능)</li>
-                <li>사용한 패키지 상품과 일치하지 않는 할인율이 입력된 케이스</li>
-                <li>상품 적용이 불가능한 정비 항목에 상품이 적용된 케이스</li>
+          <h3>BMW에서 시작해 여러 브랜드로 넓힌 운영 자동화</h3>
+          <p class="project-sum">매일 사람이 대조하던 가입 승인 한 가지를 먼저 자동화해 효과를 확인하고, 정산 검증과 리포트까지 같은 방식으로 넓혔습니다.</p>
+          <div class="psr">
+            <div>
+              <h4>문제</h4>
+              <ul>
+                <li>서비스케어플러스 가입 신청 하루 200건을 본사 차량 데이터와 손으로 대조</li>
+                <li>주간 정비 증적 에러 수정 요청에 매주 4시간, 건당 30분 추가</li>
+                <li>WP 정산 데이터가 틀어져 매달 8시간 넘게 대사</li>
               </ul>
             </div>
-            <div class="flow-step flow-step--hypothesis">
-              <span class="flow-tag">② 가설·접근 (선택 근거)</span>
-              <p>모든 에러를 동시에 잡기보다 "빈도×영향도로 우선순위화하면 적은 수정으로 최대 효과를 낸다"고 가정해 위 상위 3개 로직부터 재설계했습니다. 중복 결제는 정상 흐름에선 2회 결제가 불가능한데, <strong>결제 완료 안내 페이지 로딩 중 뒤로가기 → 결제 버튼을 반복하면 중복 결제가 발생</strong>함을 재현으로 확인했습니다. 원인을 PG 콜백 중복으로 특정하고 멱등성 확보를 핵심 가설로 삼았습니다.</p>
+            <div>
+              <h4>해결</h4>
+              <ul>
+                <li>업무별 소요 시간을 측정해 빈도와 영향도로 우선순위 결정</li>
+                <li>가입 승인을 Python, Selenium으로 먼저 자동화해 효과 검증</li>
+                <li>에러 유형별 수정 안내 리포트를 VBA로 자동 생성하고 월간 리포트와 딜러사별 성과 리포트로 확장</li>
+                <li>WP 정산 40개 이상 칼럼의 계산 로직을 전수 조사해 재설계</li>
+                <li>검증한 방식을 BHC, 아웃백, 제주삼다수 정기 업무로 확산</li>
+              </ul>
             </div>
-            <div class="flow-step flow-step--execution">
-              <span class="flow-tag">③ 실행·검증</span>
-              <p>상위 3개 정산 로직을 재설계하고, PG 중복 콜백 경로에 멱등키를 도입했습니다. 온라인 체크인·온라인 보험 가입 채널을 신규 기획하고 ISMS-P 보안 조치를 이행했습니다. 효과는 <strong>2달치 처리 건 약 30만 건(월 15만 × 2)을 표본으로 Before/After 비교</strong>해 검증했습니다.</p>
-            </div>
-            <div class="flow-step flow-step--result">
-              <span class="flow-tag">④ 데이터 기반 결과</span>
-              <p>정산 처리 시간 <strong>3시간 → 0시간</strong>·정산 에러 50%↓·CS <strong>월 100여 건 → 절반</strong>·중복 결제 100% 제거·노쇼 <strong>40% → 20%</strong>·신규 가입 40%↑·매출 40%↑을 달성했습니다.</p>
-            </div>
-          </div>
-          <div class="project-results">
-            <div class="result-item">
-              <span class="result-num">50%</span>
-              <span class="result-label">오류율 감소</span>
-            </div>
-            <div class="result-item">
-              <span class="result-num">40%</span>
-              <span class="result-label">매출 상승</span>
-            </div>
-            <div class="result-item">
-              <span class="result-num">250억</span>
-              <span class="result-label">연 거래 규모</span>
-            </div>
-            <div class="result-item">
-              <span class="result-num">15만</span>
-              <span class="result-label">월 처리 건수</span>
+            <div class="result">
+              <h4>성과</h4>
+              <ul>
+                <li>반복 업무 연 3,500시간을 0시간으로</li>
+                <li>자동화 이후 관련 CS 1년간 0건</li>
+                <li>WP 정산 정합성 100%</li>
+                <li>딜러사별 리포트에서 더미 예약 패턴을 찾아 부당 지출 적발, 같은 리포트로 프로모션 성과 30% 상승</li>
+              </ul>
             </div>
           </div>
-          <div class="project-ax">
-            <span class="ax-chip">AX 관점</span>
-            <p>사람이 눈으로 맞추던 정산 검증을 <strong>멱등키 기반 자동 대조 로직</strong>으로 대체해, 연 250억 규모에서 중복 결제를 원천 차단하고 정산 무결성을 시스템이 보장하도록 만들었습니다.</p>
+          <div class="bars" aria-label="자동화 전후 소요 시간">
+            <div class="bar-row"><span>가입 승인 (하루 2시간)</span><div class="bar-track"><div class="bar-fill" style="width:100%"></div></div><b>→ 0h</b></div>
+            <div class="bar-row"><span>정비 증적 에러 대응 (주 4시간)</span><div class="bar-track"><div class="bar-fill" style="width:40%"></div></div><b>→ 0h</b></div>
+            <div class="bar-row"><span>WP 정산 대사 (월 8시간)</span><div class="bar-track"><div class="bar-fill" style="width:18%"></div></div><b>→ 0h</b></div>
+            <div class="bar-caption">막대는 연간 환산 시간의 상대 비교입니다.</div>
+          </div>
+          <div class="chips"><span class="chip chip--ax">PoC 후 단계적 확산</span><span class="chip">Python</span><span class="chip">VBA</span><span class="chip">Selenium</span><span class="chip">React</span></div>
+        </article>
+
+        <!-- P02 -->
+        <article class="project" data-cat="ai">
+          <div class="project-top">
+            <span class="project-no">02 / AI 도구 도입</span>
+            <span class="project-meta">(주)씨앤디팩토리 / 2025.07~현재 / 기획, 개발, 배포</span>
+          </div>
+          <h3>개발 현황 대시보드와 성과 포상 자동 계산 툴, 전사 도입</h3>
+          <p class="project-sum">병목을 데이터로 드러내고, 경영진과 개발자가 모두 받아들일 수 있는 기준을 함께 만들어 평가 제도로 정착시켰습니다.</p>
+          <div class="psr">
+            <div>
+              <h4>문제</h4>
+              <ul>
+                <li>병렬 프로젝트가 늘며 일정 지연과 요청 누락이 잦음</li>
+                <li>누가 어디서 막혔는지 수치로 볼 수 없음</li>
+                <li>성과를 나눌 객관적인 기준이 없음</li>
+              </ul>
+            </div>
+            <div>
+              <h4>해결</h4>
+              <ul>
+                <li>Jira 로그를 모아 정규화한 실시간 대시보드 개발</li>
+                <li>Task를 처리 수, 리드타임, 난이도, 중요도로 등급화해 포상액 자동 계산</li>
+                <li>경영진에게 산정 근거와 기대 효과를 수치로 보고해 협의</li>
+                <li>개발자에게 데이터 출처와 계산식을 공개하고 지표 정의를 함께 수정</li>
+              </ul>
+            </div>
+            <div class="result">
+              <h4>성과</h4>
+              <ul>
+                <li>지연과 누락 80% 감소</li>
+                <li>Task 처리량 150% 증가</li>
+                <li>야근 일수 80% 감소</li>
+                <li>전사 평가 제도로 정착</li>
+              </ul>
+            </div>
+          </div>
+          <div class="shots">
+            <figure class="shot"><button type="button" data-full="assets/v2/img/dev-kanban.webp" aria-label="개발 현황 칸반 확대"><img src="assets/v2/img/dev-kanban.webp" alt="개발 현황 대시보드 칸반 화면" loading="lazy" width="1600" height="759" /></button><figcaption>실시간 Task 칸반</figcaption></figure>
+            <figure class="shot"><button type="button" data-full="assets/v2/img/dev-history.webp" aria-label="Task 이력 화면 확대"><img src="assets/v2/img/dev-history.webp" alt="Task 이력과 처리 현황 화면" loading="lazy" width="1600" height="769" /></button><figcaption>Task 이력과 처리 현황</figcaption></figure>
+            <figure class="shot"><button type="button" data-full="assets/v2/img/dev-jira.webp" aria-label="Jira 연동 화면 확대"><img src="assets/v2/img/dev-jira.webp" alt="Jira Task 생성 연동 화면" loading="lazy" width="1600" height="772" /></button><figcaption>Jira Task 연동</figcaption></figure>
+          </div>
+          <div class="chips"><span class="chip chip--ax">변화관리</span><span class="chip">Jira API</span><span class="chip">React</span><span class="chip">Firebase</span><span class="chip">Cloudflare</span></div>
+        </article>
+
+        <!-- P03 -->
+        <article class="project" data-cat="ai">
+          <div class="project-top">
+            <span class="project-no">03 / AI 도구 도입</span>
+            <span class="project-meta">(주)씨앤디팩토리 / 광동상회, SPC 온일장, 제주삼다수, BHC, 아웃백</span>
+          </div>
+          <h3>커머스 실시간 판매 분석 대시보드와 AI 판매 전략 도출</h3>
+          <p class="project-sum">흩어진 판매와 이벤트 데이터를 한 화면에 모으고, 원하는 시점마다 AI가 보완점과 다음 판매 전략을 제안하게 만들었습니다.</p>
+          <div class="psr">
+            <div>
+              <h4>문제</h4>
+              <ul>
+                <li>매출과 이벤트 성과 데이터가 GA, Matomo, 어드민, 앱스토어에 흩어짐</li>
+                <li>프로모션과 이벤트 성과를 종합해서 보기 어려움</li>
+              </ul>
+            </div>
+            <div>
+              <h4>해결</h4>
+              <ul>
+                <li>Selenium 병렬 수집으로 여러 소스의 데이터를 통합</li>
+                <li>지표마다 정의와 분모를 명시해 해석이 엇갈리지 않게 설계</li>
+                <li>커머스 5개 서비스에 실시간 판매 분석 대시보드 도입</li>
+                <li>Claude API로 원하는 시점마다 보완점과 판매 전략 도출</li>
+                <li>광동상회는 재구매가 꺾이는 시점에 맞춰 리텐션 쿠폰 발송 시점과 프로모션 노출 스케줄 조정</li>
+              </ul>
+            </div>
+            <div class="result">
+              <h4>성과</h4>
+              <ul>
+                <li>광동상회 이벤트 성과 30% 이상 향상</li>
+                <li>광동상회 어필리에이트(인플루언서 수수료 3%) 기획으로 인플루언서 120명, 월 신규 매출 8,000만 원</li>
+              </ul>
+            </div>
+          </div>
+          <div class="shots shots--1">
+            <figure class="shot"><button type="button" data-full="assets/v2/img/sales-dashboard.webp" data-tall="true" aria-label="판매 분석 대시보드 전체 화면 보기"><img src="assets/v2/img/sales-dashboard.webp" alt="광동상회 실시간 판매 분석 대시보드 화면" loading="lazy" width="1100" height="2929" /></button><figcaption>광동상회 판매 분석 대시보드 (눌러서 전체 보기)</figcaption></figure>
+          </div>
+          <div class="chips"><span class="chip chip--ax">AI 분석</span><span class="chip">Claude API</span><span class="chip">Selenium</span><span class="chip">GA</span><span class="chip">Matomo</span></div>
+        </article>
+
+        <!-- P04 -->
+        <article class="project" data-cat="ai">
+          <div class="project-top">
+            <span class="project-no">04 / AI 도구 도입</span>
+            <span class="project-meta">(주)씨앤디팩토리 / 사내 도입 / 기획, 개발, 배포</span>
+          </div>
+          <h3>RAG 기반 업무 지원 시스템</h3>
+          <p class="project-sum">기획과 개발 문서, 이메일, Teams 채팅 기록을 저장소에 모으고, 필요한 업무와 히스토리를 찾아 답하고 메일 초안까지 써 주는 지원 시스템을 만들어 사내에 도입했습니다.</p>
+          <div class="psr">
+            <div>
+              <h4>문제</h4>
+              <ul>
+                <li>업무 기록이 문서, 이메일, Teams 채팅에 흩어져 있음</li>
+                <li>요구사항과 이전 이력을 찾아 정리하는 일이 반복됨</li>
+              </ul>
+            </div>
+            <div>
+              <h4>해결</h4>
+              <ul>
+                <li>기획, 개발 문서와 이메일, Teams 채팅 기록 저장소 구축</li>
+                <li>RAG로 업무 검색과 히스토리 검색 제공</li>
+                <li>메일 초안 작성 지원</li>
+                <li>Outlook, Jira, Flow를 연동한 요구사항 정리 툴 개발</li>
+              </ul>
+            </div>
+            <div class="result">
+              <h4>성과</h4>
+              <ul>
+                <li>사내 도입</li>
+                <li>Firebase, Cloudflare로 직접 배포하고 운영</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chips"><span class="chip chip--ax">RAG</span><span class="chip">LLM</span><span class="chip">Outlook</span><span class="chip">Teams</span><span class="chip">Jira</span><span class="chip">Flow</span></div>
+        </article>
+
+        <!-- P05 -->
+        <article class="project" data-cat="sec">
+          <div class="project-top">
+            <span class="project-no">05 / 보안과 운영</span>
+            <span class="project-meta">(주)씨앤디팩토리 / BMW 애프터세일즈 / PM</span>
+          </div>
+          <h3>BMW 결제와 정산 무결성 확보, 보안 심사 취약점 0건</h3>
+          <p class="project-sum">늘어나던 결제 문의의 원인을 로그로 밝혀 정책과 로직을 다시 설계하고, IT팀, 정보보안팀과 함께 보안 심사를 취약점 없이 마쳤습니다.</p>
+          <div class="psr">
+            <div>
+              <h4>문제</h4>
+              <ul>
+                <li>결제 문의가 계속 늘었지만 원인이 드러나지 않음</li>
+                <li>결제 완료 로딩 중 중복 결제 발생</li>
+                <li>ISMS 심사, 모의해킹 등 보안 심사 대응 필요</li>
+              </ul>
+            </div>
+            <div>
+              <h4>해결</h4>
+              <ul>
+                <li>결제와 정산 에러 로그 6개월 치를 전수 분석해 상위 3개 유형(구독 시작일 규정, 할인율 불일치, 중복 결제) 특정</li>
+                <li>중복 클릭에 따른 PG 콜백 중복을 재현하고 멱등키(UUID)를 Redis에 저장해 차단</li>
+                <li>이벤트 로그 테이블 분리, 유저 단위 집계 테이블 신설</li>
+                <li>BMW 앱 iframe 모바일 가입 채널 설계, 외부 인증 플랫폼과 토큰 규격 협의</li>
+                <li>보안 코드 리뷰와 ISMS-P 보안조치 300여 건 이행</li>
+              </ul>
+            </div>
+            <div class="result">
+              <h4>성과</h4>
+              <ul>
+                <li>2달 치 약 30만 건 비교로 중복 결제 약 3천 건을 0건으로</li>
+                <li>정산 오류와 CS 각각 50% 감소</li>
+                <li>모바일 가입 30% 증가</li>
+                <li>BMW ISMS 심사, 모의해킹, VM0 Pentest 취약점 0건 종결</li>
+                <li>VTG 포인트 제휴와 직접 판매 채널 기획, 2026.10.13 런칭 확정</li>
+              </ul>
+            </div>
+          </div>
+          <div class="shots">
+            <figure class="shot"><button type="button" data-full="assets/v2/img/bmw-scp.webp" aria-label="SCP 어드민 확대"><img src="assets/v2/img/bmw-scp.webp" alt="BMW SCP 가입 관리 어드민 화면" loading="lazy" width="1234" height="634" /></button><figcaption>SCP 가입 관리</figcaption></figure>
+            <figure class="shot"><button type="button" data-full="assets/v2/img/bmw-oas.webp" aria-label="OAS 어드민 확대"><img src="assets/v2/img/bmw-oas.webp" alt="BMW OAS 예약 현황 차트 화면" loading="lazy" width="913" height="460" /></button><figcaption>OAS 예약 현황</figcaption></figure>
+            <figure class="shot"><button type="button" data-full="assets/v2/img/bmw-wpp.webp" aria-label="WPP 어드민 확대"><img src="assets/v2/img/bmw-wpp.webp" alt="BMW WPP 운영 관리 어드민 화면" loading="lazy" width="1288" height="643" /></button><figcaption>WPP 운영 관리</figcaption></figure>
+          </div>
+          <div class="chips"><span class="chip chip--ax">보안 코드 리뷰</span><span class="chip">ISMS</span><span class="chip">Redis</span><span class="chip">PG 정산</span><span class="chip">DBeaver</span><span class="chip">Postman</span></div>
+        </article>
+
+        <!-- P06 -->
+        <article class="project" data-cat="sec build">
+          <div class="project-top">
+            <span class="project-no">06 / 보안과 운영</span>
+            <span class="project-meta">(주)씨앤디팩토리 / 다우데이타 / 2026.05~2026.09 / PM</span>
+          </div>
+          <h3>디지털존 리뉴얼과 판매자 입점 플랫폼(셀러포탈) 구축</h3>
+          <p class="project-sum">기존 디지털존을 판매자가 입점해 상품을 거래하는 플랫폼으로 바꾸며, 외부 서비스 5개 연동과 ISMS 인증 요건을 3개월 안에 함께 맞췄습니다.</p>
+          <div class="psr">
+            <div>
+              <h4>문제</h4>
+              <ul>
+                <li>외부 서비스 5개를 개발, 검증, 운영 환경에 모두 연동해야 함</li>
+                <li>ISMS 인증을 바로 받을 수 있는 보안 수준 필요</li>
+                <li>고객사 요구사항, 계약 사항, 기획서 사이의 개발 범위를 맞춰야 함</li>
+              </ul>
+            </div>
+            <div>
+              <h4>해결</h4>
+              <ul>
+                <li>요구사항, 계약 사항, 기획서를 대조해 개발 범위 고정</li>
+                <li>전자계약, 배송추적, PG, 이메일, 알림톡을 DEV/STG/PROD 환경에 연동하며 이슈 컨트롤 타워 역할</li>
+                <li>Flow 로그 실시간 대시보드로 지연 Task와 이슈 Task 추적</li>
+                <li>다우데이타 IT팀, 정보보안팀과 ISMS 요건 사전 반영</li>
+              </ul>
+            </div>
+            <div class="result">
+              <h4>성과</h4>
+              <ul>
+                <li>연동 에러 0건, 지연 없이 2026.09.08 런칭</li>
+                <li>기존 상품과 이벤트 100% 마이그레이션</li>
+                <li>ERP, CRM, 네이버 EP 연동 완료</li>
+              </ul>
+            </div>
+          </div>
+          <div class="chips"><span class="chip chip--ax">환경별 연동</span><span class="chip">Flow API</span><span class="chip">Playwright</span><span class="chip">Firebase</span><span class="chip">Cloudflare</span></div>
+        </article>
+
+        <!-- P07 -->
+        <article class="project" data-cat="build auto">
+          <div class="project-top">
+            <span class="project-no">07 / 0 to 1 구축</span>
+            <span class="project-meta">(주)오앤 / 2023.09~2024.06 / 총괄 PM</span>
+          </div>
+          <h3>2024 파리올림픽 태권도 운영 글로벌 SaaS</h3>
+          <p class="project-sum">170개국의 서로 다른 대회 규정을 규정마다 따로 개발하지 않고 설정값 구조 하나에 담아, 수작업으로 운영하던 대회를 하나의 SaaS로 바꿨습니다.</p>
+          <div class="psr">
+            <div>
+              <h4>문제</h4>
+              <ul>
+                <li>나라마다 대회 규정이 다르고 매년 바뀜</li>
+                <li>외부 시스템 4개(RTDS/GMS/PSS/IVR)와 연동 필요</li>
+                <li>개발팀장 공백이 두 차례 발생</li>
+              </ul>
+            </div>
+            <div>
+              <h4>해결</h4>
+              <ul>
+                <li>20종 이상의 규정을 설정값 기반 확장 분류 체계로 설계</li>
+                <li>연동 프로토콜 분석, ERD와 API 명세 작성, Postman 호출로 파라미터 검증</li>
+                <li>공백 기간 ERD, API, 프로토콜을 직접 재설계</li>
+                <li>AI 기반 QA 자동화 툴(Selenium/Python, React/Playwright) 개발</li>
+                <li>세계태권도연맹, 조직위, 몽골 정부와 영문으로 요구사항 조율</li>
+              </ul>
+            </div>
+            <div class="result">
+              <h4>성과</h4>
+              <ul>
+                <li>파리올림픽 공식 운영 서비스 채택, 연 100만 명 사용</li>
+                <li>수작업 80% 자동 처리, 운영비 70% 절감, 운영 시간 40% 단축</li>
+                <li>기획, 개발, QA 사이클 1년 이상에서 6개월로</li>
+                <li>테스트 커버리지 70% 이상, 일정 지연 0건</li>
+              </ul>
+            </div>
+          </div>
+          <div class="shots">
+            <figure class="shot shot--tag"><button type="button" data-full="assets/v2/img/ovr-old-schedule.webp" aria-label="구버전 스케줄 화면 확대"><img src="assets/v2/img/ovr-old-schedule.webp" alt="구버전 대회 운영 프로그램의 스케줄 화면" loading="lazy" width="978" height="507" /></button><figcaption data-tag="BEFORE">구버전 프로그램 스케줄</figcaption></figure>
+            <figure class="shot shot--tag"><button type="button" data-full="assets/v2/img/ovr-schedule.webp" aria-label="새 스케줄 화면 확대"><img src="assets/v2/img/ovr-schedule.webp" alt="새 SaaS의 경기 스케줄 조정 화면" loading="lazy" width="1285" height="968" /></button><figcaption data-tag="AFTER">SaaS 경기 스케줄 조정</figcaption></figure>
+            <figure class="shot shot--tag"><button type="button" data-full="assets/v2/img/ovr-main.webp" aria-label="대회 메인 화면 확대"><img src="assets/v2/img/ovr-main.webp" alt="새 SaaS의 대회 운영 메인 화면" loading="lazy" width="1248" height="691" /></button><figcaption data-tag="AFTER">대회 운영 메인</figcaption></figure>
+          </div>
+          <div class="chips"><span class="chip chip--ax">AI QA 자동화</span><span class="chip">ERD</span><span class="chip">API 명세</span><span class="chip">SSE</span><span class="chip">PayPal</span><span class="chip">Figma</span></div>
+        </article>
+
+        <div class="compact-grid">
+          <!-- P08 -->
+          <article class="project" data-cat="build">
+            <div class="project-top">
+              <span class="project-no">08 / 0 to 1 구축</span>
+              <span class="project-meta">(주)오앤 / 2024.06~2024.11</span>
+            </div>
+            <h3>실시간 영상 판독과 AI 영상관제</h3>
+            <ul>
+              <li><strong>실시간 영상 판독(IVR)</strong>: 4K 영상을 2초 이내로 송출하고 1프레임 단위로 역재생하는 구조를 설계해 세계태권도연맹, 대한유도회 공식 판독 시스템으로 채택</li>
+              <li><strong>환인제약 AI CCTV 영상관제</strong>(2024.08~2024.11): CCTV와 물류 관리 시스템 연동 프로토콜, 근무자별 자동 라벨링과 검색, On-Premise 보안 아키텍처를 설계해 사고 처리 시간 95% 단축</li>
+            </ul>
+            <div class="shots shots--2" style="grid-template-columns:1fr">
+              <figure class="shot"><button type="button" data-full="assets/v2/img/ivr.webp" aria-label="영상 판독 화면 확대"><img src="assets/v2/img/ivr.webp" alt="실시간 영상 판독 시스템 메인 화면" loading="lazy" width="1189" height="669" /></button><figcaption>실시간 영상 판독 메인 화면</figcaption></figure>
+            </div>
+            <div class="chips"><span class="chip chip--ax">On-Premise 보안</span><span class="chip">저지연 송출</span></div>
+          </article>
+
+          <!-- P09 -->
+          <article class="project" data-cat="build auto">
+            <div class="project-top">
+              <span class="project-no">09 / 0 to 1 구축</span>
+              <span class="project-meta">와이엔케이 / 2019.06~2023.03 / 대표</span>
+            </div>
+            <h3>창업, 그리고 잠든 동안에도 돌아가는 사업 구조</h3>
+            <ul>
+              <li><strong>위치 기반 역경매 매칭 플랫폼 방문</strong>: 가입, 인증, 매칭, 결제 흐름을 설계하고 외주 개발팀과 AOS/iOS/Web으로 출시해 개시 연도 매출 3억 원</li>
+              <li><strong>공간 공유 무인 운영 자동화</strong>: 결제가 끝나면 체크인 가이드 자동 발송, 예약 문의는 챗봇이 미리 만든 답변으로 응대, 청소 담당자 일정과 알림 자동 배정. 건물마다 사진 없는 히든 컨셉 룸을 두는 실험까지 더해 1년 안에 1곳에서 13곳으로 확장</li>
+              <li><strong>사업화</strong>: 정부지원 사업 14건 선정으로 총 4억 원 확보, 기술특허 1건과 상표 42건 자력 등록</li>
+            </ul>
+            <div class="chips"><span class="chip chip--ax">무인 운영 자동화</span><span class="chip">챗봇</span><span class="chip">0 to 1</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TOOLKIT -->
+    <section class="section band-dark" id="toolkit">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">AX Toolkit</div>
+          <div>
+            <h2>직접 만들어 실무에서 써 온 도구들</h2>
+            <p>이미 검증한 도구가 있어 비슷한 구조의 업무를 찾으면 조금만 고쳐 바로 적용할 수 있습니다.</p>
+          </div>
+        </div>
+        <div class="tools">
+          <div class="tool"><h3>웹 업무 처리 자동화</h3><p>사람이 화면을 오가며 대조하고 승인하던 일을 대신 처리합니다.</p><span class="use">BMW 가입 승인 / 쿠폰 설정값 약 50종 검증</span></div>
+          <div class="tool"><h3>엑셀 양식 산출 자동화</h3><p>정해진 양식의 엑셀과 PPT 리포트를 데이터에서 바로 만들어 냅니다.</p><span class="use">정비 증적 에러 리포트 / 월간 리포트</span></div>
+          <div class="tool"><h3>QA 자동화</h3><p>반복 테스트 시나리오를 자동으로 돌려 출시 전 결함을 찾습니다.</p><span class="use">파리올림픽 SaaS 커버리지 70%</span></div>
+          <div class="tool"><h3>RAG 업무 지원</h3><p>흩어진 업무 기록을 찾아 답하고 메일 초안까지 작성합니다.</p><span class="use">문서, 이메일, Teams 기록</span></div>
+          <div class="tool"><h3>성과분석 리포트</h3><p>Task를 등급화해 성과를 계산하고 리포트를 생성합니다.</p><span class="use">성과 포상 자동 계산</span></div>
+          <div class="tool"><h3>판매 분석 대시보드</h3><p>판매와 프로모션 성과를 모으고 AI가 다음 전략을 제안합니다.</p><span class="use">커머스 5개 서비스</span></div>
+          <div class="tool"><h3>개발 현황 대시보드</h3><p>Jira와 Flow 로그로 지연 Task와 병목을 실시간으로 보여 줍니다.</p><span class="use">전사 도입 / 다우데이타 PM</span></div>
+          <div class="tool"><h3>배포와 운영</h3><p>만든 도구를 직접 배포하고 운영 환경까지 관리합니다.</p><span class="use">Firebase / Cloudflare</span></div>
+        </div>
+        <div class="stack" aria-label="기술 스택">
+          <span>Python</span><span>VBA</span><span>Selenium</span><span>Playwright</span><span>React</span><span>Claude API</span><span>RAG</span><span>Firebase</span><span>Cloudflare</span><span>Redis</span><span>Jira API</span><span>Flow API</span><span>SQL</span><span>DBeaver</span><span>Postman</span><span>Figma</span><span>Confluence</span><span>Notion</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLLAB -->
+    <section class="section" id="collab">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">Security &amp; Collaboration</div>
+          <div>
+            <h2>현업, IT, 정보보안 조직과 함께 끝까지</h2>
+            <p>고객사 IT팀, 정보보안팀과 보안 심사에 대응하고, 비개발 조직에는 기술 내용을 수치와 결과로 설명해 왔습니다.</p>
+          </div>
+        </div>
+        <div class="collab">
+          <div class="collab-card"><div class="org">BMW IT팀 / 정보보안팀</div><h3>ISMS 심사, 모의해킹, VM0 Pentest</h3><p>심사 과정에서 보안 코드 리뷰와 취약점 조치를 함께 진행했습니다.</p><div class="res">보안 취약점 0건 종결</div></div>
+          <div class="collab-card"><div class="org">SPC IT팀 / 정보보안팀</div><h3>ISMS 심사 대응</h3><p>심사 요건에 맞춰 취약점을 점검하고 조치했습니다.</p><div class="res">취약점 0건, ISMS 인증 획득 (2026.02)</div></div>
+          <div class="collab-card"><div class="org">다우데이타 IT팀 / 정보보안팀</div><h3>ISMS 요건 사전 반영</h3><p>인증을 바로 받을 수 있도록 설계 단계부터 보안 요건을 반영했습니다.</p><div class="res">2026.09.08 런칭</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAREER -->
+    <section class="section section--surface" id="career">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">Career</div>
+          <div>
+            <h2>경력</h2>
+            <p>비전공자로 창업해 서비스를 직접 만들었고, 이후 글로벌 SaaS와 여러 산업의 AX를 이끌었습니다.</p>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="t-item">
+            <div class="t-date">2025.07 ~ 재직 중</div>
+            <div class="t-body">
+              <h3>(주)씨앤디팩토리</h3>
+              <div class="t-role">서비스기획운영팀 대리 / 서비스 기획, PM, AX</div>
+              <ul>
+                <li>BMW, BHC, 아웃백, 광동상회, SPC, 제주삼다수, 다우데이타 서비스 기획과 PM</li>
+                <li>운영 자동화로 반복 업무 연 3,500시간을 0시간으로, RAG 업무 지원 시스템과 개발 현황 대시보드 전사 도입</li>
+                <li>BMW, SPC 보안 심사 취약점 0건, 다우데이타 셀러포탈 연동 에러 0건 런칭</li>
+              </ul>
+            </div>
+          </div>
+          <div class="t-item">
+            <div class="t-date">2023.02 ~ 2024.12</div>
+            <div class="t-body">
+              <h3>(주)오앤</h3>
+              <div class="t-role">전략기획팀 과장 / 총괄 PM, AI 서비스 기획</div>
+              <ul>
+                <li>2024 파리올림픽 태권도 운영 SaaS 총괄, 운영비 70% 절감</li>
+                <li>실시간 영상 판독 시스템과 환인제약 AI CCTV 영상관제 기획 및 설계</li>
+                <li>병행 프로젝트 전체 4개 팀 14명 직접 채용 및 총괄</li>
+              </ul>
+            </div>
+          </div>
+          <div class="t-item">
+            <div class="t-date">2019.06 ~ 2023.03</div>
+            <div class="t-body">
+              <h3>와이엔케이</h3>
+              <div class="t-role">대표(창업) / 서비스 기획, 총괄</div>
+              <ul>
+                <li>위치 기반 매칭 플랫폼 방문 기획과 출시, 개시 연도 매출 3억 원</li>
+                <li>공간 공유 사업 무인 운영 자동화, 1년 안에 13곳으로 확장</li>
+                <li>정부지원 사업 14건 선정, 총 4억 원 확보</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Project 3 -->
-      <div class="project-block">
-        <div class="project-number">03</div>
-        <div class="project-content">
-          <div class="project-meta">
-            <span class="project-period">2024.06 ~ 2024.08 (3개월)</span>
-            <div class="project-roles">
-              <span class="role-tag">화면 설계</span>
-              <span class="role-tag">정책 설계</span>
-              <span class="role-tag">프로토콜 설계</span>
-              <span class="role-tag">PM</span>
-              <span class="role-tag">QA</span>
-            </div>
-            <span class="project-team">👥 <strong>총 3인</strong> · 개발 1 · 기획 1(본인) · 디자이너 1</span>
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="section-kicker">Education &amp; Awards</div>
+          <div><h2>학력, 수상, 특허</h2></div>
+        </div>
+        <div class="edu">
+          <div class="edu-card">
+            <h3>학력, 수상, 인증</h3>
+            <ul>
+              <li><span><strong>한국외국어대학교</strong> 언어인지과학, 언론정보학</span><span>2026.02 졸업</span></li>
+              <li><span>제21회 경제유니버시아드 IT부문 산업통상자원부 장관상(대상)</span><span>2019.12</span></li>
+              <li><span>제1회 청년창업 스토리 공모전 은상</span><span>2019</span></li>
+              <li><span>기술보증기금 기술 심사 B등급</span><span>2020</span></li>
+            </ul>
           </div>
-          <h3>세계태권도연맹/KPNP 대회 및<br /><span>대한유도회 공식 영상 판독 서비스</span></h3>
-          <p class="project-req"><strong>요구사항</strong> 기존 영상 판독이 불편하여 경기 지연이 발생합니다. 영상 판독 솔루션이 필요합니다.</p>
-          <p class="project-overview">
-            스포츠 경기의 영상 판독을 위한 구독형 온라인 서비스. Latency 2초 이내의 실시간 송출 및 재생 제어 기능,
-            프레임 단위 역재생과 배속 재생, 카메라 묶음 제어, 외부 프로그램과의 연동 기능 탑재.
-          </p>
-          <!-- Architecture SVG -->
-          <div class="project-arch">
-            <h4>⚙️ 시스템 구성도</h4>
-            <svg class="arch-svg" viewBox="0 0 780 260" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <marker id="arrow4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-                  <path d="M0,0 L0,6 L8,3 z" fill="#5b7fff"/>
-                </marker>
-              </defs>
-              <!-- Camera Input -->
-              <rect x="20" y="80" width="110" height="50" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="75" y="97" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="13" font-weight="600">카메라</text>
-              <text x="75" y="114" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">다각도 촬영</text>
-
-              <line x1="130" y1="105" x2="200" y2="105" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow4)"/>
-
-              <!-- Encoding Server -->
-              <rect x="200" y="60" width="145" height="90" rx="10" fill="#0f1628" stroke="#7c5fff" stroke-width="2"/>
-              <text x="272" y="80" text-anchor="middle" dominant-baseline="middle" fill="#c0aaff" font-size="13" font-weight="700">인코딩 서버</text>
-              <text x="272" y="97" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">FFmpeg 처리</text>
-              <text x="272" y="114" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">프레임 단위 저장</text>
-              <text x="272" y="131" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">Latency ≤ 2초</text>
-
-              <line x1="345" y1="90" x2="415" y2="70" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow4)"/>
-              <line x1="345" y1="120" x2="415" y2="140" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow4)"/>
-
-              <!-- Replay -->
-              <rect x="415" y="40" width="140" height="60" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="485" y="53" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="13" font-weight="600">실시간 스트림</text>
-              <text x="485" y="70" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">일반 인코딩 재생</text>
-              <text x="485" y="87" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">순방향 고화질</text>
-
-              <rect x="415" y="120" width="140" height="60" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="485" y="133" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="13" font-weight="600">역재생 엔진</text>
-              <text x="485" y="150" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">프레임 저장본 활용</text>
-              <text x="485" y="167" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">1프레임 단위 제어</text>
-
-              <line x1="555" y1="70" x2="625" y2="90" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow4)"/>
-              <line x1="555" y1="150" x2="625" y2="130" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow4)"/>
-
-              <!-- Judge UI -->
-              <rect x="625" y="60" width="140" height="90" rx="10" fill="#0f1628" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="695" y="80" text-anchor="middle" dominant-baseline="middle" fill="#5b7fff" font-size="13" font-weight="600">심판 UI</text>
-              <text x="695" y="97" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">콘솔 · 단축키 지원</text>
-              <text x="695" y="114" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">다국어 접근성</text>
-              <text x="695" y="131" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">판독 속도 40% 향상</text>
-
-              <text x="75" y="200" text-anchor="middle" fill="#556688" font-size="12">입력</text>
-              <text x="272" y="185" text-anchor="middle" fill="#556688" font-size="12">처리</text>
-              <text x="485" y="210" text-anchor="middle" fill="#556688" font-size="12">재생 모드</text>
-              <text x="695" y="180" text-anchor="middle" fill="#556688" font-size="12">판독 화면</text>
-            </svg>
-          </div>
-
-          <!-- Screenshot Gallery -->
-          <div class="project-gallery">
-            <div class="gallery-item gallery-item--wide">
-              <img src="assets/images/ivr/main.png" alt="IVR 메인화면" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">영상 판독 메인 화면</span>
-            </div>
-          </div>
-
-          <div class="project-flow">
-            <h4>🧭 문제 해결 과정</h4>
-            <div class="flow-step flow-step--problem">
-              <span class="flow-tag">① 문제 인식·정의</span>
-              <p>심판 판정 편차와 영상 지연으로 경기가 지연됐습니다. '판정 신뢰'라는 추상적 문제를 <strong>Latency 2초 이내·1프레임 단위 역재생</strong>이라는 측정 가능한 품질 지표로 정의했습니다.</p>
-            </div>
-            <div class="flow-step flow-step--hypothesis">
-              <span class="flow-tag">② 가설·접근 (선택 근거)</span>
-              <p>실시간 고화질 송출과 프레임 단위 역재생은 양립하기 어렵다고 보고, FFmpeg으로 프레임 단위 1차 저장 후 재생/역재생 경로를 이원화하면 두 요건을 동시에 만족할 수 있다는 가설을 세웠습니다.</p>
-            </div>
-            <div class="flow-step flow-step--execution">
-              <span class="flow-tag">③ 실행·검증</span>
-              <p>순방향은 일반 인코딩 영상으로, 역방향은 프레임 저장본을 빠르게 불러오는 방식으로 구현했습니다. 평균 50대 외국인 심판을 대상으로 UX 인터뷰를 진행해 콘솔 호환·단축키 접근성을 우선 반영하고 1회 릴리스로 출시했습니다.</p>
-            </div>
-            <div class="flow-step flow-step--result">
-              <span class="flow-tag">④ 데이터 기반 결과</span>
-              <p>판독 속도 40%↑·Latency 2초 이내 실시간 송출·1프레임 단위 정밀 역재생을 구현해 세계태권도연맹·대한유도회 2개 기관에 공식 채택됐습니다.</p>
-            </div>
-          </div>
-          <div class="project-results">
-            <div class="result-item">
-              <span class="result-num">40%</span>
-              <span class="result-label">판독 속도 향상</span>
-            </div>
-            <div class="result-item">
-              <span class="result-num">2초</span>
-              <span class="result-label">Latency 실시간 송출</span>
-            </div>
-            <div class="result-item">
-              <span class="result-num">1프레임</span>
-              <span class="result-label">단위 정밀 역재생</span>
-            </div>
-            <div class="result-item">
-              <span class="result-num">2개</span>
-              <span class="result-label">공식 채택 기관</span>
-            </div>
-          </div>
-          <div class="project-ax">
-            <span class="ax-chip">AX 관점</span>
-            <p>'판정 신뢰'라는 추상적 문제를 <strong>Latency 2초·프레임 단위 역재생</strong>이라는 측정 가능한 기술 지표로 재정의해, 사람의 판단을 보조하는 검증 가능한 자동화 시스템으로 구현했습니다.</p>
-          </div>
-          <div class="project-badge">
-            🥋 세계태권도연맹 & 대한유도회 공식 서비스 채택
+          <div class="edu-card">
+            <h3>특허와 선정 사업</h3>
+            <ul>
+              <li><span>기술특허 등록 제10-2196536호 (자력 출원, 등록)</span><span>2020</span></li>
+              <li><span>상표등록 42건 (자력 출원, 등록)</span><span>2021</span></li>
+              <li><span>예비창업패키지 선정</span><span>2019, 2021</span></li>
+              <li><span>G-startup 챌린지 선정</span><span>2020</span></li>
+              <li><span>관광벤처사업 공모전 선정 (여행 리워드 플랫폼)</span><span>2022</span></li>
+            </ul>
           </div>
         </div>
       </div>
-      <!-- Project 4 -->
-      <div class="project-block">
-        <div class="project-number">04</div>
-        <div class="project-content">
-          <div class="project-meta">
-            <span class="project-period">2023.09 ~ 2024.06 (10개월)</span>
-            <div class="project-roles">
-              <span class="role-tag">화면 설계</span>
-              <span class="role-tag">정책 설계</span>
-              <span class="role-tag">프로토콜 설계</span>
-              <span class="role-tag">ERD 설계</span>
-              <span class="role-tag">PM</span>
-              <span class="role-tag">QA</span>
-            </div>
-            <span class="project-team">👥 <strong>총 5인</strong> · 개발 3(FE 2·BE 1) · 기획 1(본인) · 디자이너 1</span>
-          </div>
-          <h3>2024 파리 올림픽 태권도 운영 서비스<br /><span>& KPNP 대회 운영 구독 서비스</span></h3>
-          <p class="project-req"><strong>요구사항</strong> 대회 운영 사업에 대한 분석 후, 솔루션이 필요합니다.</p>
-          <p class="project-overview">
-            전세계 태권도 대회를 반자동으로 운영할 수 있도록 하는 온라인 구독 서비스.
-            대회 개최, 참가자 모집/결제, 스케줄 생성, 대진 생성, 실시간 경기 순서 조작,
-            경기 결과 통합 문서화, 참가자 경기 정보 안내 등의 기능을 갖춤.
-          </p>
-          <!-- Architecture SVG -->
-          <div class="project-arch">
-            <h4>⚙️ 시스템 구성도</h4>
-            <svg class="arch-svg" viewBox="0 0 780 280" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <marker id="arrow1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-                  <path d="M0,0 L0,6 L8,3 z" fill="#5b7fff"/>
-                </marker>
-              </defs>
-              <!-- External Programs -->
-              <rect x="20" y="30" width="120" height="44" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="80" y="44" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="12" font-weight="600">세계태권도연맹</text>
-              <text x="80" y="61" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">규정 DB</text>
+    </section>
 
-              <rect x="20" y="94" width="120" height="44" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="80" y="108" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="12" font-weight="600">외부 연동 SW</text>
-              <text x="80" y="125" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">4개 프로그램</text>
-
-              <rect x="20" y="158" width="120" height="44" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="80" y="172" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="12" font-weight="600">PG / 결제</text>
-              <text x="80" y="189" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">참가비 처리</text>
-
-              <line x1="140" y1="52" x2="210" y2="100" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow1)"/>
-              <line x1="140" y1="116" x2="210" y2="116" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow1)"/>
-              <line x1="140" y1="180" x2="210" y2="132" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow1)"/>
-
-              <!-- OVR Core -->
-              <rect x="210" y="70" width="160" height="100" rx="12" fill="#0f1628" stroke="#7c5fff" stroke-width="2"/>
-              <text x="290" y="95" text-anchor="middle" dominant-baseline="middle" fill="#c0aaff" font-size="14" font-weight="700">OVR 플랫폼</text>
-              <text x="290" y="112" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">대회 개최 · 참가자 모집</text>
-              <text x="290" y="129" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">스케줄 · 대진 자동 생성</text>
-              <text x="290" y="146" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">실시간 경기 결과 통합</text>
-
-              <line x1="370" y1="100" x2="440" y2="75" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow1)"/>
-              <line x1="370" y1="120" x2="440" y2="150" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow1)"/>
-
-              <!-- Admin -->
-              <rect x="440" y="44" width="140" height="60" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="510" y="57" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="13" font-weight="600">대회 운영자</text>
-              <text x="510" y="74" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">어드민 대시보드</text>
-              <text x="510" y="91" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">스케줄 조작 · 결과 입력</text>
-
-              <!-- Participant -->
-              <rect x="440" y="124" width="140" height="60" rx="8" fill="#1a1f2e" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="510" y="137" text-anchor="middle" dominant-baseline="middle" fill="#e0e8ff" font-size="13" font-weight="600">참가자</text>
-              <text x="510" y="154" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="12">모바일 / 웹 앱</text>
-              <text x="510" y="171" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">경기 정보 · 결과 확인</text>
-
-              <!-- Results -->
-              <line x1="580" y1="74" x2="650" y2="80" stroke="#5b7fff" stroke-width="1.2" marker-end="url(#arrow1)"/>
-              <rect x="650" y="54" width="120" height="76" rx="8" fill="#0f1628" stroke="#5b7fff" stroke-width="1.5"/>
-              <text x="710" y="67" text-anchor="middle" dominant-baseline="middle" fill="#5b7fff" font-size="12" font-weight="600">성과</text>
-              <text x="710" y="84" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">운영 시간 40% 단축</text>
-              <text x="710" y="101" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">수작업 80% 자동화</text>
-              <text x="710" y="118" text-anchor="middle" dominant-baseline="middle" fill="#8899bb" font-size="11">연 100만 이용자</text>
-
-              <!-- Labels -->
-              <text x="80" y="235" text-anchor="middle" fill="#556688" font-size="12">외부 연동</text>
-              <text x="290" y="200" text-anchor="middle" fill="#556688" font-size="12">핵심 플랫폼</text>
-              <text x="510" y="210" text-anchor="middle" fill="#556688" font-size="12">사용자</text>
-            </svg>
-          </div>
-
-          <!-- Screenshot Gallery -->
-          <div class="project-gallery">
-            <div class="gallery-item">
-              <img src="assets/images/ovr/main.png" alt="OVR 메인화면" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">대회 메인 화면</span>
-            </div>
-            <div class="gallery-item">
-              <img src="assets/images/ovr/participants.png" alt="OVR 참가자 목록" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">참가자 목록 관리</span>
-            </div>
-            <div class="gallery-item">
-              <img src="assets/images/ovr/schedule.png" alt="OVR 경기 스케줄" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">경기 스케줄 조정</span>
-            </div>
-          </div>
-
-          <p class="gallery-label">개선 전 — 구버전 (수기 운영)</p>
-          <div class="project-gallery project-gallery--old">
-            <div class="gallery-item">
-              <img src="assets/images/ovr_old/old-main.png" alt="구버전 OVR 메인" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">구버전 메인 화면</span>
-            </div>
-            <div class="gallery-item">
-              <img src="assets/images/ovr_old/old-schedule.png" alt="구버전 스케줄 관리" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">구버전 스케줄 (수기)</span>
-            </div>
-            <div class="gallery-item">
-              <img src="assets/images/ovr_old/old-weighin.png" alt="구버전 계체 관리" width="400" height="180" loading="lazy" />
-              <span class="gallery-caption">구버전 계체 관리</span>
-            </div>
-          </div>
-
-          <div class="project-flow">
-            <h4>🧭 문제 해결 과정</h4>
-            <div class="flow-step flow-step--problem">
-              <span class="flow-tag">① 문제 인식·정의</span>
-              <p>170개국마다 태권도 대회 규정이 제각각이고 4개 외부 프로그램과 연동돼야 했습니다. 무엇보다 대회는 정해진 날짜에 반드시 열려야 해, 일정 지연이 곧 사업 실패로 직결되는 구조였습니다.</p>
-            </div>
-            <div class="flow-step flow-step--hypothesis">
-              <span class="flow-tag">② 가설·접근 (선택 근거)</span>
-              <p>매 대회를 커스텀 개발하면 170개국 확장이 불가능하다고 판단했습니다. 나라·종목마다 다른 대회 규정에도 호환되도록, <strong>확장성과 호환성을 우선해 데이터 분류 체계와 처리 흐름을 재구축</strong>하고 실시간성은 SSE 기반 연동 아키텍처로 해결하는 방향을 택했습니다.</p>
-            </div>
-            <div class="flow-step flow-step--execution">
-              <span class="flow-tag">③ 실행·검증</span>
-              <p>개발팀장이 두 차례 공백이 된 위기에 ERD·API·통신 프로토콜을 직접 재설계·점검해 무결성을 확보했습니다. 대진·결제(PayPal)·결과 통합 수작업 80%를 자동화로 치환하고, Figma·Notion 멀티트랙으로 기획–개발–QA 사이클을 6개월 1회전으로 압축해 검증했습니다.</p>
-            </div>
-            <div class="flow-step flow-step--result">
-              <span class="flow-tag">④ 데이터 기반 결과</span>
-              <p>운영 시간 40%↓·수작업 80% 자동화·운영비 70%↓·연 100만 명 이용, 일정 지연 0으로 런칭해 2024 파리올림픽 공식 운영 서비스로 채택됐습니다.</p>
-            </div>
-          </div>
-          <div class="project-results">
-            <div class="result-item">
-              <span class="result-num">40%</span>
-              <span class="result-label">운영 시간 단축</span>
-            </div>
-            <div class="result-item">
-              <span class="result-num">80%</span>
-              <span class="result-label">수작업 자동화</span>
-            </div>
-            <div class="result-item">
-              <span class="result-num">70%</span>
-              <span class="result-label">비용 절감</span>
-            </div>
-            <div class="result-item">
-              <span class="result-num">100만</span>
-              <span class="result-label">연 이용자 수</span>
-            </div>
-          </div>
-          <div class="project-ax">
-            <span class="ax-chip">AX 관점</span>
-            <p>대회마다 사람이 반복하던 대진·정산·문서화를, <strong>여러 규정 차이에도 호환되도록 확장성·호환성을 고려해 데이터 분류와 처리 흐름을 재구축</strong>한 자동화 구조로 전환했습니다.</p>
-          </div>
-          <div class="project-badge">
-            🏅 2024년 파리 올림픽 태권도 공식 운영 서비스 채택
-          </div>
+    <!-- CONTACT -->
+    <section class="section section--surface contact" id="contact">
+      <div class="wrap">
+        <h2>함께 바꿀 업무가 있다면<br />이야기 나눠요</h2>
+        <p>측정할 수 있는 작은 업무 하나부터 시작하겠습니다.</p>
+        <div class="contact-row">
+          <a class="btn btn-primary" href="mailto:saian64@naver.com?subject=%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%20%EB%AC%B8%EC%9D%98">saian64@naver.com</a>
+          <button class="copy-btn" type="button" data-copy="saian64@naver.com">이메일 복사</button>
+          <a class="btn btn-ghost" href="tel:010-9954-8720">010-9954-8720</a>
+          <a class="btn btn-ghost" href="포트폴리오_김강현_한장.pdf" download>1장 PDF 받기</a>
         </div>
       </div>
-
-
-    </div>
-  </section>
-
-  <!-- EDUCATION -->
-  <section id="education" class="section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Education</span>
-        <h2>학력 <span class="accent">&</span> 수상</h2>
-      </div>
-      <div class="edu-grid">
-        <div class="edu-card">
-          <div class="edu-school">한국외국어대학교</div>
-          <div class="edu-degree">언어인지과학 / 언론정보학 학사</div>
-          <div class="edu-period">2013.02 – 2026.02 (졸업)</div>
-          <p class="edu-note">졸업 요건을 모두 갖춘 상태에서 정책적 이득(청년 지원, 창업 패키지 등) 유지를 위해 졸업을 유예했으며, 2026년 2월 졸업했습니다.</p>
-        </div>
-        <div class="awards-wrap">
-          <h3>수상 및 특허</h3>
-          <div class="award-list">
-            <div class="award-item">
-              <span class="award-icon">🏆</span>
-              <div>
-                <strong>제21회 경제 유니버시아드 IT부문 대상</strong>
-                <span>산업통상부장관상 수상 (2019)</span>
-              </div>
-            </div>
-            <div class="award-item">
-              <span class="award-icon">📜</span>
-              <div>
-                <strong>기술특허 등록</strong>
-                <span>출원번호 1020190004096</span>
-              </div>
-            </div>
-            <div class="award-item">
-              <span class="award-icon">⭐</span>
-              <div>
-                <strong>G-스타트업 챌린지 우수 과제</strong>
-                <span>완료 (2019)</span>
-              </div>
-            </div>
-            <div class="award-item">
-              <span class="award-icon">💡</span>
-              <div>
-                <strong>예비창업패키지 우수 과제 완료</strong>
-                <span>2019년, 2021년</span>
-              </div>
-            </div>
-            <div class="award-item">
-              <span class="award-icon">🔬</span>
-              <div>
-                <strong>기술보증기금 기술평가 B등급</strong>
-                <span>획득</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section section-dark contact-section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-label">Contact</span>
-        <h2>함께 이야기<br /><span class="accent">나눠요</span></h2>
-        <p class="section-desc">제 포트폴리오에 관심을 가져주신 점 매우 기쁘게 생각합니다.</p>
-      </div>
-      <div class="contact-cards">
-        <a class="contact-card" href="tel:010-9954-8720">
-          <div class="cc-icon">📱</div>
-          <div class="cc-label">전화</div>
-          <div class="cc-value">010-9954-8720</div>
-          <button class="cc-copy" type="button" data-copy="010-9954-8720" aria-label="전화번호 복사">복사</button>
-        </a>
-        <a class="contact-card" href="mailto:saian64@naver.com">
-          <div class="cc-icon">✉️</div>
-          <div class="cc-label">이메일</div>
-          <div class="cc-value">saian64@naver.com</div>
-          <button class="cc-copy" type="button" data-copy="saian64@naver.com" aria-label="이메일 주소 복사">복사</button>
-        </a>
-      </div>
-      <div class="contact-actions">
-        <a href="mailto:saian64@naver.com?subject=포트폴리오%20문의" class="btn btn-primary">✉️ 이메일 보내기</a>
-        <a href="포트폴리오_김강현.pdf" class="btn btn-ghost" download>📄 PDF 다운로드</a>
-      </div>
-      <p class="contact-name">김강현</p>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <span class="footer-name">김강현</span>
-        <span class="footer-tag">AX 전문 IT 기획자 · PM</span>
-      </div>
-      <div class="footer-links">
-        <a href="mailto:saian64@naver.com">saian64@naver.com</a>
-        <span class="footer-sep" aria-hidden="true">·</span>
-        <a href="tel:010-9954-8720">010-9954-8720</a>
-        <span class="footer-sep" aria-hidden="true">·</span>
-        <a href="포트폴리오_김강현.pdf" download>PDF 다운로드</a>
-      </div>
-      <p class="footer-copy">© 2026 김강현. All rights reserved.</p>
+    <div class="wrap">
+      <span>© 2026 김강현. AX 전문 IT 기획자 / PM</span>
+      <span><a href="v1.html">이전 버전 포트폴리오</a></span>
     </div>
   </footer>
 
-  <!-- BACK TO TOP -->
-  <button id="back-to-top" aria-label="맨 위로 이동" title="맨 위로">↑</button>
+  <dialog class="lightbox" id="lightbox" aria-label="이미지 확대 보기">
+    <div class="lb-scroll"><img id="lb-img" alt="" /></div>
+    <div class="lb-bar"><span id="lb-cap"></span><button type="button" id="lb-close">닫기</button></div>
+  </dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="assets/js/main.js"></script>
+  <script src="assets/v2/main.js"></script>
 </body>
 </html>
