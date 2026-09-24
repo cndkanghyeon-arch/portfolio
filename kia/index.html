@@ -222,7 +222,7 @@
               <ul class="list">
                 <li>BMW 서비스 패키지 가입 신청 하루 200건을 본사 차량 데이터와 손으로 대조(일 2시간)</li>
                 <li>주간 정비 증적 에러 수정 요청 대응에 주 4시간, 건당 30분 추가</li>
-                <li>딜러 수수료 정산 데이터가 틀어져 매달 8시간 넘게 대사</li>
+                <li>WP(BMW 워런티플러스) 딜러 수수료 정산 데이터가 틀어져 매달 8시간 넘게 대사</li>
               </ul>
             </div>
             <div>
@@ -247,7 +247,7 @@
             <div class="auto-col">
               <h4 class="auto-title">대조와 검증</h4>
               <div class="auto-row"><div><strong>가입 심사 (PoC)</strong><p>본사 차량 데이터를 대조해 승인과 반려를 자동 판단</p></div><span class="auto-badge">일 2시간 → 0</span></div>
-              <div class="auto-row"><div><strong>딜러 수수료 정산 정합성</strong><p>40개 이상 칼럼의 계산 로직을 전수 조사해 재설계</p></div><span class="auto-badge">월 8시간 → 0</span></div>
+              <div class="auto-row"><div><strong>WP(BMW 워런티플러스) 정산 정합성</strong><p>딜러 수수료 정산 40개 이상 칼럼의 계산 로직을 전수 조사해 재설계</p></div><span class="auto-badge">월 8시간 → 0</span></div>
               <div class="auto-row"><div><strong>WP-DMS API 통신 데이터</strong><p>정합성을 자동 확인하고 어긋난 값은 자동 수정</p></div><span class="auto-badge auto-badge--gray">자동 수정</span></div>
             </div>
             <div class="auto-col">
@@ -256,6 +256,12 @@
               <div class="auto-row"><div><strong>SCP, WP, OAS 월 마감 분석</strong><p>정산, 유지보수 이슈, 투입 공수, 딜러사별 성과 분석</p></div><span class="auto-badge auto-badge--gray">서비스 3개</span></div>
               <div class="auto-row"><div><strong>브랜드별 정기 리포트</strong><p>BHC, 아웃백 일간, 주간, 월간 리포트 자동 생성</p></div><span class="auto-badge auto-badge--gray">확산 단계</span></div>
             </div>
+          </div>
+          <div class="shots">
+            <figure class="shot"><button type="button" data-full="img/bmw-scp.webp" aria-label="서비스 패키지 가입 관리 화면 확대"><img src="img/bmw-scp.webp" alt="서비스 패키지 가입 관리 화면" loading="lazy" width="1234" height="634" /></button><figcaption>서비스 패키지 가입 관리</figcaption></figure>
+            <figure class="shot"><button type="button" data-full="img/bmw-oas.webp" aria-label="정비 예약 현황 화면 확대"><img src="img/bmw-oas.webp" alt="정비 예약 현황 차트 화면" loading="lazy" width="913" height="460" /></button><figcaption>정비 예약 현황</figcaption></figure>
+            <figure class="shot"><button type="button" data-full="img/bmw-wpp.webp" aria-label="딜러 판매 패키지 운영 화면 확대"><img src="img/bmw-wpp.webp" alt="딜러 판매 패키지 운영 관리 화면" loading="lazy" width="1288" height="643" /></button><figcaption>딜러 판매 패키지 운영</figcaption></figure>
+            <figure class="shot"><button type="button" data-full="img/sales-dashboard.webp" aria-label="광동상회 AI 판매 분석 대시보드 전체 보기"><img src="img/sales-dashboard.webp" alt="광동상회 실시간 AI 판매 분석 대시보드 화면" loading="lazy" width="1100" height="2929" /></button><figcaption>광동상회 AI 판매 분석 대시보드 (확산 단계)</figcaption></figure>
           </div>
           <div class="chips"><span class="chip chip--red">과제 발굴</span><span class="chip">PoC</span><span class="chip">ROI 산정</span><span class="chip">성과 평가</span></div>
         </article>
@@ -280,7 +286,7 @@
                 <li>MyBMW 앱 iframe 연동 모바일 가입, 결제 채널 구축</li>
                 <li>외부 인증 플랫폼과 토큰 규격 협의, 가입부터 결제까지 단일 흐름 설계</li>
                 <li>정비 예약 온라인 체크인(방문 전날 푸시 알림) 기획과 구현</li>
-                <li>CRM팀 VTG 앱 포인트를 AfterSales팀과 BMW ISK의 WP 가입에 쓰는 제휴 성사</li>
+                <li>CRM팀 VTG 앱 포인트를 AfterSales팀과 BMW ISK의 WP(BMW 워런티플러스) 가입에 쓰는 제휴 성사</li>
               </ul>
             </div>
             <div class="res">
@@ -292,11 +298,6 @@
               </ul>
             </div>
           </div>
-          <div class="shots">
-            <figure class="shot"><button type="button" data-full="img/bmw-scp.webp" aria-label="서비스 패키지 가입 관리 화면 확대"><img src="img/bmw-scp.webp" alt="서비스 패키지 가입 관리 화면" loading="lazy" width="1234" height="634" /></button><figcaption>서비스 패키지 가입 관리</figcaption></figure>
-            <figure class="shot"><button type="button" data-full="img/bmw-oas.webp" aria-label="정비 예약 현황 화면 확대"><img src="img/bmw-oas.webp" alt="정비 예약 현황 차트 화면" loading="lazy" width="913" height="460" /></button><figcaption>정비 예약 현황</figcaption></figure>
-            <figure class="shot"><button type="button" data-full="img/bmw-wpp.webp" aria-label="딜러 판매 패키지 운영 화면 확대"><img src="img/bmw-wpp.webp" alt="딜러 판매 패키지 운영 관리 화면" loading="lazy" width="1288" height="643" /></button><figcaption>딜러 판매 패키지 운영</figcaption></figure>
-          </div>
           <div class="chips"><span class="chip chip--red">모바일 채널 신설</span><span class="chip">유저 플로우</span><span class="chip">제휴</span></div>
         </article>
 
@@ -304,7 +305,7 @@
         <article class="proj" id="p3" data-cat="dom ax">
           <div class="proj-meta"><span class="no">03</span><span class="area">자동차 도메인</span><span class="dot" aria-hidden="true"></span><span>(주)씨앤디팩토리</span><span class="dot" aria-hidden="true"></span><span>BMW 애프터세일즈 / 2025.07~2025.11</span></div>
           <h3>BMW 애프터세일즈 시스템 정산 무결성 확보와 고도화</h3>
-          <p class="proj-sum">SCP(서비스케어플러스) 판매 건의 정비 매출을 딜러사와 BMW 코리아가 나누는 정산에서 에러가 이어졌습니다. 로그를 전수로 보고 원인을 좁힌 뒤 정책, 로직, 데이터 구조를 함께 고쳤습니다.</p>
+          <p class="proj-sum">SCP(BMW 서비스케어플러스) 판매 건의 정비 매출을 딜러사와 BMW 코리아가 나누는 정산에서 에러가 이어졌습니다. 로그를 전수로 보고 원인을 좁힌 뒤 정책, 로직, 데이터 구조를 함께 고쳤습니다.</p>
           <div class="psr">
             <div>
               <h4>문제</h4>
