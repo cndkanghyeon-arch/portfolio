@@ -15,7 +15,8 @@
       "PowerShell(gh auth status 2>&1)",
       "PowerShell(winget install --id GitHub.cli --silent --accept-package-agreements --accept-source-agreements 2>&1)",
       "PowerShell($env:PATH = $env:PATH + \";C:\\\\Program Files\\\\GitHub CLI\"; gh --version 2>&1)",
-      "PowerShell($env:PATH = $env:PATH + \";C:\\\\Program Files\\\\GitHub CLI\"; gh auth status 2>&1)"
+      "PowerShell($env:PATH = $env:PATH + \";C:\\\\Program Files\\\\GitHub CLI\"; gh auth status 2>&1)",
+      "Bash(cd \"D:/onedrive/바탕 화면/works/블로그자동화\" && ls && ls drafts knowledge feedback topics reports research 2>/dev/null | head -80)"
     ]
   }
 }
