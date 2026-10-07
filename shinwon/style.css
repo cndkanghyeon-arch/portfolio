@@ -106,8 +106,16 @@ footer .wrap{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between}
 
 .galhead{margin-top:20px;font-size:13px;font-weight:700;color:var(--ink)}
 
-dialog#lb{border:0;padding:0;max-width:94vw;max-height:94vh;background:#fff;box-shadow:0 24px 64px rgba(0,0,0,.35)}
-dialog#lb::backdrop{background:rgba(17,17,17,.82)}
-dialog#lb img{display:block;max-width:92vw;max-height:80vh;width:auto;height:auto}
-dialog#lb p{padding:10px 14px;font-size:13px;color:var(--ink2);border-top:1px solid var(--line)}
-#lb-close{position:absolute;top:10px;right:10px;border:0;background:var(--ink);color:#fff;font-size:12px;font-weight:600;padding:7px 13px;cursor:pointer;font-family:inherit}
+/* 전역 리셋의 *{margin:0}이 dialog 기본 margin:auto를 덮어 좌상단에 붙으므로 다시 지정한다 */
+dialog#lb{margin:auto;inset:0;border:0;padding:0;width:min(94vw,1240px);max-width:94vw;height:min(92vh,980px);max-height:92vh;background:#fff;box-shadow:0 24px 64px rgba(0,0,0,.4);overflow:hidden}
+dialog#lb[open]{display:flex;flex-direction:column}
+dialog#lb::backdrop{background:rgba(17,17,17,.84)}
+.lb-bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 12px;border-bottom:1px solid var(--line);font-size:13px;color:var(--ink2);flex:0 0 auto}
+.lb-bar #lb-cap{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lb-btns{display:flex;gap:6px;flex:0 0 auto}
+.lb-btns button{border:1px solid var(--line);background:#fff;color:var(--ink);font-family:inherit;font-size:12.5px;font-weight:600;padding:5px 11px;cursor:pointer;min-width:38px}
+.lb-btns button:hover{border-color:var(--ink)}
+.lb-btns button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+.lb-body{flex:1 1 auto;min-height:0;overflow:auto;background:#F3F2EE;padding:12px;overscroll-behavior:contain}
+.lb-body img{display:block;margin:0 auto;max-width:none;cursor:zoom-in}
+@media (max-width: 700px){dialog#lb{width:96vw;height:88vh}.lb-bar #lb-cap{display:none}}

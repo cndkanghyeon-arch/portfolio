@@ -312,33 +312,82 @@
   </div>
 </footer>
 <dialog id="lb" aria-label="이미지 크게 보기">
-  <button type="button" id="lb-close" aria-label="닫기">닫기</button>
-  <img id="lb-img" alt="" />
-  <p id="lb-cap"></p>
+  <div class="lb-bar">
+    <span id="lb-cap"></span>
+    <span class="lb-btns">
+      <button type="button" id="lb-out" aria-label="축소">−</button>
+      <button type="button" id="lb-pct" aria-label="화면에 맞추기">100%</button>
+      <button type="button" id="lb-in" aria-label="확대">+</button>
+      <button type="button" id="lb-close" class="on" aria-label="닫기">닫기</button>
+    </span>
+  </div>
+  <div class="lb-body" id="lb-body"><img id="lb-img" alt="" /></div>
 </dialog>
 <script>
 (function () {
   var dlg = document.getElementById('lb');
+  if (!dlg || !dlg.showModal) return;
   var img = document.getElementById('lb-img');
   var cap = document.getElementById('lb-cap');
+  var body = document.getElementById('lb-body');
+  var pct = document.getElementById('lb-pct');
+  var scale = 1, fit = 1;
+
+  function apply() {
+    img.style.width = Math.round(img.naturalWidth * scale) + 'px';
+    pct.textContent = Math.round(scale * 100) + '%';
+    img.style.cursor = scale > fit ? 'zoom-out' : 'zoom-in';
+  }
+  function fitScale() {
+    var w = body.clientWidth - 24, h = body.clientHeight - 24;
+    if (!img.naturalWidth || !img.naturalHeight) return 1;
+    return Math.min(w / img.naturalWidth, h / img.naturalHeight, 1);
+  }
+  function reset() {
+    fit = fitScale();
+    scale = fit;
+    apply();
+    body.scrollTop = 0;
+    body.scrollLeft = 0;
+  }
+  function zoom(f) {
+    var sx = (body.scrollLeft + body.clientWidth / 2) / (img.naturalWidth * scale);
+    var sy = (body.scrollTop + body.clientHeight / 2) / (img.naturalHeight * scale);
+    scale = Math.min(Math.max(scale * f, 0.1), 5);
+    apply();
+    body.scrollLeft = sx * img.naturalWidth * scale - body.clientWidth / 2;
+    body.scrollTop = sy * img.naturalHeight * scale - body.clientHeight / 2;
+  }
+
   document.querySelectorAll('.gal figure').forEach(function (fig) {
     var t = fig.querySelector('img');
     var c = fig.querySelector('figcaption');
     t.tabIndex = 0;
     function open() {
-      img.src = t.src;
-      img.alt = t.alt;
       cap.textContent = c ? c.textContent : t.alt;
-      if (dlg.showModal) dlg.showModal();
+      img.alt = t.alt;
+      img.style.width = 'auto';
+      img.src = t.currentSrc || t.src;
+      dlg.showModal();
+      if (img.complete) reset();
+      else img.onload = reset;
     }
     t.addEventListener('click', open);
     t.addEventListener('keydown', function (e) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
     });
   });
-  dlg.addEventListener('click', function (e) {
-    if (e.target === dlg || e.target.id === 'lb-close') dlg.close();
+
+  document.getElementById('lb-in').addEventListener('click', function () { zoom(1.25); });
+  document.getElementById('lb-out').addEventListener('click', function () { zoom(0.8); });
+  pct.addEventListener('click', reset);
+  document.getElementById('lb-close').addEventListener('click', function () { dlg.close(); });
+  img.addEventListener('click', function () {
+    if (scale > fit + 0.001) reset();
+    else { scale = 1; apply(); }
   });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  window.addEventListener('resize', function () { if (dlg.open) reset(); });
 })();
 </script>
 </body>
