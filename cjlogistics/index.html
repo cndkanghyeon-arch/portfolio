@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>김강현 | 글로벌 시스템 표준화와 연동 포트폴리오</title>
+<meta name="description" content="나라마다 다른 규정을 설정값으로 바꾸고, 외부 시스템을 붙여 데이터 정합성까지 책임져 온 기록입니다. TES물류기술연구소 포워딩 IT 전문가 지원용으로 정리했습니다." />
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#007AC3" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23007AC3'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='15' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Montserrat:wght@500;600;700&display=swap" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top">김강현 <small class="en">Logistics IT Planning &amp; PM</small></a>
+    <nav class="menu">
+      <a href="#read">공고를 보는 관점</a>
+      <a href="#how">일하는 순서</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#fit">요건 대응</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div id="top" class="hero">
+  <div class="wrap">
+    <span class="kicker">TES물류기술연구소 포워딩 IT 전문가 지원</span>
+    <h1>나라마다 다른 규정을 설정값으로 바꾸고,<br /><em>시스템 네 개를 붙여</em> 운영까지 책임졌습니다</h1>
+    <p class="lead">170개국이 서로 다른 규정을 쓰는 환경에서 하나의 운영 시스템을 0에서 1로 만들었습니다. 규정을 코드 밖으로 빼 설정으로 들고 있게 바꾸고, 외부 시스템 네 곳의 파라미터를 자사 기준으로 매핑했으며, 시스템 사이 데이터가 어긋나면 자동으로 잡도록 만들었습니다.</p>
+    <div class="who"><span>김강현</span><span>총 경력 7년 11개월</span><span>saian64@naver.com</span><span>010-9954-8720</span></div>
+    <div class="stats">
+      <div class="stat"><b>170개국</b><span>상이 규정을 설정값 기반 분류 체계로 표준화<br />규정이 바뀌어도 시스템은 그대로</span></div>
+      <div class="stat"><b>외부 4개</b><span>연동 프로토콜 분석과 파라미터 매핑<br />기관 담당자와 직접 명세 재정비</span></div>
+      <div class="stat"><b>정합성 100%</b><span>시스템 간 데이터 불일치 해소<br />어긋난 값은 자동 수정</span></div>
+      <div class="stat"><b>에러 0건</b><span>외부 솔루션 5종 연동<br />3개월 안에 런칭</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="read">
+  <div class="wrap">
+    <p class="eyebrow">지원 전에 확인한 것</p>
+    <h2>공고를 이렇게 읽었습니다</h2>
+    <p class="sub">공개된 자료에서 포워딩 IT 조직이 지금 다루는 문제를 찾고, 제가 겹치는 지점과 겹치지 않는 지점을 나눠 봤습니다.</p>
+    <div class="read">
+      <h3>국가가 늘어날수록 어려워지는 것은 기능이 아니라 기준입니다</h3>
+      <div class="grid">
+        <div class="col">
+          <h4>확인한 사실</h4>
+          <ul>
+            <li>TES는 Technology, Engineering, System and Solution을 뜻하고 연구소는 미래기술개발, SCM컨설팅, 운영최적화, 데이터분석 네 팀으로 구성</li>
+            <li>글로벌사업은 포워딩사업과 해외사업으로 나뉘고, 전 세계 39개국 115개 법인을 기반으로 운영</li>
+            <li>글로벌 통합 포워딩 시스템 큐브릿지를 운영하며, 국가별 특성을 반영한 큐브릿지 2.0을 미국과 중국 등 해외 9개국으로 확대 적용</li>
+            <li>단순 반복 서류 업무에 RPA를 적용하고 화물선 도착일시 예측에 AI를 붙였으며, LoIS 포워더스에서는 출발지와 도착지, 크기와 무게만 넣으면 실시간 견적을 조회</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>그래서 생기는 문제와 제 접점</h4>
+          <ul>
+            <li>같은 시스템을 9개국으로 넓히면 나라마다 규정과 서류가 달라 분기가 쌓입니다. 저는 170개국 규정을 코드가 아니라 <b>설정값 기반 분류 체계</b>로 바꿔 규정이 바뀌어도 시스템을 고치지 않게 만들었습니다</li>
+            <li>선사와 항공사, 통관, 고객사가 각각 다른 규격으로 데이터를 보냅니다. 저는 외부 시스템 네 곳의 연동 프로토콜을 분석하고 <b>파라미터명을 자사 기준으로 매핑</b>했으며, 문서가 실제 응답과 달라 기관 담당자와 직접 협의해 명세를 다시 썼습니다</li>
+            <li>연계가 늘수록 숫자가 서로 어긋납니다. 저는 두 시스템 사이 API 데이터를 <b>자동으로 대조하고 어긋난 값을 자동 수정</b>하도록 만들어 월 마감 대사 작업을 없앴습니다</li>
+            <li>반복 서류와 리포트는 사람이 계속 만들면 늘어납니다. 저는 업무 시간을 직접 재서 과제를 고르고 <b>14종을 만들어 전부 운영에 안착</b>시켰습니다</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="note">출처: CJ대한통운 뉴스룸 TES물류기술연구소 출범 자료, 큐브릿지와 LoIS 포워더스 보도자료, 사업 소개</p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <p class="eyebrow">일하는 순서</p>
+    <h2>표준을 먼저 세우고 연동을 붙입니다</h2>
+    <p class="sub">연동을 먼저 붙이고 표준을 나중에 맞추면 국가가 늘어날 때마다 같은 일을 반복하게 됩니다. 세 단계를 그대로 재사용합니다.</p>
+    <div class="steps3">
+      <div class="s3">
+        <p class="n en">Step 01</p>
+        <h3>기준 정리</h3>
+        <p>바뀌는 것과 바뀌지 않는 것을 먼저 나눕니다. 바뀌는 쪽은 설정값으로 빼고 유형별 기본값을 제공합니다. 예외는 별도로 분리해 본류를 오염시키지 않습니다.</p>
+      </div>
+      <div class="s3">
+        <p class="n en">Step 02</p>
+        <h3>연동 설계</h3>
+        <p>상대 시스템의 문서를 그대로 믿지 않습니다. 실제 호출로 응답을 확인하고 파라미터를 하나씩 검증한 뒤 명세를 다시 씁니다. 실패 시 재처리 경로까지 문서로 남깁니다.</p>
+      </div>
+      <div class="s3">
+        <p class="n en">Step 03</p>
+        <h3>상시 점검</h3>
+        <p>월 마감에만 보던 정합성 점검을 상시로 돌려 이상이 먼저 보이게 합니다. 사람이 찾아내기 전에 시스템이 먼저 알리는 쪽이 복구 비용이 쌉니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <p class="eyebrow">프로젝트</p>
+    <h2>공고의 업무 순서로 정리했습니다</h2>
+    <p class="sub">모든 수치는 실제 운영 결과입니다. 각 건 끝에 포워딩 업무에 옮긴다면 어디부터 보겠는지 적었습니다.</p>
+
+    <div class="cards">
+      <article class="card">
+        <span class="tag">업무 프로세스와 시스템 표준화</span>
+        <h3>170개국 규정을 설정값으로 바꾼 글로벌 운영 시스템 0 to 1</h3>
+        <p class="meta">2024 파리올림픽 태권도 운영 서비스(OVR) / ㈜오앤 / 총괄 PM</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>나라마다 규정이 달라 운영진이 계체와 대진, 스케줄을 수기로 맞추던 구조</li>
+            <li>규정이 바뀔 때마다 시스템을 고쳐야 해 변경 비용이 국가 수만큼 늘어나는 상태</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>20종이 넘는 운영 규정을 설정값 기반 확장 분류 체계로 설계해 시스템 수정 없이 설정만 바꾸도록 변경</li>
+            <li>규정 유형별 기본값을 제공하고 커스텀 유형은 국제 성적 미집계로 분리해 기준이 섞이지 않게 처리</li>
+            <li>화면기획서와 정책정의서, IA, ERD, API 명세를 직접 작성해 비즈니스 로직을 문서로 고정</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>디자인과 프론트엔드, 백엔드, 퍼블리싱, 기획 5개 팀 14명을 직접 채용하고 총괄</li>
+            <li>세계태권도연맹과 파리올림픽 조직위, 몽골 정부와 정책을 조율하고 요구사항을 영문으로 반영</li>
+            <li>개발팀장 공백이 두 번 생겼을 때 ERD와 API, 연동 프로토콜을 직접 재설계해 일정을 지킴</li>
+          </ul>
+          <div class="res"><span>파리올림픽 공식 채택</span><span>연 이용자 약 100만 명</span><span>운영 수작업 80% 자동화</span><span>운영비 70% 절감</span><span>일정 지연 0건</span></div></div></div>
+        </div>
+        <p class="galhead">구축 후 화면</p>
+        <div class="gal">
+          <figure><img src="../assets/images/ovr/main.png" alt="대회 운영 메인 화면" loading="lazy" /><figcaption>대회 운영 메인 화면</figcaption></figure>
+          <figure><img src="../assets/images/ovr/participants.png" alt="참가자 목록 관리" loading="lazy" /><figcaption>참가자 목록 관리</figcaption></figure>
+          <figure><img src="../assets/images/ovr/schedule.png" alt="경기 스케줄 조정" loading="lazy" /><figcaption>경기 스케줄 조정</figcaption></figure>
+        </div>
+        <p class="galhead">구축 전 수기 운영 화면</p>
+        <div class="gal">
+          <figure><img src="../assets/images/ovr_old/old-main.png" alt="구버전 메인 화면" loading="lazy" /><figcaption>구버전 메인 화면</figcaption></figure>
+          <figure><img src="../assets/images/ovr_old/old-schedule.png" alt="구버전 스케줄 수기 관리" loading="lazy" /><figcaption>구버전 스케줄 수기 관리</figcaption></figure>
+          <figure><img src="../assets/images/ovr_old/old-weighin.png" alt="구버전 계체 관리" loading="lazy" /><figcaption>구버전 계체 관리</figcaption></figure>
+        </div>
+        <p class="apply"><b>포워딩에 옮긴다면</b> 국가별로 다른 통관 서류와 운임 규칙을 코드가 아니라 설정으로 들고 있게 만드는 일부터 보겠습니다. 국가를 하나 더 붙일 때 드는 비용이 줄어듭니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">시스템 연계와 데이터 정합성</span>
+        <h3>외부 시스템 네 곳 연동 설계와 명세 재정비</h3>
+        <p class="meta">RTDS, GMS, PSS, IVR 연동 / ㈜오앤 / 연동 설계와 검증</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>외부 시스템마다 파라미터명과 데이터 형식이 달라 같은 값을 서로 다르게 부르던 상태</li>
+            <li>공식 연동 문서가 오래되어 실제 응답과 맞지 않아 개발이 반복해서 막힘</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>네 시스템의 연동 프로토콜을 분석하고 파라미터명을 자사 기준으로 매핑해 체계화</li>
+            <li>기관 담당자와 직접 협의하고 Postman 호출로 값을 하나씩 검증한 뒤 API 명세를 다시 작성</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>송신과 수신, 실패 시 재처리 경로를 데이터 흐름 문서로 정리해 운영 조직에 인계</li>
+            <li>Selenium과 Python, React와 Playwright로 QA 자동화를 붙여 회귀 검증을 자동화</li>
+          </ul>
+          <div class="res"><span>연동 구간 장애 없이 운영</span><span>테스트 커버리지 70% 이상</span></div></div></div>
+        </div>
+        <p class="apply"><b>포워딩에 옮긴다면</b> 선사와 항공사, 통관 시스템이 보내는 코드와 단위를 한 장의 매핑표로 먼저 세우겠습니다. EDI와 API가 섞여 있을수록 기준표가 먼저 있어야 합니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">데이터 정합성과 품질 관리</span>
+        <h3>시스템 간 데이터 자동 대조와 자동 수정</h3>
+        <p class="meta">BMW 워런티플러스와 DMS / ㈜씨앤디팩토리 / 로직 재설계와 자동 점검 구축</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>두 시스템의 계산 기준이 달라 월 마감마다 사람이 숫자를 맞추는 대사 작업이 반복</li>
+            <li>자사 투입만 월 3시간이고 유관 조직까지 합치면 월 8시간 이상이 들어가던 업무</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>40개가 넘는 정산 칼럼의 계산 로직을 전수 조사해 중복과 누락, 기준 불일치를 유형화</li>
+            <li>산정 기준을 정책 단위로 다시 정의하고 예외 케이스를 별도로 분리</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>두 시스템 사이 API 통신 데이터의 정합성을 자동 확인하고 어긋난 값을 자동 수정하도록 구성</li>
+            <li>월 마감에만 보던 점검을 상시 실행으로 바꿔 이상이 먼저 보이게 변경</li>
+          </ul>
+          <div class="res"><span>데이터 불일치 100% 해소</span><span>대사 업무 제거</span><span>관련 오류 50% 감소</span></div></div></div>
+        </div>
+        <div class="gal one">
+          <figure><img src="../assets/images/bmw/wpp.png" alt="BMW 워런티플러스 운영 관리 화면" loading="lazy" /><figcaption>정산 데이터 정합성을 다룬 운영 관리 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>포워딩에 옮긴다면</b> 오더와 선적, 정산 데이터가 시스템마다 어긋나는 구간을 먼저 찾아 상시 점검으로 돌리겠습니다. 마감 때 발견하면 이미 늦습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">반복 서류와 운영 업무 자동화</span>
+        <h3>반복 업무 자동화 14종과 효과 산정</h3>
+        <p class="meta">㈜씨앤디팩토리 / BMW 애프터세일즈와 커머스 브랜드 / 과제 발굴과 직접 구현</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>담당자가 매일, 매주, 매월 같은 서류와 리포트를 손으로 만들던 상태</li>
+            <li>어느 업무에 몇 시간이 들어가는지 조직 안에 숫자가 없어 무엇부터 고칠지 정하지 못함</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>현업 옆에서 업무를 관찰하고 소요 시간을 직접 실측해 과제를 정의</li>
+            <li>반복성과 정책 명확성, 효과 크기, 지속 사용성 네 기준으로 선별하고 못 넘기면 착수하지 않음</li>
+            <li>판단 기준이 정책으로 고정된 업무라 규칙으로 구현해 비용과 정확도를 함께 확보</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>Python과 VBA, Selenium으로 직접 구현하고 실제 운영 데이터로 검증</li>
+            <li>승인은 전부 자동, 반려만 사람이 최종 확인하는 구조로 설계해 책임 소재를 남김</li>
+          </ul>
+          <div class="res"><span>14종 전건 운영 안착</span><span>연 3,000시간</span><span>판정 정확도 100%</span><span>개입률 약 0.25%</span></div></div></div>
+        </div>
+        <div class="gal two">
+          <figure><img src="../assets/images/bmw/scp.png" alt="BMW 서비스케어플러스 가입 관리 화면" loading="lazy" /><figcaption>승인과 반려를 자동 판정하던 관리 화면</figcaption></figure>
+          <figure><img src="../assets/images/bmw/oas.png" alt="BMW 정비 예약 현황 화면" loading="lazy" /><figcaption>주간과 월 마감 리포트를 자동 생성한 운영 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>포워딩에 옮긴다면</b> 오더 등록과 선적 정보 입력, 서류 작성 중 빈도와 소요 시간이 이미 고정된 업무부터 보겠습니다. 효과를 몇 주 안에 숫자로 보일 수 있는 자리입니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">대외 파트너 시스템 연계 총괄</span>
+        <h3>외부 솔루션 5종 비교 선정과 연동 컨트롤 타워</h3>
+        <p class="meta">다우데이타 셀러포탈 / ㈜씨앤디팩토리 / PM</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>주문과 배송, 정산, 계약을 한 흐름으로 묶으려면 영역마다 외부 솔루션이 필요한 상황</li>
+            <li>선정 기준이 없으면 데모 인상으로 결정돼 비용과 일정이 뒤에서 흔들림</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>배송추적과 PG, 알림톡, 전자계약, 이메일 영역별 후보를 기능과 연동 난이도, 비용 기준으로 비교해 선정</li>
+            <li>각 사와 연동 규격을 협의한 뒤 개발, 스테이징, 운영 환경별 검증 절차를 문서로 고정</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>연동 컨트롤 타워로 일정과 이슈를 한곳에서 관리하고 고객사 데일리 미팅과 내부 주간 미팅을 운영</li>
+            <li>정보보안팀과 협업해 보안 요건을 설계 단계부터 반영</li>
+          </ul>
+          <div class="res"><span>외부 솔루션 5종 연동 에러 0건</span><span>3개월 안에 런칭</span></div></div></div>
+        </div>
+        <p class="apply"><b>포워딩에 옮긴다면</b> 파트너를 고를 때 데모 대신 기능과 연동 난이도, 운영 비용을 같은 표에 올려 비교하고, 계약 전에 환경별 검증 절차를 먼저 적어 두겠습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">운영 가시화와 보고 체계</span>
+        <h3>운영 데이터 통합 대시보드와 경영진 보고</h3>
+        <p class="meta">㈜씨앤디팩토리 / 데이터 통합과 지표 설계</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>진척과 성과 데이터가 여러 도구와 채널로 나뉘어 한 번에 보이지 않던 상태</li>
+            <li>보고 시점마다 사람이 손으로 모아 숫자가 매번 달라짐</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>Jira와 Flow 로그를 수집해 요구사항별 진척과 지연, 이슈를 정량으로 추적</li>
+            <li>지표 산정식과 데이터 출처를 공개해 팀이 같은 숫자를 보고 논의하도록 구성</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>경영진에는 산정 근거와 기대 효과를 수치로 보고해 도입을 협의하고 전사에 적용</li>
+            <li>개발자 우려에는 데이터 출처와 계산식을 공개한 뒤 지표를 함께 수정해 합의</li>
+          </ul>
+          <div class="res"><span>지연과 누락 80% 감소</span><span>처리량 150% 증가</span><span>전사 도입</span></div></div></div>
+        </div>
+        <div class="gal">
+          <figure><img src="../assets/images/dashboard/jira.png" alt="Jira 로그 기반 프로젝트 관리 화면" loading="lazy" /><figcaption>Jira 로그 기반 진척 관리 화면</figcaption></figure>
+          <figure><img src="../assets/images/dashboard/kanban.png" alt="전사 운영 칸반 보드" loading="lazy" /><figcaption>전사 운영 칸반 보드</figcaption></figure>
+          <figure><img src="../assets/images/dashboard/kd-real.png" alt="운영 성과 통합 대시보드 실제 화면" loading="lazy" /><figcaption>운영 성과 통합 대시보드 실제 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>포워딩에 옮긴다면</b> 운송 구간별 지연과 서류 반려, 비용 차이를 한 화면으로 모으고 산정식을 공개하겠습니다. 보고서가 아니라 같은 화면을 보게 만드는 쪽이 빠릅니다.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="fit">
+  <div class="wrap">
+    <p class="eyebrow">요건 대응</p>
+    <h2>필수 역량과 우대 역량</h2>
+    <p class="sub">없는 경험은 없다고 적었습니다. 대신 구조가 닮은 실제 경험을 같이 적었습니다.</p>
+    <table class="fit">
+      <tr><th>글로벌 포워딩 시스템 리딩 경험</th><td><b>포워딩 시스템을 맡아 본 적은 없습니다.</b> 글로벌 운영 SaaS를 0에서 1로 총괄했고, 170개국 규정을 설정값 체계로 표준화하며 외부 시스템 네 곳을 연동했습니다. 국가별 상이 규정을 다루는 구조는 같습니다</td></tr>
+      <tr><th>IT 프로젝트 PM 또는 PL 경력</th><td>총괄 PM으로 5개 팀 14명을 직접 채용하고 운영. WBS 기반 일정과 리소스 관리, 이슈와 리스크 관리, 일정 지연 0건. 셀러포탈 구축 PM으로 3개월 내 런칭</td></tr>
+      <tr><th>수출입 물류, 포워딩 비즈니스 이해도</th><td><b>실무 경험은 없습니다.</b> 해상과 항공 운송, 통관 절차는 입사 후 익혀야 합니다. 대신 규정에 따라 금액과 처리가 갈리는 업무는 계속 다뤘습니다. 정산 칼럼 40개 이상의 계산 로직을 전수 조사해 기준을 다시 세운 경험이 있습니다</td></tr>
+      <tr><th>(우대) 비즈니스 로직의 시스템화와 문서화</th><td>화면기획서와 정책정의서, IA, ERD, API 명세를 직접 작성. 송신과 수신, 실패 시 재처리 경로까지 데이터 흐름 문서로 정리. 판단 기준과 예외 처리 규칙을 현업과 합의한 뒤 로직에 반영</td></tr>
+      <tr><th>(우대) 다각적 이해관계자 조율</th><td>세계태권도연맹과 파리올림픽 조직위, 몽골 정부와 정책 조율. 딜러사와 본사, PG사, 개발, 인프라의 조치 순서 조율. 외부 솔루션 5개 사와 연동 규격 협의</td></tr>
+      <tr><th>(우대) C Level 보고서 작성</th><td>자동화 과제의 투입과 기대 효과를 인건비로 환산해 경영진에 보고하고 도입을 협의. 성과 지표와 포상 체계 설계안을 산정 근거와 함께 보고</td></tr>
+      <tr><th>(우대) Cargowise 운용 경험</th><td><b>없습니다.</b> 상용 포워딩 패키지를 다뤄 본 적이 없습니다. 외부 솔루션을 비교 선정하고 환경별로 연동한 경험으로 대신 말씀드립니다</td></tr>
+      <tr><th>(우대) 물류 전산업무 경험</th><td>제약 공장 AI 영상관제에서 CCTV와 물류 관리 시스템 연동 프로토콜을 정의하고 온프레미스 보안 구조를 설계했습니다. 완성된 물류 전산 업무 경험은 아닙니다</td></tr>
+      <tr><th>(우대) 영어 회화 상급</th><td><b>OPIc은 보유하고 있지 않습니다.</b> TOEIC 760점이고, 해외 기관과 정부를 상대로 요구사항을 영문으로 반영하고 조율한 경험이 있습니다. 회화는 더 올려야 합니다</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <strong>김강현</strong>
+    <a href="mailto:saian64@naver.com">saian64@naver.com</a>
+    <a href="tel:01099548720">010-9954-8720</a>
+    <a href="../">기본 포트폴리오</a>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 김강현. 개인이 만든 페이지이며 CJ대한통운의 공식 페이지가 아닙니다. 지원용으로 작성했습니다.</span>
+    <a href="../">목록으로</a>
+  </div>
+</footer>
+<dialog id="lb" aria-label="이미지 크게 보기">
+  <div class="lb-bar">
+    <span id="lb-cap"></span>
+    <span class="lb-btns">
+      <button type="button" id="lb-out" aria-label="축소">&minus;</button>
+      <button type="button" id="lb-pct" aria-label="화면에 맞추기">100%</button>
+      <button type="button" id="lb-in" aria-label="확대">+</button>
+      <button type="button" id="lb-close" class="on" aria-label="닫기">닫기</button>
+    </span>
+  </div>
+  <div class="lb-body" id="lb-body"><img id="lb-img" alt="" /></div>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('lb');
+  if (!dlg || !dlg.showModal) return;
+  var img = document.getElementById('lb-img');
+  var cap = document.getElementById('lb-cap');
+  var body = document.getElementById('lb-body');
+  var pct = document.getElementById('lb-pct');
+  var scale = 1, fit = 1;
+
+  function apply() {
+    img.style.width = Math.round(img.naturalWidth * scale) + 'px';
+    pct.textContent = Math.round(scale * 100) + '%';
+    img.style.cursor = scale > fit ? 'zoom-out' : 'zoom-in';
+  }
+  function fitScale() {
+    var w = body.clientWidth - 24, h = body.clientHeight - 24;
+    if (!img.naturalWidth || !img.naturalHeight) return 1;
+    return Math.min(w / img.naturalWidth, h / img.naturalHeight, 1);
+  }
+  function reset() {
+    fit = fitScale();
+    scale = fit;
+    apply();
+    body.scrollTop = 0;
+    body.scrollLeft = 0;
+  }
+  function zoom(f) {
+    var sx = (body.scrollLeft + body.clientWidth / 2) / (img.naturalWidth * scale);
+    var sy = (body.scrollTop + body.clientHeight / 2) / (img.naturalHeight * scale);
+    scale = Math.min(Math.max(scale * f, 0.1), 5);
+    apply();
+    body.scrollLeft = sx * img.naturalWidth * scale - body.clientWidth / 2;
+    body.scrollTop = sy * img.naturalHeight * scale - body.clientHeight / 2;
+  }
+
+  document.querySelectorAll('.gal figure').forEach(function (fig) {
+    var t = fig.querySelector('img');
+    var c = fig.querySelector('figcaption');
+    t.tabIndex = 0;
+    function open() {
+      cap.textContent = c ? c.textContent : t.alt;
+      img.alt = t.alt;
+      img.style.width = 'auto';
+      img.src = t.currentSrc || t.src;
+      dlg.showModal();
+      if (img.complete) reset();
+      else img.onload = reset;
+    }
+    t.addEventListener('click', open);
+    t.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+    });
+  });
+
+  document.getElementById('lb-in').addEventListener('click', function () { zoom(1.25); });
+  document.getElementById('lb-out').addEventListener('click', function () { zoom(0.8); });
+  pct.addEventListener('click', reset);
+  document.getElementById('lb-close').addEventListener('click', function () { dlg.close(); });
+  img.addEventListener('click', function () {
+    if (scale > fit + 0.001) reset();
+    else { scale = 1; apply(); }
+  });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  window.addEventListener('resize', function () { if (dlg.open) reset(); });
+})();
+</script>
+</body>
+</html>
