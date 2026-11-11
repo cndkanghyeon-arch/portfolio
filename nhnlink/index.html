@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>김강현 | 결제와 정산, 외부 연동 서비스 기획 포트폴리오</title>
+<meta name="description" content="요구사항 정의부터 오픈 뒤 검증까지 끌고 가고, 결제와 정산 백오피스를 기준부터 다시 세운 기록입니다. 서비스 기획 담당 지원용으로 정리했습니다." />
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#10984A" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2310984A'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='15' font-weight='700' fill='%23ffffff' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top">김강현 <small class="en">Service Planner</small></a>
+    <nav class="menu">
+      <a href="#read">공고를 보는 관점</a>
+      <a href="#how">일하는 순서</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#fit">요건 대응</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div id="top" class="hero">
+  <div class="wrap">
+    <span class="kicker">NHN Link 서비스 기획 담당 지원</span>
+    <h1>결제가 두 번 빠져나가던 문제를<br /><em>30만 건으로 확인</em>하고 닫았습니다</h1>
+    <p class="lead">결제와 정산은 틀리면 바로 고객 문의로 돌아옵니다. 로그를 전수로 보고 조건을 재현해 구조로 막았고, 정산 기준이 어긋나던 40개 칼럼은 정책 단위로 다시 세웠습니다. 요구사항 정의부터 오픈 뒤 검증까지 한 사람이 끌고 가 본 사이클이 여러 번 있습니다.</p>
+    <div class="who"><span>김강현</span><span>서비스 기획과 운영 7년 4개월</span><span>saian64@naver.com</span><span>010-9954-8720</span></div>
+    <div class="stats">
+      <div class="stat"><b>중복 결제 0건</b><span>PG 콜백 중복을 재현해 멱등키로 차단<br />2개월 치 약 30만 건 전후 비교</span></div>
+      <div class="stat"><b>월 8시간 제거</b><span>정산 대사 작업<br />계산 기준 40개 칼럼 정책 단위 재정의</span></div>
+      <div class="stat"><b>연동 에러 0건</b><span>외부 솔루션 5종 비교 선정과 연동 총괄<br />착수 3개월 만에 오픈</span></div>
+      <div class="stat"><b>노쇼 40%에서 20%</b><span>오프라인 방문 예약 흐름 재설계<br />사전 알림과 현장 도착 전 체크인</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="read">
+  <div class="wrap">
+    <p class="eyebrow">지원 전에 확인한 것</p>
+    <h2>공고를 이렇게 읽었습니다</h2>
+    <p class="sub">티켓링크가 지금 다루는 문제와 제가 겹치는 지점을 나눠 봤습니다.</p>
+    <div class="read">
+      <h3>예매는 결제와 현장이 동시에 맞아떨어져야 끝납니다</h3>
+      <div class="grid">
+        <div class="col">
+          <h4>확인한 사실</h4>
+          <ul>
+            <li>공고에 적힌 대로 국내 최초의 티켓팅 업체이고, 모든 장르의 티켓예매 서비스와 입장권 표준 전산망 시스템을 다룹니다</li>
+            <li>이번 자리의 업무가 회원과 인증 정책, 간편결제와 결제수단 연동, 결제와 정산 백오피스 운영, 외부 파트너 연동 협의까지 걸쳐 있습니다</li>
+            <li>외부 파트너에 인증 플랫폼과 결제사뿐 아니라 시설 운영사가 들어가 있습니다</li>
+            <li>운영 중인 서비스의 개선 요건 정의와 우선순위 관리가 업무에 포함돼 있습니다</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>그래서 생기는 문제와 제 접점</h4>
+          <ul>
+            <li>결제 오류는 재현되지 않으면 영원히 남습니다. 저는 <b>에러 로그 6개월 치를 전수로 보고 조건을 재현</b>해 멱등키 구조로 닫았습니다</li>
+            <li>정산은 시스템끼리 기준이 다르면 매달 사람이 맞춰야 합니다. 저는 <b>40개가 넘는 칼럼의 계산 로직</b>을 전수 조사해 기준을 정책으로 세우고 상시 점검으로 바꿨습니다</li>
+            <li>시설 운영사가 끼면 온라인 상태와 현장 상태가 어긋납니다. 저는 <b>방문 전 알림과 도착 전 온라인 체크인</b>으로 현장 흐름을 바꿔 노쇼를 절반으로 줄였습니다</li>
+            <li>개선 요건은 끝없이 쌓입니다. 저는 <b>반복성과 정책 명확성, 효과 크기, 지속 사용성</b> 네 기준으로 우선순위를 정해 착수 14종을 전부 운영에 남겼습니다</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="note">출처: NHN Careers 채용 공고 본문(조직 소개, 주요업무, 자격요건, 우대사항)</p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <p class="eyebrow">일하는 순서</p>
+    <h2>오픈이 아니라 검증에서 끝냅니다</h2>
+    <p class="sub">결제와 정산을 다루면 기능이 열린 시점과 문제가 사라진 시점이 다릅니다.</p>
+    <div class="steps3">
+      <div class="s3">
+        <p class="n en">Step 01</p>
+        <h3>정책부터 글로 고정한다</h3>
+        <p>회원 자격과 결제 조건, 환불 기준처럼 자주 바뀌는 규칙은 화면이 아니라 정책에 둡니다. 정책정의서에 상세 케이스와 예외 흐름, 실패 시 재처리 경로까지 적어야 개발과 운영이 같은 판단을 합니다.</p>
+      </div>
+      <div class="s3">
+        <p class="n en">Step 02</p>
+        <h3>연동은 호출해서 확인한다</h3>
+        <p>외부 파트너 문서는 실제와 어긋나 있는 경우가 많습니다. 기관 담당자와 직접 협의하고 Postman으로 파라미터를 하나씩 검증한 뒤 명세를 다시 썼습니다.</p>
+      </div>
+      <div class="s3">
+        <p class="n en">Step 03</p>
+        <h3>전후를 숫자로 비교한다</h3>
+        <p>오픈은 중간 지점입니다. 2개월 치 약 30만 건을 전후로 비교해 중복 결제가 정말 0이 됐는지 확인한 뒤에 종료로 적었습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <p class="eyebrow">프로젝트</p>
+    <h2>공고의 주요업무 순서로 정리했습니다</h2>
+    <p class="sub">모든 수치는 실제 운영 결과입니다. 각 건 끝에 티켓링크에 옮긴다면 어디부터 보겠는지 적었습니다.</p>
+
+    <div class="cards">
+
+      <article class="card">
+        <span class="tag">요구사항 정의부터 오픈 후 검증까지</span>
+        <h3>날짜를 못 미루는 서비스를 0에서 1로 열었습니다</h3>
+        <p class="meta">2024 파리올림픽 태권도 운영 SaaS / ㈜오앤 / 총괄 PM 겸 기획</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>170개국의 운영 규정이 제각각이라 규정이 바뀔 때마다 화면과 로직을 같이 고쳐야 하던 구조</li>
+            <li>개막일이 고정돼 일정을 뒤로 미루는 선택지가 처음부터 없던 프로젝트</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>20종이 넘는 규정을 설정값 기반 확장 분류 체계로 재정의해 시스템을 고치지 않고 설정만 바꾸도록 구성</li>
+            <li>커스텀 유형은 허용하되 국제 성적 미집계로 분리해 표준과 예외의 경계를 먼저 고정</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>화면기획서와 정책정의서, IA, ERD, API 명세를 직접 작성하고 상세 케이스와 예외 흐름까지 문서에 포함</li>
+            <li>디자인과 프론트엔드, 백엔드, 퍼블리싱, 기획 5개 팀 14명을 직접 채용하고 총괄</li>
+            <li>QA 자동화를 붙여 매 배포에 회귀 검증을 연결하고 테스트 커버리지 70% 이상 확보</li>
+          </ul>
+          <div class="res"><span>파리올림픽 공식 채택</span><span>연 100만 명 사용</span><span>운영 수작업 80% 자동화</span><span>일정 지연 0건</span></div></div></div>
+        </div>
+        <p class="galhead">오픈 후 화면</p>
+        <div class="gal">
+          <figure><img src="../assets/images/ovr/main.png" alt="운영 메인 화면" loading="lazy" /><figcaption>운영 메인 화면</figcaption></figure>
+          <figure><img src="../assets/images/ovr/participants.png" alt="대상자 목록 관리" loading="lazy" /><figcaption>대상자 목록 관리</figcaption></figure>
+          <figure><img src="../assets/images/ovr/schedule.png" alt="일정 조정 화면" loading="lazy" /><figcaption>일정 조정 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>티켓링크에 옮긴다면</b> 공연과 좌석, 할인 정책처럼 자주 바뀌는 규칙을 코드가 아니라 설정으로 들고 있게 만들겠습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">회원과 인증 정책 기획</span>
+        <h3>로그인에서 결제까지 끊기지 않는 흐름 설계</h3>
+        <p class="meta">BMW 애프터세일즈 모바일 채널 / ㈜씨앤디팩토리 / 서비스 기획</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>서비스 가입이 오프라인 창구에서만 가능해 구매 이후 고객과 다시 만날 접점이 없던 상태</li>
+            <li>앱과 외부 인증 플랫폼, 결제가 서로 다른 세션을 들고 있어 중간에 흐름이 끊기던 구조</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>앱 iframe 연동 구조를 설계하고 외부 인증 플랫폼 토큰 규격을 협의해 로그인 상태가 유지되도록 구성</li>
+            <li>가입 자격과 차량 조건을 정책으로 분리해 조건이 바뀌어도 화면을 고치지 않도록 설계</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>부서와 계열사 사이 포인트를 서비스 가입에 쓸 수 있도록 제휴 구조를 설계하고 합의</li>
+            <li>IT팀, 정보보안팀과 ISMS 심사와 모의해킹, Pentest에 대응하며 계정과 권한 통제 요건을 설계에 반영</li>
+          </ul>
+          <div class="res"><span>가입 30% 증가</span><span>매출 30% 증가</span><span>보안 취약점 0건 종결</span></div></div></div>
+        </div>
+        <div class="gal one">
+          <figure><img src="../assets/images/bmw/scp.png" alt="가입과 결제 관리 화면" loading="lazy" /><figcaption>가입 심사와 결제 관리 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>티켓링크에 옮긴다면</b> 예매 직전에 인증이 한 번 더 걸리는 구간부터 보겠습니다. 결제 직전의 이탈은 대부분 인증 흐름에서 생깁니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">간편결제와 결제수단 연동</span>
+        <h3>재현되지 않던 중복 결제를 구조로 닫았습니다</h3>
+        <p class="meta">BMW 애프터세일즈, 다우데이타 셀러포탈 / ㈜씨앤디팩토리</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>같은 결제가 두 번 빠져나가는 문제가 고객 문의로만 발견되고, 재현되지 않아 오래 남아 있던 건</li>
+            <li>결제 오류 유형이 뒤섞여 있어 무엇부터 고칠지 정하지 못하던 상태</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>결제와 정산 에러 로그 6개월 치를 전수 분석해 상위 세 유형 특정 (구독 시작일 규정 불일치, 할인율 불일치, 중복 결제)</li>
+            <li>중복 클릭으로 PG 콜백이 두 번 들어오는 경로를 재현해 발생 조건을 고정</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>멱등키를 저장해 두 번째 요청을 차단하는 구조를 설계하고 2개월 치 약 30만 건을 전후 비교해 검증</li>
+            <li>셀러포탈 구축에서는 PG를 포함한 외부 솔루션을 기능과 연동 난이도, 비용 세 축으로 비교해 선정하고 연동 규격을 협의</li>
+          </ul>
+          <div class="res"><span>중복 결제 100% 제거</span><span>정산 오류와 CS 각 50% 감소</span><span>연동 에러 0건</span></div></div></div>
+        </div>
+        <p class="apply"><b>티켓링크에 옮긴다면</b> 결제 실패와 중복 요청의 재처리 경로를 문서로 먼저 고정하겠습니다. 티켓은 재고가 좌석이라 중복이 바로 분쟁이 됩니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">결제와 정산 백오피스 운영</span>
+        <h3>매달 사람이 맞추던 정산을 기준부터 다시 세웠습니다</h3>
+        <p class="meta">BMW 워런티플러스 정산 / ㈜씨앤디팩토리 / 운영과 고도화</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>두 시스템의 계산 기준이 달라 월 마감마다 사람이 숫자를 맞추던 대사 업무</li>
+            <li>저희 쪽 작업만으로 끝나지 않고 BMW AS팀과 ISK, 딜러 관리 시스템, 재무회계팀이 각각 처리해야 완료되던 구조</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>40개가 넘는 정산 칼럼의 계산 로직을 전수 조사해 중복과 누락, 기준 불일치를 유형화하고 정책 단위로 재정의</li>
+            <li>월 마감에만 수행하던 점검을 상시 실행으로 바꿔 이상 징후가 먼저 드러나게 변경</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>정산 시스템과 딜러 관리 시스템 간 API 통신 데이터의 정합성을 자동 확인하고 어긋난 값을 자동 수정</li>
+            <li>어필리에이트 수수료 3% 기준의 정산 흐름을 신규 설계하고 지급 주기와 성과 산정 기준을 정책으로 고정</li>
+            <li>서비스별 월 마감 종합 분석 리포트를 자동 생성하도록 전환</li>
+          </ul>
+          <div class="res"><span>데이터 불일치 100% 해소</span><span>월 8시간 대사 작업 제거</span><span>정산 오류 50% 감소</span></div></div></div>
+        </div>
+        <div class="gal two">
+          <figure><img src="../assets/images/bmw/wpp.png" alt="정산 운영 관리 화면" loading="lazy" /><figcaption>정합성 자동 점검을 붙인 정산 운영 화면</figcaption></figure>
+          <figure><img src="../assets/images/bmw/oas.png" alt="운영 리포트 화면" loading="lazy" /><figcaption>월 마감 리포트를 자동 생성한 운영 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>티켓링크에 옮긴다면</b> 주최사와 시설 운영사, 결제사가 각각 들고 있는 숫자가 어디서 갈라지는지부터 찾겠습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">외부 파트너 연동 협의와 프로세스 설계</span>
+        <h3>문서를 믿지 않고 호출해서 확인했습니다</h3>
+        <p class="meta">외부 기관 시스템 4종, 외부 솔루션 5종 / ㈜오앤, ㈜씨앤디팩토리</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>연동 대상 기관의 공식 문서가 오래돼 파라미터와 응답 규격이 실제와 어긋나던 상황</li>
+            <li>벤더마다 테스트 방식이 달라 환경별로 같은 검증을 반복해야 하던 구조</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>외부 기관 시스템 4종의 연동 프로토콜을 분석하고 자사 기준으로 데이터 매핑 구조를 설계</li>
+            <li>전자계약과 PG, 알림톡, 배송추적, 이메일 다섯 영역을 기능과 연동 난이도, 비용 세 축으로 비교해 선정</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>기관 담당자와 직접 협의하고 Postman 호출로 파라미터를 하나씩 검증한 뒤 API 명세를 재작성</li>
+            <li>실패 시 재처리 경로를 문서로 남겨 운영 단계에서 수동 복구가 가능하도록 구성</li>
+            <li>개발과 스테이징, 운영 환경별 검증 절차를 문서로 고정해 벤더마다 다른 방식을 통일</li>
+          </ul>
+          <div class="res"><span>외부 솔루션 5종 연동 에러 0건</span><span>착수 3개월 만에 오픈</span><span>연동 구간 장애 없이 운영</span></div></div></div>
+        </div>
+        <div class="gal one">
+          <figure><img src="../assets/images/ivr/main.png" alt="실시간 영상 판독 운영 화면" loading="lazy" /><figcaption>외부 기관 시스템과 연동한 운영 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>티켓링크에 옮긴다면</b> 시설 운영사와 주고받는 규격을 먼저 호출해 보겠습니다. 현장 입장은 되돌릴 수 없어 오픈 전에 확인해야 합니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">운영 중 서비스 개선과 우선순위 관리</span>
+        <h3>쌓이는 개선 요건을 기준으로 걸렀습니다</h3>
+        <p class="meta">㈜씨앤디팩토리 / 과제 발굴과 직접 구현, 전사 도입</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>어느 업무에 몇 시간이 들어가는지 숫자가 없어 무엇부터 고칠지 정하지 못하던 상태</li>
+            <li>진척을 구두 보고로 받다 보니 지연이 드러나는 시점이 늘 마감 직전이던 구조</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>현업 옆에서 업무를 관찰하고 소요 시간과 건수를 직접 실측해 요건을 숫자로 바꿈</li>
+            <li>반복성과 정책 명확성, 효과 크기, 지속 사용성 네 기준으로 우선순위를 정하고 조건 미달 요건은 착수에서 제외</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>Jira와 Flow 로그를 자동 수집해 지연 Task와 담당자별 처리량을 추적하는 대시보드를 직접 개발해 전사 도입</li>
+            <li>지표 산정식과 데이터 출처를 공개하고 제기된 우려는 지표 자체를 함께 고쳐 합의</li>
+            <li>정비 예약에 방문 전날 푸시 알림과 도착 전 온라인 체크인을 도입해 현장 흐름을 개선</li>
+          </ul>
+          <div class="res"><span>지연과 누락 80% 감소</span><span>Task 처리량 150% 증가</span><span>노쇼 40%에서 20%</span><span>착수 14종 전건 안착</span></div></div></div>
+        </div>
+        <div class="gal two">
+          <figure><img src="../assets/images/dashboard/jira.png" alt="Jira 기반 진척 관리 화면" loading="lazy" /><figcaption>Jira 로그 기반 진척 관리 화면</figcaption></figure>
+          <figure><img src="../assets/images/dashboard/kd-real.png" alt="운영 성과 통합 대시보드" loading="lazy" /><figcaption>운영 성과 통합 대시보드 실제 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>티켓링크에 옮긴다면</b> 예매 단계별 이탈률부터 재겠습니다. 어디서 빠지는지 알면 고칠 요건이 저절로 줄 세워집니다.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="fit">
+  <div class="wrap">
+    <p class="eyebrow">요건 대응</p>
+    <h2>자격요건과 우대사항</h2>
+    <p class="sub">공고에 적힌 항목마다 실제로 해 온 일을 붙였습니다.</p>
+    <table class="fit">
+      <tr><th>서비스기획 경력 6년 이상</th><td>서비스 기획과 운영, PM으로 7년 4개월입니다</td></tr>
+      <tr><th>요구사항 정의부터 출시 검증까지 A to Z 리드</th><td>파리올림픽 운영 SaaS를 0에서 1로 구축해 일정 지연 없이 론칭했고, 다우데이타 셀러포탈은 착수 3개월 만에 오픈시켰습니다. 오픈 뒤에는 30만 건 전후 비교처럼 숫자로 검증하고 닫았습니다</td></tr>
+      <tr><th>다수 이해관계자 사이에서 정책 조율과 합의</th><td>정산 한 건을 끝내려면 BMW AS팀과 ISK, 딜러 관리 시스템, 재무회계팀이 각각 처리해야 했습니다. 기준을 정책으로 모아 흐름을 맞췄고, 지표 도입 때는 산정식을 공개해 개발자와 지표를 함께 고쳐 합의했습니다</td></tr>
+      <tr><th>운영 중 서비스 개선과 이슈 대응</th><td>재현되지 않아 남아 있던 중복 결제를 로그 전수 분석으로 조건을 특정해 0건으로 끝냈고, 월 마감에만 하던 정산 점검을 상시 실행으로 바꿔 이상 징후가 먼저 드러나게 했습니다</td></tr>
+      <tr><th>백엔드 구조 이해와 스펙 단위 협업</th><td>ERD와 API 명세를 직접 작성합니다. 외부 시스템 4종의 연동 프로토콜을 분석해 데이터 매핑 구조를 설계했고, 이벤트 로그 테이블 분리와 유저 단위 집계 테이블 신설도 설계했습니다. Python과 SQL로 직접 구현합니다</td></tr>
+      <tr><th>체계적인 문서화 역량</th><td>정책정의서와 화면기획서, IA, ERD, API 명세를 한 기준으로 묶어 씁니다. 상세 케이스와 예외 흐름, 실패 시 재처리 경로까지 적어 개발과 운영이 같은 문서로 판단하게 만듭니다</td></tr>
+      <tr><th>(우대) 회원, 인증, 개인정보 정책 기획</th><td>앱 안에서 가입과 결제가 끊기지 않도록 외부 인증 플랫폼 토큰 규격을 협의해 설계했고, ISMS 심사와 모의해킹, Pentest에 대응하며 계정과 권한 통제 요건을 반영했습니다</td></tr>
+      <tr><th>(우대) 결제수단과 PG 연동 기획</th><td>PG 콜백 중복을 재현해 멱등키 기반 차단 구조를 설계했고, 셀러포탈 구축에서는 PG를 포함한 외부 솔루션 5종을 비교 선정해 연동을 총괄했습니다</td></tr>
+      <tr><th>(우대) 정산, 파트너, 셀러 백오피스 관리</th><td>딜러 수수료 정산 40개 이상 칼럼의 계산 기준을 재정의하고 정합성 자동 점검을 붙였습니다. 셀러가 입점해 계약하고 정산받기까지의 포탈을 구축했고, 인플루언서 수수료 정산 흐름도 신규 설계했습니다</td></tr>
+      <tr><th>(우대) 오프라인 현장이 연계된 서비스 기획</th><td>정비 예약에 방문 전날 알림과 도착 전 온라인 체크인을 붙여 노쇼를 40%에서 20%로 줄였습니다. 올림픽 현장 운영 SaaS와 제조 현장 영상관제처럼 현장이 전제인 시스템도 설계했습니다</td></tr>
+      <tr><th>(우대) 커머스 도메인 근무 경험</th><td>광동상회와 SPC 온일장, 제주삼다수, BHC, 아웃백 다섯 커머스 서비스를 담당했고 어필리에이트 채널을 0에서 1로 만들어 월 매출 약 8,000만 원까지 올렸습니다</td></tr>
+      <tr><th>(우대) 비즈니스 외국어 커뮤니케이션</th><td>세계태권도연맹과 파리올림픽 조직위, 몽골 정부와 정책과 요구사항을 영문으로 조율했습니다. TOEIC 760점입니다</td></tr>
+      <tr><th>병역과 해외여행 결격 사유</th><td>육군 병장 만기 전역, 결격 사유 없습니다</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <strong>김강현</strong>
+    <a href="mailto:saian64@naver.com">saian64@naver.com</a>
+    <a href="tel:01099548720">010-9954-8720</a>
+    <a href="../">기본 포트폴리오</a>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 김강현. 개인이 만든 페이지이며 NHN Link의 공식 페이지가 아닙니다. 지원용으로 작성했습니다.</span>
+    <a href="../">목록으로</a>
+  </div>
+</footer>
+<dialog id="lb" aria-label="이미지 크게 보기">
+  <div class="lb-bar">
+    <span id="lb-cap"></span>
+    <span class="lb-btns">
+      <button type="button" id="lb-out" aria-label="축소">&minus;</button>
+      <button type="button" id="lb-pct" aria-label="화면에 맞추기">100%</button>
+      <button type="button" id="lb-in" aria-label="확대">+</button>
+      <button type="button" id="lb-close" class="on" aria-label="닫기">닫기</button>
+    </span>
+  </div>
+  <div class="lb-body" id="lb-body"><img id="lb-img" alt="" /></div>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('lb');
+  if (!dlg || !dlg.showModal) return;
+  var img = document.getElementById('lb-img');
+  var cap = document.getElementById('lb-cap');
+  var body = document.getElementById('lb-body');
+  var pct = document.getElementById('lb-pct');
+  var scale = 1, fit = 1;
+
+  function apply() {
+    img.style.width = Math.round(img.naturalWidth * scale) + 'px';
+    pct.textContent = Math.round(scale * 100) + '%';
+    img.style.cursor = scale > fit ? 'zoom-out' : 'zoom-in';
+  }
+  function fitScale() {
+    var w = body.clientWidth - 24, h = body.clientHeight - 24;
+    if (!img.naturalWidth || !img.naturalHeight) return 1;
+    return Math.min(w / img.naturalWidth, h / img.naturalHeight, 1);
+  }
+  function reset() {
+    fit = fitScale();
+    scale = fit;
+    apply();
+    body.scrollTop = 0;
+    body.scrollLeft = 0;
+  }
+  function zoom(f) {
+    var sx = (body.scrollLeft + body.clientWidth / 2) / (img.naturalWidth * scale);
+    var sy = (body.scrollTop + body.clientHeight / 2) / (img.naturalHeight * scale);
+    scale = Math.min(Math.max(scale * f, 0.1), 5);
+    apply();
+    body.scrollLeft = sx * img.naturalWidth * scale - body.clientWidth / 2;
+    body.scrollTop = sy * img.naturalHeight * scale - body.clientHeight / 2;
+  }
+
+  document.querySelectorAll('.gal figure').forEach(function (fig) {
+    var t = fig.querySelector('img');
+    var c = fig.querySelector('figcaption');
+    t.tabIndex = 0;
+    function open() {
+      cap.textContent = c ? c.textContent : t.alt;
+      img.alt = t.alt;
+      img.style.width = 'auto';
+      img.src = t.currentSrc || t.src;
+      dlg.showModal();
+      if (img.complete) reset();
+      else img.onload = reset;
+    }
+    t.addEventListener('click', open);
+    t.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+    });
+  });
+
+  document.getElementById('lb-in').addEventListener('click', function () { zoom(1.25); });
+  document.getElementById('lb-out').addEventListener('click', function () { zoom(0.8); });
+  pct.addEventListener('click', reset);
+  document.getElementById('lb-close').addEventListener('click', function () { dlg.close(); });
+  img.addEventListener('click', function () {
+    if (scale > fit + 0.001) reset();
+    else { scale = 1; apply(); }
+  });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  window.addEventListener('resize', function () { if (dlg.open) reset(); });
+})();
+</script>
+</body>
+</html>
