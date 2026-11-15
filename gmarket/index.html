@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>김강현 | 주문결제와 수수료 플랫폼 기획 포트폴리오</title>
+<meta name="description" content="주문과 결제의 흐름을 바꿔 전환을 올리고, 수수료와 정산 기준을 정책으로 세워 온 기록입니다. 주문결제 서비스 기획자 지원용으로 정리했습니다." />
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#00C400" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111111'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='15' font-weight='700' fill='%2300C400' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top">김강현 <small class="en">Transaction Product</small></a>
+    <nav class="menu">
+      <a href="#read">공고를 보는 관점</a>
+      <a href="#how">일하는 순서</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#fit">요건 대응</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div id="top" class="hero">
+  <div class="wrap">
+    <span class="kicker">지마켓 Demand Product Transaction 주문결제 서비스 기획자 지원</span>
+    <h1>결제는 기능을 더해서가 아니라<br /><em>흐름을 바꿔야 숫자가 움직였습니다</em></h1>
+    <p class="lead">구독 상품을 사려면 앱을 벗어나야 했고 이탈이 그 구간에 몰려 있었습니다. 앱 안에서 가입과 결제가 끝나도록 흐름을 바꾸자 가입과 매출이 각각 30% 늘었습니다. 수수료와 정산은 금액보다 기준이 먼저라서, 참여 자격과 성과 산정, 지급 주기를 정책으로 고정한 뒤에 열었습니다.</p>
+    <div class="who"><span>김강현</span><span>이커머스와 플랫폼 서비스 기획, 결제 정산 운영</span><span>saian64@naver.com</span><span>010-9954-8720</span></div>
+    <div class="stats">
+      <div class="stat"><b>가입과 매출 각 30%</b><span>앱 안에서 가입과 결제가 끝나도록 흐름 변경<br />iframe 연동 구조와 계열사 포인트 제휴 설계</span></div>
+      <div class="stat"><b>중복 결제 0건</b><span>PG 콜백 중복을 재현해 멱등키로 차단<br />2개월 치 약 30만 건 전후 비교</span></div>
+      <div class="stat"><b>노쇼 40%에서 20%</b><span>독촉 대신 여정의 순서를 바꾼 결과<br />방문 전 알림과 도착 전 체크인 도입</span></div>
+      <div class="stat"><b>월 8,000만 원</b><span>수수료 3% 어필리에이트 신규 채널<br />정산 흐름까지 함께 설계</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="read">
+  <div class="wrap">
+    <p class="eyebrow">지원 전에 확인한 것</p>
+    <h2>공고를 이렇게 읽었습니다</h2>
+    <p class="sub">Transaction 조직이 지금 다루는 문제와 제가 겹치는 지점을 나눠 봤습니다.</p>
+    <div class="read">
+      <h3>주문결제와 수수료를 한 사람이 보는 자리입니다</h3>
+      <div class="grid">
+        <div class="col">
+          <h4>공고에서 확인한 사실</h4>
+          <ul>
+            <li>Transaction 조직이 고객의 구매 과정과 직접 연결되는 주문, 결제, 장바구니, My 영역의 서비스 기획과 운영을 맡습니다</li>
+            <li>같은 포지션이 <b>판매자 수수료 정책 수립과 구조 설계, 수수료 어드민 기획과 운영</b>까지 함께 봅니다</li>
+            <li>구매 전환율과 사용자 경험 개선을 위한 서비스 흐름 설계와 고도화가 주요업무에 들어 있습니다</li>
+            <li>운영 어드민 기획과 개선, 수수료 정책 운영 효율화도 범위입니다</li>
+            <li>자격요건에 문제 정의부터 요구사항 도출, 실행까지 End to End 경험과 데이터 기반 운영 경험이 적혀 있습니다</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>그래서 생기는 문제와 제 접점</h4>
+          <ul>
+            <li>결제 구간은 기능을 더해도 이탈이 줄지 않습니다. 저는 <b>앱을 벗어나야 했던 구간을 iframe 연동으로 안에서 닫아</b> 가입과 매출을 각각 30% 올렸습니다</li>
+            <li>수수료는 요율보다 기준입니다. 저는 <b>참여 자격과 성과 산정, 지급 주기를 정책으로 먼저 고정</b>한 뒤 어필리에이트를 열어 신규 채널 월 매출 약 8,000만 원을 만들었습니다</li>
+            <li>정산 어드민은 기준이 흩어지면 매달 사람이 맞춰야 합니다. 저는 <b>수수료 계산 로직 40개 이상 칼럼을 전수 조사해 재설계</b>하고 정합성을 자동 대조로 바꿨습니다</li>
+            <li>결제 사고는 추정으로 못 막습니다. 저는 <b>중복 콜백 경로를 재현해 조건을 고정</b>한 뒤 멱등키로 막고, 약 30만 건을 전후 비교해 0을 확인했습니다</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="note">출처: 지마켓 채용 페이지의 주문결제 서비스 기획자 공고 본문(조직 및 역할 소개, 주요 업무, 자격 요건)</p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <p class="eyebrow">일하는 순서</p>
+    <h2>기준을 글로 고정한 뒤에 엽니다</h2>
+    <p class="sub">결제와 수수료는 열고 나서 고치면 돈과 신뢰가 같이 샙니다.</p>
+    <div class="steps3">
+      <div class="s3">
+        <p class="n en">Step 01</p>
+        <h3>이탈 구간을 끊어서 센다</h3>
+        <p>전환이 낮다는 말로는 아무것도 못 고칩니다. 탐색에서 결제까지 구간을 끊어 어디서 빠지는지 먼저 셌습니다.</p>
+      </div>
+      <div class="s3">
+        <p class="n en">Step 02</p>
+        <h3>정책을 화면이 아니라 문서에 둔다</h3>
+        <p>참여 자격과 성과 산정, 지급 주기처럼 자주 바뀌는 규칙은 정책에 둡니다. 그래야 운영이 사람 손을 안 타고 분쟁이 생기지 않습니다.</p>
+      </div>
+      <div class="s3">
+        <p class="n en">Step 03</p>
+        <h3>전후를 숫자로 비교하고 닫는다</h3>
+        <p>오픈은 중간 지점입니다. 2개월 치 약 30만 건을 전후로 비교해 중복 결제가 정말 0이 됐는지 확인한 뒤에 종료로 적었습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <p class="eyebrow">프로젝트</p>
+    <h2>공고의 주요업무 순서로 정리했습니다</h2>
+    <p class="sub">모든 수치는 실제 운영 결과입니다. 각 건 끝에 지마켓에 옮긴다면 어디부터 보겠는지 적었습니다.</p>
+
+    <div class="cards">
+
+      <article class="card">
+        <span class="tag">주문과 결제 흐름</span>
+        <h3>앱 밖으로 나가던 결제를 안에서 닫았습니다</h3>
+        <p class="meta">애프터세일즈 모바일 가입과 결제 채널 신설 / ㈜씨앤디팩토리 / 0에서 1 기획</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>상품을 사려면 앱을 벗어나 별도 채널로 넘어가야 했고, 이탈이 그 구간에 몰려 있던 상태</li>
+            <li>정비 예약 노쇼가 40%. 예약은 받았는데 오지 않으니 그만큼 가동률이 비던 상황</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>앱 안에서 가입과 결제가 끝나도록 iframe 연동 구조를 기획하고 화면 전환과 인증 흐름을 다시 설계</li>
+            <li>부서와 계열사 사이 포인트를 가입 결제에 쓸 수 있도록 제휴 구조를 설계하고 합의</li>
+            <li>노쇼는 독촉이 아니라 순서 문제로 보고, 방문 전날 푸시와 도착 전 온라인 체크인으로 흐름을 변경</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>예약 시스템과 연동된 모바일 앱 운영을 맡아 연동 구간 이슈를 모니터링하고 배포 일정에 맞춰 운영을 준비</li>
+            <li>온라인 체크인을 고도화 기능으로 추가해 방문 전 단계를 하나 더 당김</li>
+          </ul>
+          <div class="res"><span>가입 30% 증가</span><span>매출 30% 증가</span><span>노쇼 40%에서 20%</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal two">
+          <figure><img src="../assets/images/bmw/scp.png" alt="가입과 결제 관리 화면" loading="lazy" /><figcaption>가입 심사와 결제를 운영한 관리 화면</figcaption></figure>
+          <figure><img src="../assets/images/bmw/oas.png" alt="예약과 체크인 운영 화면" loading="lazy" /><figcaption>예약과 온라인 체크인 흐름을 운영한 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>지마켓에 옮긴다면</b> 장바구니에서 주문서, 결제 수단 선택, 인증까지 구간을 끊어 이탈률을 먼저 재고, 가장 많이 빠지는 한 구간부터 손대겠습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">결제 무결성</span>
+        <h3>중복 결제를 재현해 원인을 특정하고 막았습니다</h3>
+        <p class="meta">PG 중복 콜백 차단 설계 / ㈜씨앤디팩토리 / 장애 분석과 설계</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>같은 건이 두 번 결제되는 사례가 간헐적으로 보고되는데 재현이 안 돼 원인을 못 잡던 상태</li>
+            <li>환불로 수습하면 그 달 정산과 회계가 다시 틀어져 처리 비용이 두 배로 드는 구조</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>결제와 정산 에러 로그 6개월 치를 전수 분석해 상위 세 유형을 특정. 구독 시작일 규정 불일치, 할인율 불일치, 중복 결제로 원인이 서로 달랐음</li>
+            <li>중복 클릭으로 PG 콜백이 두 번 들어오는 경로를 재현해 조건을 고정</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>멱등키 기반 차단 구조를 설계해 같은 요청이 두 번 들어와도 한 번만 처리되도록 변경</li>
+            <li>2개월 치 약 30만 건을 전후로 비교해 정말 0이 됐는지 확인한 뒤에 종료로 적음</li>
+          </ul>
+          <div class="res"><span>중복 결제 100% 제거</span><span>약 30만 건 전후 비교로 검증</span><span>관련 환불과 정정 처리 소멸</span></div></div></div>
+        </div>
+        <p class="apply"><b>지마켓에 옮긴다면</b> 취소와 부분취소, 재승인이 섞인 주문이 어떻게 기록되는지 먼저 맞추고, 결제 실패 재시도 구간에서 중복이 생길 여지가 있는지 로그로 확인하겠습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">수수료 플랫폼</span>
+        <h3>수수료는 요율보다 기준을 먼저 고정했습니다</h3>
+        <p class="meta">어필리에이트 수수료 모델과 딜러 수수료 정산 / ㈜씨앤디팩토리 / 기획과 운영</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>외부 참여자에게 수수료를 주는 구조는 정산이 한 번 틀어지는 순간 신뢰가 깨진다는 점</li>
+            <li>딜러 수수료 정산의 계산 기준이 문서가 아니라 사람 머릿속과 엑셀에 흩어져 있어 월 마감마다 손으로 맞추던 구조</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>인플루언서에게 판매액의 3%를 지급하는 어필리에이트 모델을 기획하면서 참여 자격과 성과 산정 기준, 지급 주기를 정책으로 먼저 고정</li>
+            <li>딜러 수수료는 40개가 넘는 칼럼의 계산 로직을 전수 조사해 기준과 예외를 분리하고 정책으로 재정의</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>쿠폰 자동 적용 로직을 설계해 기존 프로모션과 충돌하지 않도록 처리</li>
+            <li>시스템 간 API 데이터의 정합성을 자동 확인하고 어긋난 값은 자동으로 맞추도록 구성</li>
+            <li>월 마감 정합성 점검과 조정, 환불 정보 입력과 특이건 리포트를 자동 생성으로 전환</li>
+          </ul>
+          <div class="res"><span>인플루언서 약 120명 확보</span><span>신규 채널 월 매출 약 8,000만 원</span><span>프로모션 충돌 0건</span><span>정산 오류 50% 감소</span><span>정산 대사 월 8시간에서 0</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal one">
+          <figure><img src="../assets/images/bmw/wpp.png" alt="수수료 정산 운영 화면" loading="lazy" /><figcaption>정합성 자동 점검을 붙인 수수료 정산 운영 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>지마켓에 옮긴다면</b> 카테고리와 프로모션, 판매자 등급이 겹칠 때 수수료가 어떤 순서로 적용되는지 한 장으로 정리하고, 예외가 코드가 아니라 정책으로 들어가 있는지부터 확인하겠습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">운영 어드민과 데이터</span>
+        <h3>반복 요청을 어드민 기능으로 바꿨습니다</h3>
+        <p class="meta">고객사 요청 구조화와 지표 통합 / ㈜씨앤디팩토리 / PM</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>비슷한 요청이 계속 들어오는데 매번 개별 개발로 처리해서 운영이 개발 대기에 묶이던 구조</li>
+            <li>분석 데이터가 GA와 Matomo, Admin, 앱스토어로 흩어져 있어 같은 지표도 소스마다 값이 달랐던 상황</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>식품 커머스 세 고객사를 동시에 담당하며 반복 요청을 유형별로 묶어 Admin 기능으로 구조화</li>
+            <li>흩어진 소스를 집계 기준부터 맞춘 뒤 자동 수집해 하나의 대시보드로 통합</li>
+            <li>심사 업무는 승인을 전부 자동으로, 반려만 사람이 최종 확인하는 구조로 설계해 위험을 한쪽으로 몰아 둠</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>Claude API로 매출과 회원, 재구매, 이벤트 성과를 분석하고 개선 전략까지 자동 도출하도록 구성</li>
+            <li>Jira와 Flow 로그를 모아 지연 Task와 누락을 정량 추적하고 산정식과 데이터 출처를 공개해 합의</li>
+          </ul>
+          <div class="res"><span>고객사 개발 요청 약 80% 감소</span><span>이벤트 성과 30% 이상 향상</span><span>심사 일 2시간에서 0, 정확도 100%</span><span>지연과 누락 80% 감소</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal two">
+          <figure><img src="../assets/images/dashboard/kd-real.png" alt="통합 분석 대시보드" loading="lazy" /><figcaption>집계 기준을 통일한 통합 분석 대시보드 실제 화면</figcaption></figure>
+          <figure><img src="../assets/images/dashboard/jira.png" alt="진척 관리 대시보드" loading="lazy" /><figcaption>Jira 로그로 지연과 누락을 추적한 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>지마켓에 옮긴다면</b> 운영팀이 어드민 밖에서 처리하는 일이 무엇인지 한 주 동안 적게 한 뒤, 빈도와 소요 시간이 가장 큰 세 가지부터 기능으로 올리겠습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">정책 수립과 End to End</span>
+        <h3>정책을 문서로 세워 0에서 1을 완주했습니다</h3>
+        <p class="meta">대회 운영 SaaS 총괄과 외부 시스템 연동 / ㈜오앤 / 총괄 PM</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>170개국이 저마다 다른 규정을 써서 나라마다 시스템을 새로 만들어야 하던 상황. 규정은 매년 바뀜</li>
+            <li>붙여야 할 외부 시스템이 많은데 규격과 문서 수준이 달라서 그대로 붙이면 오픈 후에 어긋나는 구조</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>나라별 차이를 설정값 기반 분류체계로 표준화해 규정이 바뀌어도 코드가 아니라 설정이 바뀌도록 설계</li>
+            <li>화면기획서와 정책정의서, IA, ERD, API 명세를 직접 작성</li>
+            <li>외부 기관 시스템 4종의 연동 프로토콜을 분석해 데이터 매핑 구조를 설계하고 Postman으로 파라미터를 검증</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>디자인과 프론트엔드, 백엔드, 퍼블리싱, 기획 다섯 조직 14명을 직접 채용하고 총괄</li>
+            <li>셀러포탈 구축에서는 배송추적과 PG, 알림톡, 전자계약 등 외부 솔루션 5종을 비교 선정해 연동 규격 협의와 환경별 검증까지 총괄</li>
+            <li>기획에서 QA까지 1년 이상 걸리던 개발 사이클을 6개월 1회전으로 단축</li>
+          </ul>
+          <div class="res"><span>파리올림픽 공식 채택</span><span>연간 이용자 약 100만 명</span><span>운영시간 40% 절감</span><span>외부 솔루션 5종 연동 에러 0건</span><span>일정 지연 없이 론칭</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal two">
+          <figure><img src="../assets/images/ovr/main.png" alt="운영 메인 화면" loading="lazy" /><figcaption>설정값으로 규정 차이를 수용한 운영 화면</figcaption></figure>
+          <figure><img src="../assets/images/ivr/main.png" alt="외부 기관 연동 운영 화면" loading="lazy" /><figcaption>외부 기관 시스템과 연동한 운영 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>지마켓에 옮긴다면</b> 주문과 결제 정책 중 어디까지가 문서에 있고 어디부터가 코드에만 있는지 먼저 갈라 보겠습니다. 그 경계가 운영 속도를 정합니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">전환과 객단가</span>
+        <h3>지표를 나눠 보고 가격과 운영을 따로 고쳤습니다</h3>
+        <p class="meta">공간 공유 사업 13곳과 역경매 플랫폼 / 와이엔케이, 플러스이노베이션 / 사업 기획과 운영 총괄</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>어디를 고쳐야 매출이 오르는지 모른 채 가격만 내리면 이용률은 올라도 객단가가 무너진다는 점</li>
+            <li>고정비가 길게 따라붙는 구조라 들어갈 자리와 접을 자리를 감으로 정하면 바로 손익이 흔들리던 상황</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>점유율과 ADR, 재방문율을 나눠 보고 어느 지표가 깨졌는지에 따라 가격을 손댈지 운영을 손댈지 구분</li>
+            <li>입지별로 고정비와 변동비를 나누고 공헌이익률을 구해 BEP를 산출, 투자금 회수는 IRR로 모델링</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>점유율이 낮으면 가격과 유입을, 객단가가 낮으면 상품 구성과 이용 기간을, 재방문율이 낮으면 이용 경험과 응대를 고침</li>
+            <li>위치기반 역경매 매칭 플랫폼은 사업모델 수립부터 AOS, iOS, Web 정책과 UX, 운영 프로세스 기획, 앱스토어 출시까지 수행</li>
+          </ul>
+          <div class="res"><span>공간 13곳까지 확장</span><span>사업 1년차 연매출 약 3억 원</span><span>정부지원 14건 선정, 총 약 4억 원 규모</span></div></div></div>
+          <div class="step"><span class="lb">배운 것</span><div><p>지원 사업이 끝난 뒤 자체 매출 구조가 받쳐 주지 못해 사업을 접었습니다. 그 뒤로 무엇을 시작하든 효과가 스스로 증명되는지부터 확인하는 습관이 생겼습니다.</p></div></div>
+        </div>
+        <p class="apply"><b>지마켓에 옮긴다면</b> 전환율 한 숫자로 보지 않고 유입, 장바구니 담기, 주문서 진입, 결제 완료로 쪼갠 뒤 각 구간을 다른 수단으로 고치겠습니다.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="fit">
+  <div class="wrap">
+    <p class="eyebrow">요건 대응</p>
+    <h2>자격 요건과 공통 요건</h2>
+    <p class="sub">공고에 적힌 항목마다 실제로 해 온 일을 붙였습니다.</p>
+    <table class="fit">
+      <tr><th>이커머스 또는 온라인 플랫폼 서비스 기획과 운영 경력</th><td>이커머스와 온라인 플랫폼 기준으로는 오앤과 씨앤디팩토리에서 3년대입니다. 광동상회와 SPC, 제주삼다수, BHC, 아웃백 다섯 서비스를 담당했고, 다우데이타 셀러포탈 구축에서는 솔루션 선정과 연동을 총괄했습니다</td></tr>
+      <tr><th>주문, 결제, 장바구니 등 Transaction 도메인 경험</th><td>구독 서비스의 가입과 결제 채널을 앱 안에 0에서 1로 신설했고, 결제와 정산 에러 로그 6개월 치를 전수 분석해 구독 시작일 규정 불일치와 할인율 불일치, 중복 결제 세 유형을 각각 다른 방식으로 막았습니다. 쿠폰 자동 적용 로직도 직접 설계했습니다</td></tr>
+      <tr><th>서비스 정책 수립 및 기능 기획 경험</th><td>화면기획서와 정책정의서, IA, ERD, API 명세를 직접 작성합니다. 170개국의 상이한 규정을 설정값 기반 분류체계로 표준화해 규정 변경이 코드가 아니라 설정으로 흡수되게 만들었습니다</td></tr>
+      <tr><th>문제 정의부터 요구사항 도출, 실행까지 End to End</th><td>가입 심사 자동 판정은 현장에서 시간을 직접 재는 일부터 시작해 Python과 Selenium으로 구현하고, 1년 이상 운영하며 사람 개입률 0.25%와 관련 문의 0건까지 확인한 뒤 종료로 적었습니다</td></tr>
+      <tr><th>데이터 기반의 서비스 개선 및 운영 경험</th><td>GA와 Matomo, Admin, 앱스토어로 흩어진 지표를 집계 기준부터 맞춰 통합하고 이벤트 성과를 30% 이상 올렸습니다. 정산 계산 로직 40개 이상 칼럼을 전수 조사해 재설계했고, Jira와 Flow 로그로 지연과 누락을 정량 추적했습니다</td></tr>
+      <tr><th>판매자 수수료 정책 수립과 구조 설계, 수수료 어드민</th><td>판매액의 3%를 지급하는 어필리에이트 모델을 기획하며 참여 자격과 성과 산정, 지급 주기를 정책으로 고정해 신규 채널 월 매출 약 8,000만 원을 만들었습니다. 딜러 수수료 정산은 기준을 재정의하고 정합성 자동 점검을 붙여 오류를 50% 줄였습니다</td></tr>
+      <tr><th>운영 어드민 기획 및 개선</th><td>반복되는 고객사 요청을 유형별로 묶어 Admin 기능으로 구조화해 개발 요청을 약 80% 줄였습니다. 월 마감 정합성 점검과 환불 특이건 리포트는 자동 생성으로 전환했습니다</td></tr>
+      <tr><th>개발, 디자인 등 유관 부서와의 협업</th><td>디자인과 프론트엔드, 백엔드, 퍼블리싱, 기획 다섯 조직 14명을 직접 채용해 총괄했습니다. 진척 지표를 도입할 때 감시로 읽힌다는 우려가 나와 산정식과 데이터 출처를 공개하고 지표를 함께 고쳐 합의했습니다</td></tr>
+      <tr><th>(우대) 영어 커뮤니케이션</th><td>세계태권도연맹과 파리올림픽 조직위, 몽골 정부와 정책과 요구사항을 영문으로 조율했습니다. TOEIC 760점입니다</td></tr>
+      <tr><th>해외여행 결격 사유와 병역</th><td>결격 사유 없습니다. 육군 병장 만기 전역입니다</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <strong>김강현</strong>
+    <a href="mailto:saian64@naver.com">saian64@naver.com</a>
+    <a href="tel:01099548720">010-9954-8720</a>
+    <a href="../">기본 포트폴리오</a>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 김강현. 개인이 만든 페이지이며 지마켓의 공식 페이지가 아닙니다. 지원용으로 작성했습니다.</span>
+    <a href="../">목록으로</a>
+  </div>
+</footer>
+<dialog id="lb" aria-label="이미지 크게 보기">
+  <div class="lb-bar">
+    <span id="lb-cap"></span>
+    <span class="lb-btns">
+      <button type="button" id="lb-out" aria-label="축소">&minus;</button>
+      <button type="button" id="lb-pct" aria-label="화면에 맞추기">100%</button>
+      <button type="button" id="lb-in" aria-label="확대">+</button>
+      <button type="button" id="lb-close" class="on" aria-label="닫기">닫기</button>
+    </span>
+  </div>
+  <div class="lb-body" id="lb-body"><img id="lb-img" alt="" /></div>
+</dialog>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('lb');
+  if (!dlg || !dlg.showModal) return;
+  var img = document.getElementById('lb-img');
+  var cap = document.getElementById('lb-cap');
+  var body = document.getElementById('lb-body');
+  var pct = document.getElementById('lb-pct');
+  var scale = 1, fit = 1;
+
+  function apply() {
+    img.style.width = Math.round(img.naturalWidth * scale) + 'px';
+    pct.textContent = Math.round(scale * 100) + '%';
+    img.style.cursor = scale > fit ? 'zoom-out' : 'zoom-in';
+  }
+  function fitScale() {
+    var w = body.clientWidth - 24, h = body.clientHeight - 24;
+    if (!img.naturalWidth || !img.naturalHeight) return 1;
+    return Math.min(w / img.naturalWidth, h / img.naturalHeight, 1);
+  }
+  function reset() {
+    fit = fitScale();
+    scale = fit;
+    apply();
+    body.scrollTop = 0;
+    body.scrollLeft = 0;
+  }
+  function zoom(f) {
+    var sx = (body.scrollLeft + body.clientWidth / 2) / (img.naturalWidth * scale);
+    var sy = (body.scrollTop + body.clientHeight / 2) / (img.naturalHeight * scale);
+    scale = Math.min(Math.max(scale * f, 0.1), 5);
+    apply();
+    body.scrollLeft = sx * img.naturalWidth * scale - body.clientWidth / 2;
+    body.scrollTop = sy * img.naturalHeight * scale - body.clientHeight / 2;
+  }
+
+  document.querySelectorAll('.gal figure').forEach(function (fig) {
+    var t = fig.querySelector('img');
+    var c = fig.querySelector('figcaption');
+    t.tabIndex = 0;
+    function open() {
+      cap.textContent = c ? c.textContent : t.alt;
+      img.alt = t.alt;
+      img.style.width = 'auto';
+      img.src = t.currentSrc || t.src;
+      dlg.showModal();
+      if (img.complete) reset();
+      else img.onload = reset;
+    }
+    t.addEventListener('click', open);
+    t.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+    });
+  });
+
+  document.getElementById('lb-in').addEventListener('click', function () { zoom(1.25); });
+  document.getElementById('lb-out').addEventListener('click', function () { zoom(0.8); });
+  pct.addEventListener('click', reset);
+  document.getElementById('lb-close').addEventListener('click', function () { dlg.close(); });
+  img.addEventListener('click', function () {
+    if (scale > fit + 0.001) reset();
+    else { scale = 1; apply(); }
+  });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  window.addEventListener('resize', function () { if (dlg.open) reset(); });
+})();
+</script>
+</body>
+</html>
