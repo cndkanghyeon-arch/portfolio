@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>김강현 | 거점 운영과 프로덕트 오너십 포트폴리오</title>
+<meta name="description" content="오프라인 거점의 점유율과 온라인 서비스의 행동 데이터를 같은 표에 놓고 판단해 온 기록입니다. AI-DLC Product Owner 지원용으로 정리했습니다." />
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#2868FF" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23111111'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='15' font-weight='700' fill='%232868FF' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top">김강현 <small class="en">Product Owner</small></a>
+    <nav class="menu">
+      <a href="#read">공고를 보는 관점</a>
+      <a href="#how">일하는 순서</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#fit">요건 대응</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div id="top" class="hero">
+  <div class="wrap">
+    <span class="kicker">세컨신드롬 AI-DLC Product Owner 지원</span>
+    <h1>거점의 점유율과 앱의 행동 데이터를<br /><em>같은 표에 놓고 봤습니다</em></h1>
+    <p class="lead">공간 13곳을 직접 굴리며 점유율과 ADR, 재방문율로 가격과 출점을 판단했고, 온라인에서는 가입과 결제, 재이용을 데이터로 끌어올렸습니다. 가설은 기획서보다 먼저 만들어 확인하는 편입니다. Python으로 판정 로직을 직접 구현했고 Claude API로 분석 대시보드를 만들어 운영에 올렸습니다.</p>
+    <div class="who"><span>김강현</span><span>서비스 기획과 PM, 사업 운영 7년 4개월</span><span>saian64@naver.com</span><span>010-9954-8720</span></div>
+    <div class="stats">
+      <div class="stat"><b>연 100만 명</b><span>0에서 1로 만든 운영 서비스<br />파리올림픽 공식 채택, 일정 지연 없이 론칭</span></div>
+      <div class="stat"><b>공간 13곳</b><span>점유율과 ADR, 재방문율로 가격과 출점 판단<br />사업 1년차 연매출 약 3억 원</span></div>
+      <div class="stat"><b>연 3,000시간</b><span>자동화 도구 14종을 직접 만들어 제거<br />ROI 약 1,320%, 회수 기간 약 3.5주</span></div>
+      <div class="stat"><b>노쇼 40%에서 20%</b><span>고객 여정의 순서를 바꿔 얻은 결과<br />방문 전 알림과 도착 전 체크인 도입</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="read">
+  <div class="wrap">
+    <p class="eyebrow">지원 전에 확인한 것</p>
+    <h2>공고를 이렇게 읽었습니다</h2>
+    <p class="sub">AI-DLC팀이 지금 풀어야 하는 문제와 제가 겹치는 지점을 나눠 봤습니다.</p>
+    <div class="read">
+      <h3>물리 거점과 온라인 서비스는 지표의 단위가 다릅니다</h3>
+      <div class="grid">
+        <div class="col">
+          <h4>공고에서 확인한 사실</h4>
+          <ul>
+            <li>기획과 개발, 데이터가 한 팀에서 움직이는 AI-DLC팀을 새로 세우고, AI를 도구가 아니라 일하는 방식의 기본값으로 삼습니다</li>
+            <li>거점 운영 데이터인 점유율과 출입, 재계약에 앱 행동 데이터와 고객 인터뷰를 더해 핵심 고객과 핵심 행동, 핵심 지표를 정의합니다</li>
+            <li>디지털 인벤토리를 비보관 회원과 가정 사용자, 기업 고객까지 넓히는 가설을 세우고 검증 순서를 정합니다</li>
+            <li>생성형 AI와 바이브 코딩으로 PRD와 프로토타입, 화면 구현, 데이터 분석을 직접 수행합니다. 기획서보다 작동하는 프로토타입으로 먼저 이야기한다고 적혀 있습니다</li>
+            <li>관리자가 아니라 가장 앞에서 직접 만들고 검증하는 오너를 찾습니다</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>그래서 생기는 문제와 제 접점</h4>
+          <ul>
+            <li>거점 숫자와 앱 숫자는 집계 단위가 달라서 그대로 합치면 믿을 수 없습니다. 저는 <b>공간 13곳을 점유율과 ADR, 재방문율로 직접 굴려</b> 거점 지표가 어떻게 만들어지는지 알고, 동시에 <b>GA와 Matomo, Admin, 앱스토어로 흩어진 온라인 지표를 집계 기준부터 맞춰</b> 통합했습니다</li>
+            <li>사용자군을 넓히는 일은 가설의 수가 아니라 검증 순서가 승부입니다. 저는 <b>반복성과 정책 명확성, 효과 크기, 지속 사용성</b> 네 기준으로 착수 전에 걸러 <b>착수한 14건을 전부 운영에 남겼습니다</b></li>
+            <li>프로토타입을 먼저 내려면 직접 만들 수 있어야 합니다. 저는 <b>Python과 Selenium으로 판정 로직을 직접 구현</b>했고 <b>Claude API로 매출과 회원, 재구매를 분석하는 대시보드</b>를 만들어 운영에 올렸습니다</li>
+            <li>팀을 세우는 일은 사람을 뽑는 일이 아니라 일하는 방식을 정하는 일입니다. 저는 <b>다섯 직군 14명을 직접 면접하고 채용해 총괄</b>했고, 인수인계 문서를 위키로 모아 팀의 기본값으로 만들었습니다</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="note">출처: 원티드에 올라온 세컨신드롬 AI-DLC Product Owner 공고 본문(포지션 소개, 주요업무, 자격요건, 우대사항)</p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <p class="eyebrow">일하는 순서</p>
+    <h2>가설보다 검증 순서를 먼저 정합니다</h2>
+    <p class="sub">아이디어는 늘 많습니다. 줄이는 기준을 먼저 세워야 끝까지 갑니다.</p>
+    <div class="steps3">
+      <div class="s3">
+        <p class="n en">Step 01</p>
+        <h3>현장에서 시간을 직접 잰다</h3>
+        <p>담당자 옆에 앉아 한 건에 몇 분이 드는지 직접 쟀습니다. 들은 말이 아니라 잰 숫자여야 효과를 나중에 비교할 수 있습니다.</p>
+      </div>
+      <div class="s3">
+        <p class="n en">Step 02</p>
+        <h3>네 가지로 걸러 착수를 줄인다</h3>
+        <p>반복성과 정책 명확성, 효과 크기, 지속 사용성을 넘지 못하면 검토 단계에 올리지 않았습니다. 그래서 착수한 14건이 전부 남았습니다.</p>
+      </div>
+      <div class="s3">
+        <p class="n en">Step 03</p>
+        <h3>전후를 숫자로 비교하고 닫는다</h3>
+        <p>오픈은 중간 지점입니다. 1년 이상 돌려 사람 개입률과 관련 문의 건수까지 확인한 뒤에 종료로 적었습니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <p class="eyebrow">프로젝트</p>
+    <h2>공고의 자격요건 순서로 정리했습니다</h2>
+    <p class="sub">모든 수치는 실제 운영 결과입니다. 각 건 끝에 세컨신드롬에 옮긴다면 어디부터 보겠는지 적었습니다.</p>
+
+    <div class="cards">
+
+      <article class="card">
+        <span class="tag">거점 운영 지표</span>
+        <h3>점유율과 ADR로 가격과 출점을 판단했습니다</h3>
+        <p class="meta">공간 공유 사업 13곳 / 와이엔케이, 플러스이노베이션 / 사업 기획과 운영 총괄</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>공간 사업은 한 번 계약하면 고정비가 길게 따라붙어서, 들어갈 자리와 접을 자리를 감으로 정하면 바로 손익이 흔들리는 구조</li>
+            <li>어디를 고쳐야 매출이 오르는지 모른 채 가격만 내리면 점유율은 올라도 객단가가 무너진다는 점</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>입지별로 고정비와 변동비를 나누고 공헌이익률을 구해 BEP 매출과 BEP 점유율을 먼저 계산</li>
+            <li>투자금 회수를 IRR로 모델링해 들어갈 자리와 접을 자리를 판단</li>
+            <li>점유율과 ADR, 재방문율을 나눠 보고 어느 쪽이 깨졌는지에 따라 가격을 손댈지 운영을 손댈지 구분</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>지표별로 대응을 다르게 가져감. 점유율이 낮으면 가격과 유입을, ADR이 낮으면 상품 구성과 이용 기간을, 재방문율이 낮으면 이용 경험과 응대를 고침</li>
+            <li>정부지원 사업 14건에 선정돼 수행하며 사업계획서와 시장성, 수익성 분석을 직접 작성</li>
+          </ul>
+          <div class="res"><span>공간 13곳까지 확장</span><span>사업 1년차 연매출 약 3억 원</span><span>정부지원 14건 선정, 총 약 4억 원 규모</span></div></div></div>
+          <div class="step"><span class="lb">배운 것</span><div><p>지원 사업이 끝난 뒤 자체 매출 구조가 받쳐 주지 못해 사업을 접었습니다. 그 뒤로 무엇을 시작하든 효과가 스스로 증명되는지부터 확인하는 습관이 생겼습니다.</p></div></div>
+        </div>
+        <p class="apply"><b>세컨신드롬에 옮긴다면</b> 지점별 점유율과 재계약률, 출입 빈도를 같은 표에 올려 어느 지점이 가격 문제이고 어느 지점이 경험 문제인지부터 갈라 보겠습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">0에서 1까지 오너로 완주</span>
+        <h3>없던 서비스를 만들어 연 100만 명이 쓰게 했습니다</h3>
+        <p class="meta">태권도 대회 운영 SaaS / ㈜오앤 / 총괄 PM</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>170개국이 저마다 다른 대회 규정을 써서 나라마다 시스템을 새로 만들어야 하던 상황</li>
+            <li>규정이 매년 바뀌는데 바뀔 때마다 코드를 고치면 운영이 버티지 못한다는 점</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>나라별 차이를 설정값 기반 분류체계로 표준화해 규정이 바뀌어도 코드가 아니라 설정이 바뀌도록 설계</li>
+            <li>화면기획서와 정책정의서, IA, ERD, API 명세를 직접 작성</li>
+            <li>RTDS와 GMS, PSS, IVR 네 개 외부 시스템의 연동 프로토콜을 분석하고 데이터 매핑 구조를 설계. 공식 문서가 오래돼 기관 담당자와 직접 협의하고 Postman으로 파라미터를 검증</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>디자인과 프론트엔드, 백엔드, 퍼블리싱, 기획 다섯 조직을 총괄하며 일정을 사수</li>
+            <li>기획에서 QA까지 1년 이상 걸리던 개발 사이클을 6개월 1회전으로 단축</li>
+          </ul>
+          <div class="res"><span>파리올림픽 공식 채택</span><span>연간 이용자 약 100만 명</span><span>수작업 80% 자동화</span><span>운영시간 40% 절감</span><span>운영비 70% 절감</span><span>일정 지연 없이 론칭</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal two">
+          <figure><img src="../assets/images/ovr/main.png" alt="대회 운영 메인 화면" loading="lazy" /><figcaption>설정값으로 나라별 규정을 수용한 운영 화면</figcaption></figure>
+          <figure><img src="../assets/images/ovr/schedule.png" alt="대회 일정 관리 화면" loading="lazy" /><figcaption>일정과 배정을 자동 생성하는 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>세컨신드롬에 옮긴다면</b> 장기 보관과 단기 이용, 방문 픽업, 택배보관, 다락 오너스가 공통으로 쓰는 값과 서비스별로 갈라지는 값을 먼저 분리해 하나의 설정 체계로 묶겠습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">AI로 가설을 직접 제품으로</span>
+        <h3>기획서를 쓰기 전에 작동하는 것부터 만들었습니다</h3>
+        <p class="meta">가입 심사 자동 판정과 AI 분석 대시보드 / ㈜씨앤디팩토리 / 기획과 구현</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>담당자가 매일 가입 신청 200건을 본사 차량 데이터와 손으로 대조하던 업무. 하루 2시간이 고정으로 나감</li>
+            <li>분석 데이터가 GA와 Matomo, Admin, 앱스토어로 흩어져 있어 같은 지표도 소스마다 값이 달랐던 상황</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>판단 기준이 정책으로 고정된 업무라 LLM을 운영에 상시 투입하는 대신 규칙으로 구현하는 쪽이 비용과 정확도 양쪽에서 유리하다고 판단</li>
+            <li>승인은 전부 자동으로, 반려만 사람이 최종 확인하는 구조로 설계해 위험을 한쪽으로 몰아 둠</li>
+            <li>분석 쪽은 Claude API로 매출과 회원, 재구매, 이벤트 성과를 분석하고 개선 전략까지 자동 도출하도록 구성</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>Python과 Selenium으로 직접 구현하고 실제 신청 데이터로 검증. 코드에서 정책 부분을 별도 섹션으로 분리해 규정이 바뀌면 그 섹션만 고치도록 정리</li>
+            <li>흩어진 소스를 자동 수집해 집계 기준을 맞춘 뒤 하나의 대시보드로 통합</li>
+            <li>RAG로 흩어진 업무 기록을 사내에서 찾아 쓸 수 있는 형태로 구성</li>
+          </ul>
+          <div class="res"><span>일 2시간에서 0</span><span>자동 판정 정확도 100%</span><span>사람 개입률 0.25%</span><span>1년 이상 관련 문의 0건</span><span>이벤트 성과 30% 이상 향상</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal two">
+          <figure><img src="../assets/images/bmw/scp.png" alt="가입 심사와 결제 관리 화면" loading="lazy" /><figcaption>자동 판정을 붙인 가입 심사와 결제 관리 화면</figcaption></figure>
+          <figure><img src="../assets/images/dashboard/kd-real.png" alt="AI 분석 대시보드" loading="lazy" /><figcaption>집계 기준을 통일해 통합한 AI 분석 대시보드 실제 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>세컨신드롬에 옮긴다면</b> 물품 인식의 정확도를 어디까지 올려야 사용자가 손으로 고치지 않는지 먼저 재고, 그 선을 기준으로 자동과 수동의 경계를 정하겠습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">AI Native 팀의 일하는 방식</span>
+        <h3>반복 업무를 팀의 기본값에서 걷어냈습니다</h3>
+        <p class="meta">자동화 도구 14종과 과제 선별 체계 / ㈜씨앤디팩토리 / 발굴부터 운영까지</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>자동화는 만들기는 쉬운데 쓰이지 않고 버려지는 쪽이 더 많다는 점. 무엇을 안 할지 정하는 기준이 없던 상태</li>
+            <li>효과를 말로만 설명하면 다음 과제의 예산을 받기 어렵다는 점</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>현업 업무 시간을 직접 실측해 과제를 정의하고, 반복성과 정책 명확성, 효과 크기, 지속 사용성 네 기준으로 선별</li>
+            <li>도구 한 건에 들어가는 시간을 단계별로 쪼개 집계. 업무 관찰 2시간, 정책을 규칙으로 정리 2~3시간, 코드 작성 6시간, 한 달 돌려 보며 세 번 고치기 3시간, 테스트와 반영 1시간으로 약 15시간</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>14종을 만들어 전부 운영에 안착. 항목별 절감 시간을 표로 집계해 경영진에 보고</li>
+            <li>한 브랜드에서 검증한 리포트 자동화를 다른 브랜드로 그대로 확산해 재사용</li>
+            <li>인수인계 문서를 팀원이 동시에 편집하는 위키로 통합하고, 개발 현황을 Jira와 Flow 로그로 정량 추적</li>
+          </ul>
+          <div class="res"><span>반복 업무 연 3,000시간 제거</span><span>인건비 환산 약 5,700만 원</span><span>ROI 약 1,320%</span><span>회수 기간 약 3.5주</span><span>지연과 누락 80% 감소</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal two">
+          <figure><img src="../assets/images/bmw/wpp.png" alt="정산 운영 관리 화면" loading="lazy" /><figcaption>정합성 자동 점검을 붙인 운영 화면</figcaption></figure>
+          <figure><img src="../assets/images/dashboard/jira.png" alt="진척 관리 대시보드" loading="lazy" /><figcaption>Jira 로그로 지연과 누락을 추적한 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>세컨신드롬에 옮긴다면</b> 팀이 지금 손으로 하는 일을 한 주 동안 시간 단위로 적어 보게 한 뒤, 가장 긴 세 가지부터 프롬프트와 에이전트로 옮기고 그 결과를 팀 표준으로 문서화하겠습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">작은 팀을 꾸리고 끌기</span>
+        <h3>다섯 직군 14명을 직접 뽑아 한 방향으로 움직였습니다</h3>
+        <p class="meta">조직 운영과 채용, 공백 대응 / ㈜오앤 / 전략기획팀</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>필요한 역할과 인원이 정해지지 않은 상태에서 일정은 이미 외부에 공표돼 있던 상황</li>
+            <li>프로젝트 중간에 개발팀장 공백이 두 번 발생</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>필요 역할과 인원을 산정해 대표 승인을 받고 직접 면접해 채용</li>
+            <li>공백 구간에는 ERD와 API, 연동 프로토콜을 직접 다시 설계해 일정을 사수</li>
+            <li>진척 지표를 도입할 때 감시로 읽힌다는 우려가 나와 산정식과 데이터 출처를 전부 공개하고 지표를 함께 고쳐 합의</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>디자인과 프론트엔드, 백엔드, 퍼블리싱, 기획 다섯 조직을 총괄</li>
+            <li>식품 커머스 세 고객사를 동시에 담당하며 반복되는 요청을 Admin 기능으로 구조화</li>
+            <li>세계태권도연맹과 파리올림픽 조직위, 몽골 정부와 정책과 요구사항을 직접 조율</li>
+          </ul>
+          <div class="res"><span>5개 팀 14명 총괄</span><span>Task 처리량 150% 증가</span><span>고객사 개발 요청 약 80% 감소</span></div></div></div>
+        </div>
+        <div class="galhead">바꾸기 전과 새로 만든 것</div>
+        <div class="gal two">
+          <figure><img src="../assets/images/ovr_old/old-main.png" alt="개편 전 운영 화면" loading="lazy" /><figcaption>개편 전 운영 화면</figcaption></figure>
+          <figure><img src="../assets/images/ivr/main.png" alt="실시간 영상 판독 화면" loading="lazy" /><figcaption>0에서 1로 기획한 실시간 영상 판독 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>세컨신드롬에 옮긴다면</b> 채용 전에 AI-DLC팀이 한 분기에 끝낼 수 있는 일의 양부터 숫자로 잡고, 그 안에서 역할을 쪼개 필요한 사람 수를 정하겠습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">전환과 재이용</span>
+        <h3>여정의 순서를 바꿔 전환과 재이용을 올렸습니다</h3>
+        <p class="meta">구독 가입과 결제 채널 신설, 온라인 체크인, 제휴 채널 / ㈜씨앤디팩토리 / 기획과 운영</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>구독 상품을 사려면 앱을 벗어나야 했고, 이탈이 그 구간에 몰려 있던 상태</li>
+            <li>정비 예약 노쇼가 40%. 예약은 받았는데 오지 않으니 그만큼 가동률이 비던 상황</li>
+            <li>자사몰 매출이 기존 채널에만 묶여 있어 새로 열 유입 경로가 없던 점</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>앱 안에서 가입과 결제가 끝나도록 iframe 연동 구조를 기획하고 계열사 포인트까지 쓸 수 있게 제휴를 설계</li>
+            <li>노쇼는 독촉이 아니라 순서 문제로 보고, 방문 전날 푸시와 도착 전 온라인 체크인으로 흐름을 바꿈</li>
+            <li>인플루언서에게 판매액의 3%를 지급하는 어필리에이트 모델을 기획하고 참여 자격과 성과 산정, 지급 주기를 정책으로 먼저 고정</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>중복 결제 문제를 재현해 원인을 특정하고 멱등키 기반 차단 구조를 설계</li>
+            <li>쿠폰 자동 적용 로직을 설계해 기존 프로모션과 충돌하지 않도록 처리</li>
+            <li>셀러포탈에서는 배송추적과 PG, 알림톡, 전자계약 등 외부 솔루션 5종을 비교 선정하고 연동 규격을 협의</li>
+          </ul>
+          <div class="res"><span>가입 30% 증가</span><span>매출 30% 증가</span><span>노쇼 40%에서 20%</span><span>중복 결제 100% 제거</span><span>인플루언서 약 120명, 신규 채널 월 매출 약 8,000만 원</span><span>외부 솔루션 5종 연동 에러 0건</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal one">
+          <figure><img src="../assets/images/bmw/oas.png" alt="예약과 체크인 운영 화면" loading="lazy" /><figcaption>예약과 온라인 체크인 흐름을 운영한 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>세컨신드롬에 옮긴다면</b> 탐색에서 계약까지, 보관에서 픽업까지 두 구간을 따로 끊어 이탈 지점을 먼저 재고, 재계약률이 떨어지는 시점이 계약 몇 개월째인지부터 확인하겠습니다.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="fit">
+  <div class="wrap">
+    <p class="eyebrow">요건 대응</p>
+    <h2>자격요건과 우대사항</h2>
+    <p class="sub">공고에 적힌 항목마다 실제로 해 온 일을 붙였습니다.</p>
+    <table class="fit">
+      <tr><th>7년 이상 프로덕트 경력 중 신규 서비스나 신사업을 0에서 1까지 직접 리딩</th><td>서비스 기획과 PM, 사업 운영으로 7년 4개월입니다. 태권도 대회 운영 SaaS를 0에서 1로 총괄해 파리올림픽 공식 채택과 연 100만 명까지 끌고 갔고, 실시간 영상 판독을 요구사항 정의부터 품질 기준 수립까지 새로 기획했으며, 창업해 위치기반 역경매 플랫폼을 앱스토어 출시까지 직접 만들었습니다</td></tr>
+      <tr><th>문제 발견부터 가설, 구현, 출시, 성과 검증까지 한 사이클을 오너로 완주</th><td>가입 심사 자동 판정은 현장에서 시간을 직접 재는 일부터 시작해 Python과 Selenium으로 구현하고, 1년 이상 운영하며 사람 개입률 0.25%와 관련 문의 0건까지 확인한 뒤 종료로 적었습니다</td></tr>
+      <tr><th>PM과 디자이너, 개발자를 포함한 소규모 팀을 이끌고 우선순위와 트레이드오프 결정</th><td>디자인, 프론트엔드, 백엔드, 퍼블리싱, 기획 다섯 조직 14명의 필요 인원을 산정하고 직접 면접해 채용한 뒤 총괄했습니다. 개발팀장 공백이 두 번 생겼을 때는 ERD와 API, 연동 프로토콜을 직접 재설계해 일정을 지켰습니다</td></tr>
+      <tr><th>생성형 AI와 AI 기반 개발 도구로 기획과 프로토타입, 데이터 분석을 직접 수행</th><td>Claude API로 매출과 회원, 재구매, 이벤트 성과를 분석하고 개선 전략을 자동 도출하는 대시보드를 만들었고, RAG로 사내 업무 지원 도구를 구성했습니다. Python과 Selenium, Playwright로 자동화 도구 14종을 직접 구현해 운영에 올렸습니다</td></tr>
+      <tr><th>데이터를 직접 다루고 데이터와 근거로 의사결정</th><td>정산 계산 로직 40개 이상 칼럼을 전수 조사해 재설계하고 시스템 간 정합성을 자동으로 대조하도록 만들었습니다. 분산된 지표는 집계 기준부터 맞춰 통합했고, Jira와 Flow 로그를 모아 지연 Task와 누락을 정량으로 추적했습니다</td></tr>
+      <tr><th>불확실한 환경에서 스스로 구조를 만들고 문제가 풀릴 때까지 파고듦</th><td>170개국이 제각각인 대회 규정을 설정값 기반 분류체계로 표준화해 매년 바뀌는 규정이 코드가 아니라 설정으로 흡수되게 만들었습니다. 중복 결제는 로그를 전수로 보고 재현에 성공한 뒤 원인을 특정해 멱등키로 차단했습니다</td></tr>
+      <tr><th>(우대) 오프라인 매장과 공간, 물류 운영을 온라인 서비스와 함께 다뤄 본 경험</th><td>공간 공유 사업을 13곳까지 운영하며 점유율과 ADR, 재방문율로 가격과 운영 방식을 고쳤고 사업 1년차 연매출 약 3억 원을 만들었습니다. IoT 무드등은 3D 설계부터 PCB와 금형, 양산까지 관리해 약 3,000개를 생산하고 크라우드펀딩과 온라인 판매로 풀었습니다</td></tr>
+      <tr><th>(우대) 구독형 서비스나 커머스의 전환과 리텐션을 직접 개선</th><td>구독 서비스의 가입과 결제 채널을 앱 안에 신설해 가입과 매출이 각각 30% 늘었고, 방문 전 알림과 도착 전 온라인 체크인으로 노쇼를 40%에서 20%로 낮췄습니다. 커머스 쪽은 광동상회와 SPC, 제주삼다수, BHC, 아웃백을 담당했습니다</td></tr>
+      <tr><th>(우대) AI 이미지 인식과 추천, 에이전트 기반 기능을 기획하거나 출시</th><td>제약 공장의 AI CCTV 영상관제를 온프레미스로 구축하며 근무자 자동 라벨링과 영상 검색, 사고 추적 기능을 기획했습니다. 사고 영상 확인과 처리시간을 약 95% 줄였고 근무자 실수가 약 70% 감소했습니다</td></tr>
+      <tr><th>(우대) 물류와 커머스 파트너를 엮은 제휴 기반 서비스</th><td>셀러포탈 구축에서 배송추적과 PG, 알림톡, 전자계약 등 영역별 솔루션을 비교 검토해 선정하고 연동 규격을 협의해 5종 전부 에러 없이 3개월 내 론칭했습니다. 인플루언서 어필리에이트는 수수료 정산 흐름까지 설계해 신규 채널 월 매출 약 8,000만 원을 만들었습니다</td></tr>
+      <tr><th>해외 여행과 출장 결격 사유</th><td>없습니다. 육군 병장 만기 전역이고, 세계태권도연맹과 파리올림픽 조직위, 몽골 정부를 상대로 영문 협업을 해 왔습니다</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <strong>김강현</strong>
+    <a href="mailto:saian64@naver.com">saian64@naver.com</a>
+    <a href="tel:01099548720">010-9954-8720</a>
+    <a href="../">기본 포트폴리오</a>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 김강현. 개인이 만든 페이지이며 세컨신드롬의 공식 페이지가 아닙니다. 지원용으로 작성했습니다.</span>
+    <a href="../">목록으로</a>
+  </div>
+</footer>
+<dialog id="lb" aria-label="이미지 크게 보기">
+  <div class="lb-bar">
+    <span id="lb-cap"></span>
+    <span class="lb-btns">
+      <button type="button" id="lb-out" aria-label="축소">&minus;</button>
+      <button type="button" id="lb-pct" aria-label="화면에 맞추기">100%</button>
+      <button type="button" id="lb-in" aria-label="확대">+</button>
+      <button type="button" id="lb-close" class="on" aria-label="닫기">닫기</button>
+    </span>
+  </div>
+  <div class="lb-body" id="lb-body"><img id="lb-img" alt="" /></div>
+</dialog>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('lb');
+  if (!dlg || !dlg.showModal) return;
+  var img = document.getElementById('lb-img');
+  var cap = document.getElementById('lb-cap');
+  var body = document.getElementById('lb-body');
+  var pct = document.getElementById('lb-pct');
+  var scale = 1, fit = 1;
+
+  function apply() {
+    img.style.width = Math.round(img.naturalWidth * scale) + 'px';
+    pct.textContent = Math.round(scale * 100) + '%';
+    img.style.cursor = scale > fit ? 'zoom-out' : 'zoom-in';
+  }
+  function fitScale() {
+    var w = body.clientWidth - 24, h = body.clientHeight - 24;
+    if (!img.naturalWidth || !img.naturalHeight) return 1;
+    return Math.min(w / img.naturalWidth, h / img.naturalHeight, 1);
+  }
+  function reset() {
+    fit = fitScale();
+    scale = fit;
+    apply();
+    body.scrollTop = 0;
+    body.scrollLeft = 0;
+  }
+  function zoom(f) {
+    var sx = (body.scrollLeft + body.clientWidth / 2) / (img.naturalWidth * scale);
+    var sy = (body.scrollTop + body.clientHeight / 2) / (img.naturalHeight * scale);
+    scale = Math.min(Math.max(scale * f, 0.1), 5);
+    apply();
+    body.scrollLeft = sx * img.naturalWidth * scale - body.clientWidth / 2;
+    body.scrollTop = sy * img.naturalHeight * scale - body.clientHeight / 2;
+  }
+
+  document.querySelectorAll('.gal figure').forEach(function (fig) {
+    var t = fig.querySelector('img');
+    var c = fig.querySelector('figcaption');
+    t.tabIndex = 0;
+    function open() {
+      cap.textContent = c ? c.textContent : t.alt;
+      img.alt = t.alt;
+      img.style.width = 'auto';
+      img.src = t.currentSrc || t.src;
+      dlg.showModal();
+      if (img.complete) reset();
+      else img.onload = reset;
+    }
+    t.addEventListener('click', open);
+    t.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+    });
+  });
+
+  document.getElementById('lb-in').addEventListener('click', function () { zoom(1.25); });
+  document.getElementById('lb-out').addEventListener('click', function () { zoom(0.8); });
+  pct.addEventListener('click', reset);
+  document.getElementById('lb-close').addEventListener('click', function () { dlg.close(); });
+  img.addEventListener('click', function () {
+    if (scale > fit + 0.001) reset();
+    else { scale = 1; apply(); }
+  });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  window.addEventListener('resize', function () { if (dlg.open) reset(); });
+})();
+</script>
+</body>
+</html>
