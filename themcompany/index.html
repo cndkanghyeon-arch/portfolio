@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>김강현 | 정산 정합성과 연동 PM 포트폴리오</title>
+<meta name="description" content="매출과 입금이 어긋나는 지점을 전수로 찾아 구조로 막아 온 기록입니다. 통합정산 솔루션 PM 지원용으로 정리했습니다." />
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#DE642B" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%2328292A'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='15' font-weight='700' fill='%23DE642B' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top">김강현 <small class="en">Settlement PM</small></a>
+    <nav class="menu">
+      <a href="#read">공고를 보는 관점</a>
+      <a href="#how">일하는 순서</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#fit">요건 대응</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div id="top" class="hero">
+  <div class="wrap">
+    <span class="kicker">더엠컴퍼니 통합정산 솔루션 PM 지원</span>
+    <h1>매출과 입금이 어긋나는 지점을<br /><em>전수로 찾아 구조로 막았습니다</em></h1>
+    <p class="lead">정산은 매달 사람이 맞추기 시작하면 끝이 없습니다. 계산 기준 40개가 넘는 칼럼을 하나씩 다시 읽어 정책으로 세우고, 시스템 사이 값이 어긋나면 자동으로 잡히도록 바꿨습니다. 중복 결제는 재현에 성공한 뒤 원인을 특정해 멱등키로 막았습니다. 고객사와 개발팀 사이에서 요구를 과제로 바꾸는 일도 같이 해 왔습니다.</p>
+    <div class="who"><span>김강현</span><span>서비스 기획과 PM, 결제 정산 운영 7년 4개월</span><span>saian64@naver.com</span><span>010-9954-8720</span></div>
+    <div class="stats">
+      <div class="stat"><b>중복 결제 0건</b><span>PG 콜백 중복을 재현해 멱등키로 차단<br />2개월 치 약 30만 건 전후 비교</span></div>
+      <div class="stat"><b>정산 오류 50% 감소</b><span>계산 기준 40개 이상 칼럼을 전수 조사해 재정의<br />시스템 간 값 불일치는 자동 수정</span></div>
+      <div class="stat"><b>월 8시간 제거</b><span>정산 대사 작업<br />자사 투입 3시간, 유관 조직 포함 전체 기준</span></div>
+      <div class="stat"><b>연동 에러 0건</b><span>외부 솔루션 5종 선정과 연동 총괄<br />3개월 내 론칭</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="read">
+  <div class="wrap">
+    <p class="eyebrow">지원 전에 확인한 것</p>
+    <h2>공고를 이렇게 읽었습니다</h2>
+    <p class="sub">통합정산 솔루션이 다루는 문제와 제가 겹치는 지점을 나눠 봤습니다.</p>
+    <div class="read">
+      <h3>채널이 늘수록 틀어지는 건 금액이 아니라 기준입니다</h3>
+      <div class="grid">
+        <div class="col">
+          <h4>공고에서 확인한 사실</h4>
+          <ul>
+            <li>VAN과 PG, 온라인배달, 배달대행, 쿠폰, 모바일상품권 등 여러 채널의 매출 데이터를 통합하고 입금 내역과 대조하는 솔루션을 운영합니다</li>
+            <li>고객사와 협력사, 사내 개발팀과 운영팀 사이에서 요구사항과 역할, 우선순위, 일정을 조율합니다</li>
+            <li>신규 고객사와 브랜드, 매장의 데이터 연동과 온보딩을 관리합니다</li>
+            <li>운영팀과 매출, 입금 차이와 데이터 누락, 지연 같은 이슈를 확인하고 개발팀과 해결 과정을 조율합니다</li>
+            <li>우대사항에 매출과 입금 대사, 누락과 중복, 취소 거래 분석 경험이 들어 있습니다</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>그래서 생기는 문제와 제 접점</h4>
+          <ul>
+            <li>채널마다 집계 시점과 수수료 차감 기준이 달라서, 금액이 맞아도 기준이 다르면 매달 사람이 맞춰야 합니다. 저는 <b>정산 계산 로직 40개 이상 칼럼을 전수 조사해 재설계</b>하고 시스템 간 정합성을 자동으로 대조하게 바꿨습니다</li>
+            <li>중복과 누락은 표본으로는 보이지 않습니다. 저는 <b>결제와 정산 에러 로그 6개월 치를 전수로 읽어</b> 상위 세 유형을 특정하고 각각 다른 방식으로 막았습니다</li>
+            <li>연동은 붙이는 것보다 붙인 뒤 어긋나는 것이 문제입니다. 저는 <b>외부 솔루션 5종과 외부 기관 시스템 4종</b>의 연동 규격을 직접 협의하고 환경별 검증까지 맡았습니다</li>
+            <li>고객사 요구는 그대로 두면 개발 과제가 되지 않습니다. 저는 <b>반복되는 요청을 Admin 기능으로 구조화</b>해 고객사 개발 요청을 약 80% 줄였습니다</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="note">출처: 원티드에 올라온 더엠컴퍼니 통합정산 솔루션 PM 공고 본문(포지션 소개, 주요업무, 자격요건, 우대사항)</p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <p class="eyebrow">일하는 순서</p>
+    <h2>표본으로 보지 않고 전수로 봅니다</h2>
+    <p class="sub">정산에서 표본은 평균만 보여 줍니다. 문제는 늘 꼬리에 있습니다.</p>
+    <div class="steps3">
+      <div class="s3">
+        <p class="n en">Step 01</p>
+        <h3>로그를 끝까지 읽는다</h3>
+        <p>결제와 정산 에러 로그 6개월 치를 전수로 읽어 유형을 묶었습니다. 상위 세 유형이 전체의 대부분이었고, 원인이 셋 다 달랐습니다.</p>
+      </div>
+      <div class="s3">
+        <p class="n en">Step 02</p>
+        <h3>재현에 성공할 때까지 조건을 좁힌다</h3>
+        <p>중복 결제는 중복 클릭으로 PG 콜백이 두 번 들어오는 경로를 재현해 조건을 고정한 뒤에야 막을 수 있었습니다. 추정으로는 못 막습니다.</p>
+      </div>
+      <div class="s3">
+        <p class="n en">Step 03</p>
+        <h3>기준을 정책에 두고 상시 점검으로 바꾼다</h3>
+        <p>사람이 매달 맞추는 일은 고친 게 아닙니다. 계산 기준을 정책으로 고정하고 어긋나면 자동으로 잡히게 해야 끝납니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <p class="eyebrow">프로젝트</p>
+    <h2>공고의 주요업무 순서로 정리했습니다</h2>
+    <p class="sub">모든 수치는 실제 운영 결과입니다. 각 건 끝에 더엠컴퍼니에 옮긴다면 어디부터 보겠는지 적었습니다.</p>
+
+    <div class="cards">
+
+      <article class="card">
+        <span class="tag">매출과 입금 대사</span>
+        <h3>매달 사람이 맞추던 정산을 기준부터 다시 세웠습니다</h3>
+        <p class="meta">BMW 워런티플러스 딜러 수수료 정산 / ㈜씨앤디팩토리 / 운영과 고도화</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>딜러 수수료 정산의 계산 기준이 문서가 아니라 사람 머릿속과 엑셀에 흩어져 있어, 월 마감마다 숫자를 손으로 맞추던 구조</li>
+            <li>정산 한 건을 끝내려면 BMW AS팀과 ISK, 딜러 관리 시스템, 재무회계팀이 각각 자기 몫을 처리해야 끝나는 구조라 한 곳이 늦으면 전체가 밀림</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>40개가 넘는 칼럼의 계산 로직을 전수 조사해 무엇이 기준이고 무엇이 예외인지 분리한 뒤 정책으로 다시 세움</li>
+            <li>워런티플러스와 딜러 관리 시스템 사이 API 데이터의 정합성을 자동으로 확인하고, 어긋난 값은 자동으로 맞추도록 구성</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>월 마감 정합성 점검과 조정, 환불 정보 입력과 특이건 리포트를 자동 생성으로 전환</li>
+            <li>정산과 유지보수 이슈, 투입 공수, 딜러사별 성과를 분석하는 월 마감 리포트를 자동화</li>
+          </ul>
+          <div class="res"><span>정산 대사 월 8시간에서 0</span><span>정산 오류 50% 감소</span><span>자사 투입 기준 월 3시간, 유관 조직 포함 8시간 이상</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal two">
+          <figure><img src="../assets/images/bmw/wpp.png" alt="정산 운영 관리 화면" loading="lazy" /><figcaption>정합성 자동 점검을 붙인 정산 운영 화면</figcaption></figure>
+          <figure><img src="../assets/images/bmw/oas.png" alt="월 마감 리포트 화면" loading="lazy" /><figcaption>월 마감 리포트를 자동 생성한 운영 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>더엠컴퍼니에 옮긴다면</b> 채널별로 매출 인식 시점과 수수료 차감 시점이 어디서 갈라지는지 한 장으로 정리하고, 입금 대조가 틀어지는 건이 어느 채널에 몰려 있는지부터 세어 보겠습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">누락과 중복, 취소 거래</span>
+        <h3>중복 결제를 재현해 원인을 특정하고 막았습니다</h3>
+        <p class="meta">PG 중복 콜백 차단 설계 / ㈜씨앤디팩토리 / 장애 분석과 설계</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>같은 건이 두 번 결제되는 사례가 간헐적으로 보고되는데 재현이 안 돼 원인을 못 잡던 상태</li>
+            <li>환불로 수습하면 그 달 정산과 회계가 다시 틀어져 처리 비용이 두 배로 드는 구조</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>결제와 정산 에러 로그 6개월 치를 전수 분석해 상위 세 유형을 특정. 구독 시작일 규정 불일치, 할인율 불일치, 중복 결제로 원인이 서로 달랐음</li>
+            <li>중복 클릭으로 PG 콜백이 두 번 들어오는 경로를 재현해 조건을 고정</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>멱등키 기반 차단 구조를 설계해 같은 요청이 두 번 들어와도 한 번만 처리되도록 변경</li>
+            <li>2개월 치 약 30만 건을 전후로 비교해 정말 0이 됐는지 확인한 뒤에 종료로 적음</li>
+          </ul>
+          <div class="res"><span>중복 결제 100% 제거</span><span>약 30만 건 전후 비교로 검증</span><span>관련 환불과 정정 처리 소멸</span></div></div></div>
+        </div>
+        <p class="apply"><b>더엠컴퍼니에 옮긴다면</b> 취소와 부분취소, 재승인이 섞인 거래가 채널별로 어떻게 기록되는지 먼저 맞춰 보고, 대사 불일치 중 몇 퍼센트가 취소 처리 시점 차이에서 오는지 재겠습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">신규 연동과 온보딩</span>
+        <h3>기업 간 데이터 연동을 규격부터 협의해 붙였습니다</h3>
+        <p class="meta">셀러포탈 솔루션 선정과 외부 기관 연동 설계 / ㈜오앤 / 연동 총괄</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>붙여야 할 외부 시스템이 많은데 각각 규격과 문서 수준이 달라서, 그대로 붙이면 오픈 후에 어긋나는 구조</li>
+            <li>공식 문서가 오래돼 실제 동작과 다른 구간이 섞여 있던 상황</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>다우데이타 셀러포탈 구축에서 배송추적과 PG, 알림톡, 전자계약 등 영역별 후보 솔루션을 비교 검토하고 연동 규격을 협의</li>
+            <li>RTDS와 GMS, PSS, IVR 네 개 외부 기관 시스템은 연동 프로토콜을 분석해 데이터 매핑 구조를 설계</li>
+            <li>문서가 미덥지 않은 구간은 기관 담당자와 직접 협의하고 Postman 테스트로 파라미터를 하나씩 검증</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>개발 환경과 스테이징, 운영 환경별 검증까지 컨트롤 타워 역할을 맡아 수행</li>
+            <li>제약 공장에서는 외부 클라우드 사용이 막혀 있어 온프레미스 아키텍처를 따로 설계하고 CCTV와 물류시스템, 바코드 시스템 연동 구조를 설계</li>
+          </ul>
+          <div class="res"><span>외부 솔루션 5종 연동 에러 0건</span><span>3개월 내 런칭</span><span>외부 기관 시스템 4종 연동 설계</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal one">
+          <figure><img src="../assets/images/ivr/main.png" alt="외부 기관 연동 운영 화면" loading="lazy" /><figcaption>외부 기관 시스템과 연동한 운영 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>더엠컴퍼니에 옮긴다면</b> 신규 매장 온보딩을 체크리스트가 아니라 상태 값으로 바꿔, 어느 단계에서 며칠이 걸리는지 보이게 한 뒤 가장 오래 걸리는 단계부터 줄이겠습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">요구사항을 개발 과제로</span>
+        <h3>고객사 요구를 완료 기준이 있는 과제로 바꿨습니다</h3>
+        <p class="meta">식품 커머스 3개사 동시 PM과 진척 관리 / ㈜씨앤디팩토리 / PM</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>세 고객사를 동시에 맡으면서 비슷한 요청이 계속 들어오는데 매번 개별 개발로 처리하던 구조</li>
+            <li>무엇이 밀리고 있는지 말로 공유하다 보니 오픈 직전에야 누락이 드러나던 상황</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>반복되는 요청을 유형별로 묶어 Admin 기능으로 구조화. 고객사가 직접 처리할 수 있는 범위를 넓힘</li>
+            <li>Jira와 Flow 로그를 모아 지연 Task와 누락을 정량으로 추적하고, 산정식과 데이터 출처를 전부 공개해 지표를 함께 고침</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>개발 현황 모니터링 대시보드로 다우데이타 구축에서 개발 누락을 오픈 전에 적발</li>
+            <li>진척 지표가 감시로 읽힌다는 우려가 나와 계산식을 공개하고 합의한 뒤 운영</li>
+          </ul>
+          <div class="res"><span>고객사 개발 요청 약 80% 감소</span><span>지연과 누락 80% 감소</span><span>Task 처리량 150% 증가</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal one">
+          <figure><img src="../assets/images/dashboard/jira.png" alt="진척 관리 대시보드" loading="lazy" /><figcaption>Jira 로그 기반 진척 관리 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>더엠컴퍼니에 옮긴다면</b> 고객사 요청을 받는 창구를 하나로 모으고, 접수부터 배포까지 상태를 단계로 나눠 어느 단계에 쌓이는지 주간으로 보겠습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">운영 현황 공유와 후속 조치</span>
+        <h3>현황 보고를 사람 손에서 떼어 냈습니다</h3>
+        <p class="meta">리포트 자동화 14종과 과제 선별 체계 / ㈜씨앤디팩토리 / 발굴부터 운영까지</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>주간과 월간 현황 정리에 매번 사람 시간이 들어가는데, 정작 그 시간에는 이슈를 못 보던 구조</li>
+            <li>효과를 말로만 설명하면 다음 개선의 예산을 받기 어렵다는 점</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>현업 업무 시간을 직접 실측해 과제를 정의하고, 반복성과 정책 명확성, 효과 크기, 지속 사용성 네 기준으로 선별</li>
+            <li>기준을 넘지 못한 과제는 검토 단계에 올리지 않아 착수한 14건이 전부 운영에 안착</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>주간 증적 에러 가이드 리포트, 월 마감 분석, 환불 특이건 리포트를 자동 생성으로 전환</li>
+            <li>한 브랜드에서 검증한 리포트 자동화를 다른 브랜드로 그대로 확산해 재사용</li>
+            <li>항목별 절감 시간과 인건비 환산액을 표로 집계해 경영진에 보고</li>
+          </ul>
+          <div class="res"><span>반복 업무 연 3,000시간 제거</span><span>인건비 환산 약 5,700만 원</span><span>ROI 약 1,320%</span><span>회수 기간 약 3.5주</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal one">
+          <figure><img src="../assets/images/dashboard/kd-real.png" alt="운영 성과 통합 대시보드" loading="lazy" /><figcaption>집계 기준을 통일한 통합 대시보드 실제 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>더엠컴퍼니에 옮긴다면</b> 고객사 회의에 들고 갈 현황 자료를 먼저 자동 생성으로 바꿔, 회의 준비 시간을 이슈 확인에 쓰도록 돌리겠습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">도입부터 운영 안정화까지</span>
+        <h3>대형 고객의 도입을 끝까지 끌고 갔습니다</h3>
+        <p class="meta">대회 운영 SaaS 총괄과 제조 환경 구축 / ㈜오앤 / 총괄 PM</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>170개국이 저마다 다른 규정을 써서 고객마다 시스템을 새로 만들어야 하던 상황. 규정은 매년 바뀜</li>
+            <li>일정은 이미 외부에 공표돼 있는데 프로젝트 중간에 개발팀장 공백이 두 번 발생</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>나라별 차이를 설정값 기반 분류체계로 표준화해 규정이 바뀌어도 코드가 아니라 설정이 바뀌도록 설계</li>
+            <li>화면기획서와 정책정의서, IA, ERD, API 명세를 직접 작성</li>
+            <li>공백 구간에는 ERD와 API, 연동 프로토콜을 직접 다시 설계해 일정을 사수</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>세계태권도연맹과 파리올림픽 조직위, 몽골 정부와 정책과 요구사항을 직접 조율</li>
+            <li>디자인과 프론트엔드, 백엔드, 퍼블리싱, 기획 다섯 조직 14명을 직접 채용하고 총괄</li>
+            <li>기획에서 QA까지 1년 이상 걸리던 개발 사이클을 6개월 1회전으로 단축</li>
+          </ul>
+          <div class="res"><span>파리올림픽 공식 채택</span><span>연간 이용자 약 100만 명</span><span>운영시간 40% 절감</span><span>운영비 70% 절감</span><span>일정 지연 없이 론칭</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal two">
+          <figure><img src="../assets/images/ovr/main.png" alt="대회 운영 메인 화면" loading="lazy" /><figcaption>설정값으로 고객별 규정을 수용한 운영 화면</figcaption></figure>
+          <figure><img src="../assets/images/ovr/schedule.png" alt="일정 관리 화면" loading="lazy" /><figcaption>일정과 배정을 자동 생성하는 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>더엠컴퍼니에 옮긴다면</b> 대형 고객사일수록 브랜드와 매장 단위 예외가 쌓입니다. 예외를 코드가 아니라 설정으로 받도록 먼저 정리하겠습니다.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="fit">
+  <div class="wrap">
+    <p class="eyebrow">요건 대응</p>
+    <h2>자격요건과 우대사항</h2>
+    <p class="sub">공고에 적힌 항목마다 실제로 해 온 일을 붙였습니다.</p>
+    <table class="fit">
+      <tr><th>IT 솔루션 PM, 운영 또는 기술 연동 관련 업무 경험</th><td>서비스 기획과 PM, 운영으로 7년 4개월입니다. 계약 단위로 30건을 수행했고, 솔루션 선정과 연동 총괄, 구독 결제와 정산 운영, 대회 운영 SaaS 총괄 PM을 맡았습니다</td></tr>
+      <tr><th>고객사의 요구를 구체적인 개발과 운영 과제로 정리</th><td>식품 커머스 세 고객사를 동시에 담당하며 반복되는 요청을 유형별로 묶어 Admin 기능으로 구조화했고, 고객사 개발 요청이 약 80% 줄었습니다. 화면기획서와 정책정의서, 기능 명세를 직접 작성해 완료 기준까지 붙입니다</td></tr>
+      <tr><th>상대의 의도와 핵심 쟁점을 파악하고 상황에 맞게 소통</th><td>진척 지표를 도입할 때 감시로 읽힌다는 우려가 나와 산정식과 데이터 출처를 전부 공개하고 지표를 함께 고쳐 합의했습니다. 세계태권도연맹과 파리올림픽 조직위, 몽골 정부처럼 결정 구조가 다른 상대와도 요구사항을 조율해 왔습니다</td></tr>
+      <tr><th>고객사와 협력사, 개발팀, 운영팀의 입장을 이해하고 실행 가능한 합의를 도출</th><td>정산 한 건을 끝내려면 BMW AS팀과 ISK, 딜러 관리 시스템, 재무회계팀이 각각 처리해야 해서, 기준을 정책으로 모아 각 조직이 자기 구간만 보면 되도록 흐름을 맞췄습니다</td></tr>
+      <tr><th>데이터와 사실로 문제를 설명하고 일정과 이슈를 끝까지 관리</th><td>중복 결제는 재현에 성공한 뒤 원인을 특정했고, 2개월 치 약 30만 건을 전후로 비교해 0이 된 것을 확인하고 종료했습니다. 개발 현황은 Jira와 Flow 로그를 모아 지연 Task와 누락을 정량으로 추적했습니다</td></tr>
+      <tr><th>(우대) 결제와 정산 도메인 경험</th><td>구독 서비스 두 종의 과금 기준과 결제, 딜러 수수료 정산을 맡아 운영했습니다. 계산 로직 40개 이상 칼럼을 전수 조사해 재설계하고, 정산 오류를 50% 줄였으며 월 마감 대사 작업을 없앴습니다</td></tr>
+      <tr><th>(우대) API와 파일 전송 등 기업 간 데이터 연동에 대한 이해</th><td>워런티플러스와 딜러 관리 시스템 사이 API 데이터의 정합성을 자동으로 확인하고 어긋난 값을 자동 수정하도록 만들었습니다. 외부 기관 시스템 4종의 연동 프로토콜을 분석해 데이터 매핑 구조를 설계하고 Postman으로 파라미터를 검증했습니다</td></tr>
+      <tr><th>(우대) 매출과 입금 대사, 누락과 중복, 취소 거래 분석</th><td>결제와 정산 에러 로그 6개월 치를 전수 분석해 구독 시작일 규정 불일치, 할인율 불일치, 중복 결제 세 유형을 특정하고 각각 다른 방식으로 막았습니다. 환불 정보 입력과 특이건 리포트도 자동 생성으로 전환했습니다</td></tr>
+      <tr><th>(우대) 개발 또는 데이터 처리 업무 경험</th><td>Python과 Selenium으로 자동 판정 로직을 직접 구현해 1년 이상 운영했고, Playwright로 QA 자동화를 구축해 테스트 커버리지 70% 이상을 확보했습니다. Claude API로 매출과 회원, 재구매를 분석하는 대시보드도 직접 만들었습니다</td></tr>
+      <tr><th>(우대) 대형 고객사의 솔루션 도입부터 운영 안정화까지 주도</th><td>다우데이타 셀러포탈에서 외부 솔루션 5종을 비교 선정해 연동 규격 협의와 환경별 검증까지 총괄했고 에러 없이 3개월 내 론칭했습니다. 대회 운영 SaaS는 0에서 1로 만들어 파리올림픽 공식 채택과 연 100만 명까지 끌고 갔습니다</td></tr>
+      <tr><th>병역과 결격 사유</th><td>육군 병장 만기 전역, 결격 사유 없습니다</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <strong>김강현</strong>
+    <a href="mailto:saian64@naver.com">saian64@naver.com</a>
+    <a href="tel:01099548720">010-9954-8720</a>
+    <a href="../">기본 포트폴리오</a>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 김강현. 개인이 만든 페이지이며 더엠컴퍼니의 공식 페이지가 아닙니다. 지원용으로 작성했습니다.</span>
+    <a href="../">목록으로</a>
+  </div>
+</footer>
+<dialog id="lb" aria-label="이미지 크게 보기">
+  <div class="lb-bar">
+    <span id="lb-cap"></span>
+    <span class="lb-btns">
+      <button type="button" id="lb-out" aria-label="축소">&minus;</button>
+      <button type="button" id="lb-pct" aria-label="화면에 맞추기">100%</button>
+      <button type="button" id="lb-in" aria-label="확대">+</button>
+      <button type="button" id="lb-close" class="on" aria-label="닫기">닫기</button>
+    </span>
+  </div>
+  <div class="lb-body" id="lb-body"><img id="lb-img" alt="" /></div>
+</dialog>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('lb');
+  if (!dlg || !dlg.showModal) return;
+  var img = document.getElementById('lb-img');
+  var cap = document.getElementById('lb-cap');
+  var body = document.getElementById('lb-body');
+  var pct = document.getElementById('lb-pct');
+  var scale = 1, fit = 1;
+
+  function apply() {
+    img.style.width = Math.round(img.naturalWidth * scale) + 'px';
+    pct.textContent = Math.round(scale * 100) + '%';
+    img.style.cursor = scale > fit ? 'zoom-out' : 'zoom-in';
+  }
+  function fitScale() {
+    var w = body.clientWidth - 24, h = body.clientHeight - 24;
+    if (!img.naturalWidth || !img.naturalHeight) return 1;
+    return Math.min(w / img.naturalWidth, h / img.naturalHeight, 1);
+  }
+  function reset() {
+    fit = fitScale();
+    scale = fit;
+    apply();
+    body.scrollTop = 0;
+    body.scrollLeft = 0;
+  }
+  function zoom(f) {
+    var sx = (body.scrollLeft + body.clientWidth / 2) / (img.naturalWidth * scale);
+    var sy = (body.scrollTop + body.clientHeight / 2) / (img.naturalHeight * scale);
+    scale = Math.min(Math.max(scale * f, 0.1), 5);
+    apply();
+    body.scrollLeft = sx * img.naturalWidth * scale - body.clientWidth / 2;
+    body.scrollTop = sy * img.naturalHeight * scale - body.clientHeight / 2;
+  }
+
+  document.querySelectorAll('.gal figure').forEach(function (fig) {
+    var t = fig.querySelector('img');
+    var c = fig.querySelector('figcaption');
+    t.tabIndex = 0;
+    function open() {
+      cap.textContent = c ? c.textContent : t.alt;
+      img.alt = t.alt;
+      img.style.width = 'auto';
+      img.src = t.currentSrc || t.src;
+      dlg.showModal();
+      if (img.complete) reset();
+      else img.onload = reset;
+    }
+    t.addEventListener('click', open);
+    t.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+    });
+  });
+
+  document.getElementById('lb-in').addEventListener('click', function () { zoom(1.25); });
+  document.getElementById('lb-out').addEventListener('click', function () { zoom(0.8); });
+  pct.addEventListener('click', reset);
+  document.getElementById('lb-close').addEventListener('click', function () { dlg.close(); });
+  img.addEventListener('click', function () {
+    if (scale > fit + 0.001) reset();
+    else { scale = 1; apply(); }
+  });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  window.addEventListener('resize', function () { if (dlg.open) reset(); });
+})();
+</script>
+</body>
+</html>
