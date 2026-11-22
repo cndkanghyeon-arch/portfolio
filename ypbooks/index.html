@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>김강현 | 쇼핑몰 서비스 기획 포트폴리오</title>
+<meta name="description" content="결제와 정산, 어드민과 고객센터까지 쇼핑몰 뒤쪽을 고쳐 온 기록입니다. 영풍문고 정보기획팀 서비스 기획 지원용으로 정리했습니다." />
+<meta name="robots" content="noindex" />
+<meta name="theme-color" content="#E60000" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%231A1A1A'/%3E%3Ctext x='16' y='22' font-family='sans-serif' font-size='15' font-weight='700' fill='%23E60000' text-anchor='middle'%3EK%3C/text%3E%3C/svg%3E" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<a class="skip" href="#main">본문으로 건너뛰기</a>
+<header class="top">
+  <div class="wrap top-in">
+    <a class="brand" href="#top">김강현 <small class="en">Commerce Service Planning</small></a>
+    <nav class="menu">
+      <a href="#read">공고를 보는 관점</a>
+      <a href="#how">일하는 순서</a>
+      <a href="#projects">프로젝트</a>
+      <a href="#fit">요건 대응</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<div id="top" class="hero">
+  <div class="wrap">
+    <span class="kicker">영풍문고 정보기획팀 서비스 기획 지원</span>
+    <h1>사고는 화면이 아니라<br /><em>정산에서 났습니다</em></h1>
+    <p class="lead">쇼핑몰에서 눈에 보이는 것은 상품과 장바구니지만, 실제로 수습에 시간을 쓰게 만든 쪽은 늘 뒤쪽이었습니다. 결제 콜백이 중복으로 들어와 같은 건이 두 번 잡히던 문제는 재현 조건을 만들어 원인을 특정하고 같은 요청을 한 번만 처리하도록 바꿔 없앴습니다. 정산은 40개가 넘는 칼럼의 계산 로직을 전수 조사해 기준과 예외를 분리하고 정합성 자동 점검을 붙였습니다. 운영이 매번 개발에 요청하던 일은 유형별로 묶어 어드민 기능으로 올려 개발 요청을 약 80% 줄였습니다.</p>
+    <div class="who"><span>김강현</span><span>쇼핑몰 서비스 기획과 운영, 결제와 정산</span><span>saian64@naver.com</span><span>010-9954-8720</span></div>
+    <div class="stats">
+      <div class="stat"><b>중복 결제 100% 제거</b><span>중복 콜백을 재현해 원인을 특정하고 차단 구조를 설계<br />결제 예외 경로를 먼저 닫음</span></div>
+      <div class="stat"><b>정산 오류 50% 감소</b><span>40개 이상 칼럼의 계산 로직을 전수 조사<br />기준과 예외를 분리하고 자동 점검 적용</span></div>
+      <div class="stat"><b>개발 요청 약 80% 감소</b><span>반복 운영 요청을 어드민 기능으로 전환<br />커머스 3개사 동시 담당</span></div>
+      <div class="stat"><b>가입 30%, 매출 30% 증가</b><span>앱 안에서 가입과 결제가 끝나는 채널 신설<br />가입 조건과 결제 수단, 환불 기준을 한 벌로</span></div>
+    </div>
+  </div>
+</div>
+
+<section id="read">
+  <div class="wrap">
+    <p class="eyebrow">지원 전에 확인한 것</p>
+    <h2>공고를 이렇게 읽었습니다</h2>
+    <p class="sub">이 자리에 맡기려는 일과 제가 해 온 일이 겹치는 지점을 나눠 봤습니다.</p>
+    <div class="read">
+      <h3>앞단 화면과 뒷단 정산을 같은 사람이 보는 자리입니다</h3>
+      <div class="grid">
+        <div class="col">
+          <h4>공고에서 확인한 사실</h4>
+          <ul>
+            <li>상품과 장바구니, 결제의 <b>프론트엔드 UX를 최적화하고 기능을 기획</b>합니다</li>
+            <li>어드민과 고객센터 시스템 등 <b>백오피스 운영 프로세스를 설계</b>합니다</li>
+            <li><b>PG사 결제와 정산 관리, 채권관리</b>를 맡습니다</li>
+            <li><b>Figma로 와이어프레임과 스토리보드</b>를 만들고 상세 요구사항 정의서를 씁니다</li>
+            <li>타부서 요구사항을 조정하고 <b>프로젝트를 관리</b>하며 운영 피드백을 반영합니다</li>
+            <li>우대조건에 <b>PG 연동과 정산, 채권 관리, 회원과 적립금</b> 도메인 구축 경험이 들어 있습니다</li>
+          </ul>
+        </div>
+        <div class="col">
+          <h4>그래서 생기는 문제와 제 접점</h4>
+          <ul>
+            <li>결제는 정상 경로보다 예외에서 터집니다. 저는 <b>중복 콜백을 재현해 원인을 특정하고 같은 요청을 한 번만 처리하도록 바꿔 중복 결제를 없앴습니다</b></li>
+            <li>정산은 기준이 글로 없으면 담당자가 바뀔 때마다 다시 해석됩니다. 저는 <b>40개가 넘는 칼럼의 계산 로직을 전수 조사해 기준과 예외를 분리</b>하고 정합성 자동 점검을 붙였습니다</li>
+            <li>운영이 개발 대기에 묶이면 CS가 쌓입니다. 저는 <b>반복 요청을 유형별로 묶어 어드민 기능으로 올려 개발 요청을 약 80% 줄였습니다</b></li>
+            <li>정의서는 예외를 적어야 쓸모가 생깁니다. 저는 <b>화면기획서와 정책정의서, IA, ERD, API 명세를 직접 작성</b>하며 범위를 산출물 단위로 고정했습니다</li>
+            <li>요구사항은 부서마다 다른 말로 옵니다. 저는 <b>다섯 조직 14명을 총괄</b>하며 산출물과 일정으로 합의 지점을 만들었습니다</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <p class="note">출처: 사람인에 게시된 영풍문고 정보기획팀 서비스 기획 공고 본문(담당업무, 필수 자격 요건, 우대조건)</p>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <p class="eyebrow">일하는 순서</p>
+    <h2>예외부터 적고 화면을 그립니다</h2>
+    <p class="sub">정상 흐름은 누구나 그립니다.</p>
+    <div class="steps3">
+      <div class="s3">
+        <p class="n en">Step 01</p>
+        <h3>재현되는지부터 가른다</h3>
+        <p>문의를 건수로만 세면 무엇을 고쳐야 할지 나오지 않습니다. 재현되는 것과 아닌 것으로 먼저 나누고, 재현되는 건은 안내가 아니라 구조를 고칩니다.</p>
+      </div>
+      <div class="s3">
+        <p class="n en">Step 02</p>
+        <h3>기준과 예외를 분리해 글로 남긴다</h3>
+        <p>정산과 채권은 숫자가 한 번 어긋나면 신뢰가 먼저 깨집니다. 계산 로직을 전수로 훑어 기준을 세우고 어긋나는 경우를 따로 적은 뒤 자동 점검을 붙입니다.</p>
+      </div>
+      <div class="s3">
+        <p class="n en">Step 03</p>
+        <h3>같은 요청이 세 번 오면 기능으로 올린다</h3>
+        <p>개별 대응은 당장 빠르지만 다음 분기에 똑같이 돌아옵니다. 유형별로 묶어 어드민에서 운영이 직접 처리하도록 바꿉니다.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <p class="eyebrow">프로젝트</p>
+    <h2>공고의 담당업무 순서로 정리했습니다</h2>
+    <p class="sub">모든 수치는 실제 운영 결과입니다. 각 건 끝에 영풍문고에서라면 어디부터 보겠는지 적었습니다.</p>
+
+    <div class="cards">
+
+      <article class="card">
+        <span class="tag">결제 흐름과 PG 연동</span>
+        <h3>앱 안에서 끝나게 만들고 예외를 먼저 닫았습니다</h3>
+        <p class="meta">가입과 결제 채널 신설, 중복 결제 차단 / ㈜씨앤디팩토리 / 서비스 기획</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>가입하려면 앱을 빠져나와 별도 웹으로 이동해야 해서 중간에 이탈이 생기던 구조</li>
+            <li>가입 조건과 결제 수단, 환불 기준이 채널마다 따로 적혀 있어 같은 상품인데 설명이 갈리던 상태</li>
+            <li>결제 콜백이 중복으로 들어오면 같은 건이 두 번 잡히는 문제가 간헐적으로 재현되던 점</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>앱 안에서 가입과 결제가 한 번에 끝나는 채널을 새로 정의하고 앱 연동 구조를 기획</li>
+            <li>가입 조건과 결제 수단, 환불 기준을 한 벌의 정책으로 정리해 채널이 늘어도 한 곳만 고치도록 구성</li>
+            <li>중복 결제는 재현 조건을 먼저 만들어 원인을 특정하고 같은 요청을 한 번만 처리하는 차단 구조를 설계</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>제휴사와 계열사 포인트를 결제 수단으로 받도록 범위를 확장</li>
+            <li>오픈 후 가입과 매출 변화를 추적해 변경이 실제로 숫자를 움직였는지 확인</li>
+          </ul>
+          <div class="res"><span>가입 30% 증가</span><span>매출 30% 증가</span><span>중복 결제 100% 제거</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal one">
+          <figure><img src="../assets/images/bmw/scp.png" alt="가입 운영 화면" loading="lazy" /><figcaption>신청과 심사, 결제 상태를 한 화면에서 처리하도록 구성한 운영 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>영풍문고에서라면</b> 장바구니에서 결제까지의 이탈을 보기 전에 결제 실패와 취소, 부분 환불 같은 예외 경로부터 훑겠습니다. 거기서 CS가 가장 많이 생겼습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">정산과 채권 관리</span>
+        <h3>계산 기준을 전수로 훑고 자동 점검을 붙였습니다</h3>
+        <p class="meta">정산 데이터 정합성 자동화 / ㈜씨앤디팩토리 / 서비스 기획</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>정산 대사가 자사 작업만 월 3시간이고 유관 조직까지 포함하면 월 8시간 이상 걸리던 구조</li>
+            <li>계산 기준이 문서로 정리되어 있지 않아 담당자가 바뀌면 다시 해석해야 했던 점</li>
+            <li>시스템 간 값이 어긋나도 사람이 월말에야 발견하던 상태</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>40개가 넘는 칼럼의 계산 로직을 전수 조사해 기준과 예외를 분리하고 문서로 고정</li>
+            <li>시스템 간 데이터 정합성을 자동으로 확인하고 어긋난 값을 자동 수정하도록 구성</li>
+            <li>월 마감 분석은 정산과 유지보수 이슈, 투입 공수, 거래처별 성과를 자동 생성하도록 전환</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>환불 정보 입력과 특이건 리포트도 같은 방식으로 자동화해 월 단위 작업을 줄임</li>
+            <li>정산 대사는 자동 점검으로 전환해 사람이 확인하는 범위를 예외 건으로 좁힘</li>
+          </ul>
+          <div class="res"><span>정산 오류 50% 감소</span><span>정산 대사 자동 점검 전환</span><span>월 마감 리포트 자동 생성</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal one">
+          <figure><img src="../assets/images/bmw/wpp.png" alt="정합성 점검 화면" loading="lazy" /><figcaption>계산 기준을 재정의하고 정합성 자동 점검을 붙인 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>영풍문고에서라면</b> 정산과 채권의 계산 기준을 먼저 한 장으로 모으겠습니다. 기준이 글로 없으면 자동화를 붙여도 어디까지 믿을지 매번 다시 물었습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">어드민과 고객센터 백오피스</span>
+        <h3>운영이 개발을 기다리지 않게 바꿨습니다</h3>
+        <p class="meta">운영 요청의 기능 전환과 자동 판정 / ㈜씨앤디팩토리 / PM</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>비슷한 요청이 계속 들어오는데 매번 개별 개발로 처리해 운영이 개발 대기에 묶이던 상황</li>
+            <li>담당자가 매일 신청 200건을 본사 데이터와 손으로 대조하던 업무</li>
+            <li>자동 판정을 잘못 넣으면 사람이 다시 전수 확인하게 되어 전보다 느려진다는 점</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>반복 요청을 유형별로 묶어 운영 어드민 기능으로 올려 운영이 직접 처리하도록 구조화</li>
+            <li>승인은 전부 자동, 반려만 사람이 최종 확인하는 구조로 설계해 위험을 한쪽으로 몰아 둠</li>
+            <li>운영에 올리기 전 한 달간 실제 업무와 병행해 돌리며 현업 피드백으로 세 번 고치고 합의</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>커머스 3개사를 동시에 담당하며 같은 구조를 각 사에 적용</li>
+            <li>1년 이상 운영하며 오판 없이 사람 개입률 약 0.25%를 유지</li>
+          </ul>
+          <div class="res"><span>고객사 개발 요청 약 80% 감소</span><span>관련 CS 1년 이상 0건</span><span>사람 개입률 약 0.25%</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal two">
+          <figure><img src="../assets/images/bmw/oas.png" alt="운영 관리 화면" loading="lazy" /><figcaption>신청과 접수 상태를 한 화면에서 처리하도록 구성한 운영 화면</figcaption></figure>
+          <figure><img src="../assets/images/dashboard/kanban.png" alt="요청 처리 현황 화면" loading="lazy" /><figcaption>반복 요청을 유형별로 묶어 처리하던 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>영풍문고에서라면</b> 고객센터로 들어오는 문의를 유형별로 세어 상위 다섯 개부터 어드민 기능으로 올리겠습니다. 응대 속도보다 요청 자체를 줄이는 쪽이 오래갔습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">화면 설계와 요구사항 정의서</span>
+        <h3>예외를 먼저 적고 화면을 그렸습니다</h3>
+        <p class="meta">170개국 운영 SaaS 0에서 1 구축 / ㈜오앤 / 총괄 PM</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>170개국이 저마다 다른 규정을 써서 나라가 늘 때마다 운영이 같이 늘던 구조</li>
+            <li>요구사항이 부서마다 다른 말로 들어와 같은 기능을 다르게 이해하던 상황</li>
+            <li>공식 문서가 오래되어 그대로 구현하면 실제 운영과 어긋나던 구간</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>화면기획서와 정책정의서, IA, ERD, API 명세를 직접 작성해 범위를 산출물 단위로 고정</li>
+            <li>나라별 차이를 설정값 기반 분류체계로 묶어 운영이 개발 없이 바꾸도록 표준화</li>
+            <li>심판과 운영진 인터뷰로 문제를 정의하고 지연 2초 이내 같은 품질 기준을 먼저 수립</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>디자인과 프론트엔드, 백엔드, 퍼블리싱, 기획 다섯 조직 14명을 직접 채용해 총괄</li>
+            <li>일정 지연 없이 론칭해 파리올림픽 공식 채택과 연간 이용자 약 100만 명을 달성</li>
+          </ul>
+          <div class="res"><span>연간 이용자 약 100만 명</span><span>수작업 80% 자동화</span><span>운영시간 40% 절감</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal two">
+          <figure><img src="../assets/images/ovr/main.png" alt="운영 시스템 화면" loading="lazy" /><figcaption>설정값으로 운영 흐름을 묶은 화면</figcaption></figure>
+          <figure><img src="../assets/images/ovr/schedule.png" alt="일정 운영 화면" loading="lazy" /><figcaption>규정 차이를 설정으로 흡수해 일정을 운영하던 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>영풍문고에서라면</b> 와이어프레임을 그리기 전에 품절과 예약판매, 부분 취소 같은 상태를 먼저 표로 정리하겠습니다. 상태가 빠지면 화면은 늘 다시 그리게 됐습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">자사몰 성과 분석과 고도화</span>
+        <h3>같은 숫자를 보게 만든 다음에 개선안을 올렸습니다</h3>
+        <p class="meta">분산 데이터 통합과 신규 채널 기획 / ㈜씨앤디팩토리 / PM</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>같은 지표도 GA와 Matomo, Admin, 앱스토어마다 값이 달라 숫자로 대화하기 어려웠던 상태</li>
+            <li>개선안을 올려도 근거 수치가 흔들려 논의가 수치 논쟁으로 흘러가던 구조</li>
+            <li>광고비를 늘리는 방식으로는 신규 유입 단가가 계속 올라가던 상황</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>분산된 분석 소스의 집계 기준을 먼저 맞춘 뒤 자동 수집해 하나의 대시보드로 통합</li>
+            <li>Claude API로 매출과 회원, 재구매, 이벤트 성과를 분석하고 개선 전략 도출까지 연결</li>
+            <li>성과에 따라 보상하는 인플루언서 제휴 모델을 신규 기획해 참여 조건과 정산 구조를 정의</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>채널별 성과를 따로 끊어 보도록 지표를 분리해 기존 채널과 비교</li>
+            <li>인플루언서 약 120명을 확보하고 신규 채널에서 월 매출 약 8,000만 원을 만듦</li>
+          </ul>
+          <div class="res"><span>이벤트 성과 30% 이상 향상</span><span>신규 채널 월 매출 약 8,000만 원</span><span>3개사 동시 운영</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal one">
+          <figure><img src="../assets/images/dashboard/kd-real.png" alt="통합 분석 화면" loading="lazy" /><figcaption>집계 기준을 통일해 운영과 같은 숫자를 보도록 만든 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>영풍문고에서라면</b> 회원과 적립금 지표의 정의부터 문서로 고정하겠습니다. 적립금은 집계 시점을 어디로 잡느냐에 따라 같은 달이 다르게 보였습니다.</p>
+      </article>
+
+      <article class="card">
+        <span class="tag">협업 조정과 진척 관리</span>
+        <h3>지연과 누락이 보고 없이 드러나게 했습니다</h3>
+        <p class="meta">개발 현황 모니터링과 외부 연동 관리 / ㈜씨앤디팩토리 / PM</p>
+        <div class="flow">
+          <div class="step"><span class="lb">문제</span><div><ul>
+            <li>진척을 주간 보고로만 확인해 지연을 늦게 알던 구조</li>
+            <li>누락된 작업은 오픈 직전에야 드러나 일정을 통째로 흔들던 상황</li>
+            <li>배송추적과 결제, 알림, 전자계약처럼 영역마다 외부 솔루션을 새로 골라야 했던 점</li>
+          </ul></div></div>
+          <div class="step"><span class="lb">접근</span><div><ul>
+            <li>Jira와 Flow 로그를 모아 지연 Task와 누락을 정량으로 추적하고 보고가 아니라 로그에서 수치가 나오도록 구성</li>
+            <li>영역별 후보 솔루션을 비교 검토하고 연동 규격과 검증 항목을 계약 전에 협의</li>
+            <li>문서로 확인되지 않는 파라미터는 Postman으로 직접 호출해 검증한 뒤 규격에 반영</li>
+          </ul></div></div>
+          <div class="step r"><span class="lb">실행</span><div><ul>
+            <li>개발과 스테이징, 운영 환경별 검증까지 맡아 셀러포탈 구축에서 외부 솔루션 5종을 에러 없이 열었습니다</li>
+            <li>개발 누락을 오픈 전에 적발해 일정 영향을 차단</li>
+          </ul>
+          <div class="res"><span>지연과 누락 80% 감소</span><span>Task 처리량 150% 증가</span><span>외부 솔루션 5종 연동 에러 0건</span></div></div></div>
+        </div>
+        <div class="galhead">실제 화면</div>
+        <div class="gal one">
+          <figure><img src="../assets/images/dashboard/jira.png" alt="진척 관리 화면" loading="lazy" /><figcaption>지연과 누락을 로그에서 자동으로 드러나게 한 화면</figcaption></figure>
+        </div>
+        <p class="apply"><b>영풍문고에서라면</b> 타부서 요구사항을 회의록이 아니라 상태가 보이는 보드로 받겠습니다. 말로 합의한 일정은 지키는 사람만 지켰습니다.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="fit">
+  <div class="wrap">
+    <p class="eyebrow">요건 대응</p>
+    <h2>자격 요건과 담당업무</h2>
+    <p class="sub">공고에 적힌 항목마다 실제로 해 온 일을 붙였습니다.</p>
+    <table class="fit">
+      <tr><th>경력 4년에서 7년</th><td>재직 기간을 합산하면 7년입니다. 씨앤디팩토리에서 서비스 기획과 운영을 맡고 있고, 오앤에서는 다섯 조직 14명을 총괄했으며, 그전에는 직접 창업해 서비스와 제품을 만들었습니다</td></tr>
+      <tr><th>포트폴리오 제출 필수</th><td>지원 직무에 맞춰 이 페이지를 정리했고 경력기술서와 함께 제출합니다</td></tr>
+      <tr><th>Figma 활용 능력, 와이어프레임과 스토리보드</th><td>화면기획서와 정책정의서, IA, ERD, API 명세를 직접 작성해 왔고 Figma로 화면과 흐름을 정리해 디자인과 개발에 전달했습니다</td></tr>
+      <tr><th>이커머스 생태계와 자사몰 운영 구조 이해</th><td>커머스 고객사 세 곳을 동시에 담당하며 자사몰 운영 요청을 어드민 기능으로 구조화했고, GA와 Matomo, Admin, 앱스토어로 흩어진 지표를 통합해 이벤트 성과를 30% 이상 올렸습니다</td></tr>
+      <tr><th>비즈니스 요구사항을 UI와 프로세스로 구조화</th><td>흩어져 있던 가입 조건과 결제 수단, 환불 기준을 한 벌의 정책으로 정리한 뒤 화면과 운영 절차를 설계했습니다. 170개국의 규정 차이도 설정값 기반 분류체계로 묶어 운영이 개발 없이 바꾸도록 만들었습니다</td></tr>
+      <tr><th>프론트엔드 상품, 장바구니, 결제 UX와 기능 기획</th><td>고객이 앱 안에서 가입과 결제를 한 번에 마치는 채널을 신규 정의하고 연동 구조를 기획해 가입과 매출을 각각 30% 올렸습니다</td></tr>
+      <tr><th>어드민과 고객센터 시스템, 백오피스 프로세스 설계</th><td>반복 요청을 유형별로 묶어 운영 어드민 기능으로 올려 고객사 개발 요청을 약 80% 줄였습니다. 자동 판정은 승인만 자동으로 처리하고 반려는 사람이 확인하도록 설계해 1년 이상 관련 CS 0건을 유지했습니다</td></tr>
+      <tr><th>PG사 결제와 정산, 채권 관리</th><td>중복 콜백을 재현해 원인을 특정하고 같은 요청을 한 번만 처리하도록 바꿔 중복 결제를 없앴습니다. 정산은 40개가 넘는 칼럼의 계산 로직을 전수 조사해 기준과 예외를 분리하고 정합성 자동 점검을 적용해 오류를 50% 줄였습니다</td></tr>
+      <tr><th>타부서 요구사항 조정과 프로젝트 관리</th><td>디자인과 프론트엔드, 백엔드, 퍼블리싱, 기획 다섯 조직 14명을 직접 채용해 총괄했습니다. 진척은 Jira와 Flow 로그로 정량 추적해 지연과 누락을 80% 줄이고 Task 처리량을 150% 올렸습니다</td></tr>
+      <tr><th>(우대) 쇼핑몰 내부 관리자와 고객센터 시스템 구축, 운영</th><td>운영 어드민과 월 마감 리포트, 정합성 점검을 묶어 운영이 직접 처리하는 구조로 바꿨고, 셀러포탈 구축에서는 배송추적과 결제, 알림, 전자계약 영역의 외부 솔루션 5종을 연동 에러 없이 3개월 내에 열었습니다</td></tr>
+      <tr><th>병역과 해외여행 결격 사유</th><td>육군 병장으로 만기 전역했고 해외여행에 결격 사유가 없습니다</td></tr>
+      <tr><th>근무지 서울 강남</th><td>서울 양천구에 살고 있어 강남대로 근무에 문제 없습니다</td></tr>
+    </table>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <strong>김강현</strong>
+    <a href="mailto:saian64@naver.com">saian64@naver.com</a>
+    <a href="tel:01099548720">010-9954-8720</a>
+    <a href="../">기본 포트폴리오</a>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© 2026 김강현. 개인이 만든 페이지이며 영풍문고의 공식 페이지가 아닙니다. 지원용으로 작성했습니다.</span>
+    <a href="../">목록으로</a>
+  </div>
+</footer>
+<dialog id="lb" aria-label="이미지 크게 보기">
+  <div class="lb-bar">
+    <span id="lb-cap"></span>
+    <span class="lb-btns">
+      <button type="button" id="lb-out" aria-label="축소">&minus;</button>
+      <button type="button" id="lb-pct" aria-label="화면에 맞추기">100%</button>
+      <button type="button" id="lb-in" aria-label="확대">+</button>
+      <button type="button" id="lb-close" class="on" aria-label="닫기">닫기</button>
+    </span>
+  </div>
+  <div class="lb-body" id="lb-body"><img id="lb-img" alt="" /></div>
+</dialog>
+<script>
+(function () {
+  var dlg = document.getElementById('lb');
+  if (!dlg || !dlg.showModal) return;
+  var img = document.getElementById('lb-img');
+  var cap = document.getElementById('lb-cap');
+  var body = document.getElementById('lb-body');
+  var pct = document.getElementById('lb-pct');
+  var scale = 1, fit = 1;
+
+  function apply() {
+    img.style.width = Math.round(img.naturalWidth * scale) + 'px';
+    pct.textContent = Math.round(scale * 100) + '%';
+    img.style.cursor = scale > fit ? 'zoom-out' : 'zoom-in';
+  }
+  function fitScale() {
+    var w = body.clientWidth - 24, h = body.clientHeight - 24;
+    if (!img.naturalWidth || !img.naturalHeight) return 1;
+    return Math.min(w / img.naturalWidth, h / img.naturalHeight, 1);
+  }
+  function reset() {
+    fit = fitScale();
+    scale = fit;
+    apply();
+    body.scrollTop = 0;
+    body.scrollLeft = 0;
+  }
+  function zoom(f) {
+    var sx = (body.scrollLeft + body.clientWidth / 2) / (img.naturalWidth * scale);
+    var sy = (body.scrollTop + body.clientHeight / 2) / (img.naturalHeight * scale);
+    scale = Math.min(Math.max(scale * f, 0.1), 5);
+    apply();
+    body.scrollLeft = sx * img.naturalWidth * scale - body.clientWidth / 2;
+    body.scrollTop = sy * img.naturalHeight * scale - body.clientHeight / 2;
+  }
+
+  document.querySelectorAll('.gal figure').forEach(function (fig) {
+    var t = fig.querySelector('img');
+    var c = fig.querySelector('figcaption');
+    t.tabIndex = 0;
+    function open() {
+      cap.textContent = c ? c.textContent : t.alt;
+      img.alt = t.alt;
+      img.style.width = 'auto';
+      img.src = t.currentSrc || t.src;
+      dlg.showModal();
+      if (img.complete) reset();
+      else img.onload = reset;
+    }
+    t.addEventListener('click', open);
+    t.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+    });
+  });
+
+  document.getElementById('lb-in').addEventListener('click', function () { zoom(1.25); });
+  document.getElementById('lb-out').addEventListener('click', function () { zoom(0.8); });
+  pct.addEventListener('click', reset);
+  document.getElementById('lb-close').addEventListener('click', function () { dlg.close(); });
+  img.addEventListener('click', function () {
+    if (scale > fit + 0.001) reset();
+    else { scale = 1; apply(); }
+  });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+  window.addEventListener('resize', function () { if (dlg.open) reset(); });
+})();
+</script>
+</body>
+</html>
